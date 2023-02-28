@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { SimpleGrid } from "@chakra-ui/react";
+import { Outlet } from "react-router-dom";
+import Menu from "./components/Menu";
+import ProjectBox from "./components/ProjectBox";
+import { projects } from "./projects";
 
-function App() {
+interface IAppProps {}
+
+export function App(props: IAppProps) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Menu></Menu>
+      <SimpleGrid minChildWidth="300px" spacing="40px">
+        {projects.map((proj) => (
+          <ProjectBox project={proj} />
+        ))}
+      </SimpleGrid>
+      {/* <Link to="/about">
+        
+        <Button>about</Button>
+      </Link>{" "} */}
+      {/* link v routeru, bacha je i v chakra */}
+      <div>
+        <Outlet />
+      </div>
+    </>
   );
 }
-
-export default App;
