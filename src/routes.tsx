@@ -11,11 +11,12 @@ export const router = [
         path: "about", //:smh je promenna (param)
         element: <div>hello</div>,
       },
-      {
-        // path: ":projects[0].path",
-        path: "kocourkov",
-        element: <ProjectPage project={projects[0]} />,
-      },
+      ...projects.map((proj) => ({
+        //tri tecky rozbali pole, at nemam pole v poli
+        path: proj.path,
+        // path: "kocourkov",
+        element: proj.component || <ProjectPage project={proj} />,
+      })),
     ],
   },
 ];

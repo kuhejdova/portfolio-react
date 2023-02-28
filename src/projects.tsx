@@ -4,14 +4,22 @@ export enum ProjectTags {
   TYPOGRAPHY = "Typography",
   MODELLING = "3D modellin",
   GENERATIVE = "Generative Art",
-  VISUALIZATION = "Visualization"
+  VISUALIZATION = "Visualization",
+
+  OTHER = "Other",
 }
+
+export const otherCategories: ProjectTags[] = [
+  ProjectTags.VISUALIZATION,
+  ProjectTags.GRAPHIC_DESIGN,
+];
 
 export type Project = {
   name: string;
   image: string;
   tags: ProjectTags[];
   path: string;
+  component?: React.ReactNode;
 };
 
 export const projects: Project[] = [
@@ -31,12 +39,13 @@ export const projects: Project[] = [
     name: "Ahoj",
     image: "/cover_images/kocourkov_sign.png",
     tags: [ProjectTags.UX],
-    path: "/ahoj",
+    path: "/ahoj1",
   },
   {
     name: "Ahoj",
     image: "/cover_images/kocourkov_sign.png",
-    tags: [ProjectTags.UX],
-    path: "/ahoj",
+    tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
+    path: "/ahoj2",
+    component: <>Hello world</>,
   },
 ];

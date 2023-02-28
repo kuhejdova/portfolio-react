@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { MdLocalShipping } from "react-icons/md";
 import { Project } from "../projects";
+import { BackButton } from "./utils/BackButton";
 
 export interface IProjectBoxProps {
   project: Project;
@@ -24,6 +25,7 @@ export interface IProjectBoxProps {
 export default function ProjectPage(props: IProjectBoxProps) {
   return (
     <Container maxW={"7xl"}>
+      <BackButton/>
       <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 8, md: 10 }}

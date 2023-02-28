@@ -14,6 +14,7 @@ import {
   Icon,
   IconButton,
   Link,
+  LinkProps,
   Popover,
   PopoverContent,
   PopoverTrigger,
@@ -24,8 +25,14 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from "react-router-dom";
+import { ProjectTags } from "../projects";
 
-export default function WithSubnavigation() {
+export interface IMenuProps {
+  onMenuClicked: (tag: ProjectTags) => void;
+}
+
+export default function WithSubnavigation({ onMenuClicked }: IMenuProps) {
   const { isOpen, onToggle, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -68,7 +75,7 @@ export default function WithSubnavigation() {
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} mx={"auto"}>
-            <DesktopNav />
+            <DesktopNav onMenuClicked={onMenuClicked} />
           </Flex>
         </Flex>
 
@@ -99,13 +106,17 @@ export default function WithSubnavigation() {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav onMenuClicked={onMenuClicked} />
       </Collapse>
     </Box>
   );
 }
 
-const DesktopNav = () => {
+const DesktopNav = ({
+  onMenuClicked,
+}: {
+  onMenuClicked: (tag: ProjectTags) => void;
+}) => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
@@ -116,22 +127,40 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Link>
+              {navItem.href ? (
+                <Link
+                  p={2}
+                  fontSize={"sm"}
+                  fontWeight={500}
+                  color={linkColor}
+                  _hover={{
+                    textDecoration: "none",
+                    color: linkHoverColor,
+                  }}
+                  as={ReactRouterLink}
+                  to={navItem.href}
+                  onClick={() => navItem.tag && onMenuClicked(navItem.tag)}
+                >
+                  {navItem.label}
+                </Link>
+              ) : (
+                <Link
+                  p={2}
+                  fontSize={"sm"}
+                  fontWeight={500}
+                  color={linkColor}
+                  _hover={{
+                    textDecoration: "none",
+                    color: linkHoverColor,
+                  }}
+                  onClick={() => navItem.tag && onMenuClicked(navItem.tag)}
+                >
+                  {navItem.label}
+                </Link>
+              )}
             </PopoverTrigger>
 
-            {navItem.children && (
+            {navItem.submenu && (
               <PopoverContent
                 border={0}
                 boxShadow={"xl"}
@@ -141,8 +170,12 @@ const DesktopNav = () => {
                 minW={"sm"}
               >
                 <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
+                  {navItem.submenu.map((child) => (
+                    <DesktopSubNav
+                      key={child.label}
+                      onMenuClicked={onMenuClicked}
+                      navItem={child}
+                    />
                   ))}
                 </Stack>
               </PopoverContent>
@@ -154,15 +187,24 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+const DesktopSubNav = ({
+  navItem,
+  onMenuClicked,
+}: {
+  navItem: NavItem;
+  onMenuClicked: (tag: ProjectTags) => void;
+}) => {
+  const { label, href, subLabel, tag } = navItem;
+
   return (
-    <Link
-      href={href}
+    <LinkOrNot
       role={"group"}
       display={"block"}
       p={2}
       rounded={"md"}
       _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+      menuItem={navItem}
+      onMenuClicked={onMenuClicked}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
@@ -187,11 +229,15 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
-    </Link>
+    </LinkOrNot>
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({
+  onMenuClicked,
+}: {
+  onMenuClicked: (tag: ProjectTags) => void;
+}) => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
@@ -199,13 +245,23 @@ const MobileNav = () => {
       display={{ md: "none" }}
     >
       {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+        <MobileNavItem
+          key={navItem.label}
+          onMenuClicked={onMenuClicked}
+          navItem={navItem}
+        />
       ))}
     </Stack>
   );
 };
 
-const MobileNavItem = ({ label, children, href }: NavItem) => {
+const MobileNavItem = ({
+  navItem: { label, submenu: children, href, tag },
+  onMenuClicked,
+}: {
+  navItem: NavItem;
+  onMenuClicked: (tag: ProjectTags) => void;
+}) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -248,9 +304,14 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <LinkOrNot
+                key={child.label}
+                menuItem={child}
+                onMenuClicked={onMenuClicked}
+                py={2}
+              >
                 {child.label}
-              </Link>
+              </LinkOrNot>
             ))}
         </Stack>
       </Collapse>
@@ -258,47 +319,81 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   );
 };
 
+const LinkOrNot = ({
+  menuItem: { href, tag },
+  children,
+  onMenuClicked,
+  ...rest
+}: LinkProps & {
+  menuItem: NavItem;
+  children: React.ReactNode;
+  onMenuClicked: (tag: ProjectTags) => void;
+}) => {
+  return href ? (
+    <Link
+      as={ReactRouterLink}
+      to={href}
+      onClick={() => tag && onMenuClicked(tag!)}
+      {...rest}
+    >
+      {children}
+    </Link>
+  ) : (
+    <Link onClick={() => tag && onMenuClicked(tag!)} {...rest}>
+      {children}
+    </Link>
+  );
+};
+
 interface NavItem {
   label: string;
   subLabel?: string;
-  children?: Array<NavItem>;
+  submenu?: Array<NavItem>;
   href?: string;
+  tag?: ProjectTags;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "About",
+    href: "/about",
   },
   {
     label: "Graphic design",
-    children: [
+    tag: ProjectTags.GRAPHIC_DESIGN,
+    href: "/",
+    submenu: [
       {
         label: "Generative design",
         subLabel: "something",
-        href: "#",
+        href: "/",
       },
       {
         label: "Visual identity",
         subLabel: "something",
-        href: "#",
+        href: "/",
       },
       {
         label: "Typography",
+        tag: ProjectTags.TYPOGRAPHY,
         subLabel: "something",
-        href: "#",
+        href: "/",
       },
     ],
   },
   {
     label: "UX",
-    href: "#",
+    tag: ProjectTags.UX,
+    href: "/",
   },
   {
     label: "3D modelling",
-    href: "#",
+    tag: ProjectTags.MODELLING,
+    href: "/",
   },
   {
     label: "Other",
-    href: "#",
+    tag: ProjectTags.OTHER,
+    href: "/",
   },
 ];
