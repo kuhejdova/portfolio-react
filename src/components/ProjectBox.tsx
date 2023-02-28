@@ -11,9 +11,6 @@ import {
 import { Link } from "react-router-dom";
 import { Project } from "../projects";
 
-const IMAGE =
-  "https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80";
-
 export interface IProjectBoxProps {
   project: Project;
 }
@@ -39,7 +36,7 @@ export default function ProjectBox(props: IProjectBoxProps) {
               height={230}
               width={282}
               objectFit={"cover"}
-              src={IMAGE}
+              src={props.project.image}
             />
           </Box>
           <Stack pt={10} align={"center"}>

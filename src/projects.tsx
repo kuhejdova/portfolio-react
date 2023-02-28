@@ -1,6 +1,10 @@
 export enum ProjectTags {
-  GRAPHICS = "Graphic design",
-  UI = "UX",
+  GRAPHIC_DESIGN = "Graphic design",
+  UX = "UX",
+  TYPOGRAPHY = "Typography",
+  MODELLING = "3D modellin",
+  GENERATIVE = "Generative Art",
+  VISUALIZATION = "Visualization"
 }
 
 export type Project = {
@@ -12,27 +16,27 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Cat café Kocourkov",
+    image: "/cover_images/kocourkov_sign.png",
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/kocourkov",
+  },
+  {
     name: "Ahoj",
-    image: "lipsum",
-    tags: [ProjectTags.UI, ProjectTags.GRAPHICS],
+    image: "/cover_images/kocourkov_sign.png",
+    tags: [ProjectTags.UX],
     path: "/ahoj",
   },
   {
     name: "Ahoj",
-    image: "lipsum",
-    tags: [ProjectTags.UI],
+    image: "/cover_images/kocourkov_sign.png",
+    tags: [ProjectTags.UX],
     path: "/ahoj",
   },
   {
     name: "Ahoj",
-    image: "lipsum",
-    tags: [ProjectTags.UI],
-    path: "/ahoj",
-  },
-  {
-    name: "Ahoj",
-    image: "lipsum",
-    tags: [ProjectTags.UI],
+    image: "/cover_images/kocourkov_sign.png",
+    tags: [ProjectTags.UX],
     path: "/ahoj",
   },
 ];

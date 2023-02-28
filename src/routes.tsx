@@ -1,4 +1,6 @@
 import { App } from "./App";
+import ProjectPage from "./components/ProjectPage";
+import { projects } from "./projects";
 
 export const router = [
   {
@@ -8,6 +10,11 @@ export const router = [
       {
         path: "about", //:smh je promenna (param)
         element: <div>hello</div>,
+      },
+      {
+        // path: ":projects[0].path",
+        path: "kocourkov",
+        element: <ProjectPage project={projects[0]} />,
       },
     ],
   },
