@@ -4,6 +4,7 @@ import {
   Container,
   Flex,
   Heading,
+  HStack,
   Image,
   List,
   ListItem,
@@ -25,41 +26,105 @@ export interface IProjectBoxProps {
 export default function ProjectPage(props: IProjectBoxProps) {
   return (
     <Container maxW={"7xl"}>
-      <BackButton/>
-      <SimpleGrid
-        columns={{ base: 1, lg: 2 }}
-        spacing={{ base: 8, md: 10 }}
-        py={{ base: 18, md: 24 }}
-      >
-        <Flex>
-          <Image
-            rounded={"md"}
-            alt={"product image"}
-            src={props.project.image}
-            fit={"cover"}
-            align={"center"}
-            w={"100%"}
-            h={{ base: "100%", sm: "400px", lg: "500px" }}
-          />
-        </Flex>
-        <Stack spacing={{ base: 6, md: 10 }}>
-          <Box as={"header"}>
-            <Heading
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: "2xl", sm: "4xl", lg: "5xl" }}
-            >
-              {props.project.name}
-            </Heading>
-            {/* <Text
+      <HStack paddingBottom={30}>
+        <BackButton/>
+        <Box as={"header"}>
+          <Heading
+            lineHeight={1.1}
+            fontWeight={600}
+            fontSize={{ base: "2xl", sm: "4xl", lg: "5xl" }}
+          >
+            {props.project.name}
+          </Heading>
+          {/* <Text
               color={useColorModeValue("gray.900", "gray.400")}
               fontWeight={300}
               fontSize={"2xl"}
             >
               $350.00 USD
             </Text> */}
-          </Box>
-
+        </Box>
+      </HStack>
+      <Image
+        rounded={"md"}
+        alt={"product image"}
+        src={props.project.projectImages[0]}
+        fit={"cover"}
+        align={"center"}
+        w={"100%"}
+        h={{ base: "100%", sm: "400px", lg: "500px" }}
+      />
+      <VStack spacing={{ base: 4, sm: 6 }}>
+        <Text
+          color={useColorModeValue("gray.500", "gray.400")}
+          fontSize={"2xl"}
+          fontWeight={"300"}
+          paddingTop={30}
+        >
+          {props.project.description}
+        </Text>
+        <Text fontSize={"lg"}>
+          {props.project.text}
+        </Text>
+      </VStack><Image
+              rounded={"md"}
+              alt={"product image"}
+              src={props.project.projectImages[1]}
+              fit={"contain"}
+              align={"center"}
+              w={"100%"}
+              h={{ base: "100%"}}
+              paddingTop={10}
+            />
+            <Image
+              rounded={"md"}
+              alt={"product image"}
+              src={props.project.projectImages[2]}
+              fit={"contain"}
+              align={"center"}
+              w={"100%"}
+              h={{ base: "100%"}}
+              paddingTop={10}
+            />
+      <SimpleGrid
+        columns={{ base: 1, lg: 2 }}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 18, md: 24 }}
+        // paddingTop = {0}
+      >
+        
+        <Flex >
+          <HStack>
+          <Image
+              rounded={"md"}
+              alt={"product image"}
+              src={props.project.projectImages[3]}
+              fit={"cover"}
+              align={"center"}
+              w={"100%"}
+              h={{ base: "100%", sm: "400px", lg: "500px" }}
+            />
+            <Image
+              rounded={"md"}
+              alt={"product image"}
+              src={props.project.projectImages[4]}
+              fit={"cover"}
+              align={"center"}
+              w={"100%"}
+              h={{ base: "100%", sm: "400px", lg: "500px" }}
+            />
+            <Image
+              rounded={"md"}
+              alt={"product image"}
+              src={props.project.projectImages[5]}
+              fit={"cover"}
+              align={"center"}
+              w={"100%"}
+              h={{ base: "100%", sm: "400px", lg: "500px" }}
+            />
+            </HStack>
+        </Flex>
+        {/* <Stack spacing={{ base: 6, md: 10 }}>
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={"column"}
@@ -70,14 +135,6 @@ export default function ProjectPage(props: IProjectBoxProps) {
             }
           >
             <VStack spacing={{ base: 4, sm: 6 }}>
-              <Text
-                color={useColorModeValue("gray.500", "gray.400")}
-                fontSize={"2xl"}
-                fontWeight={"300"}
-              >
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore
-              </Text>
               <Text fontSize={"lg"}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
                 aliquid amet at delectus doloribus dolorum expedita hic, ipsum
@@ -189,7 +246,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
             <MdLocalShipping />
             <Text>2-3 business days delivery</Text>
           </Stack>
-        </Stack>
+        </Stack> */}
       </SimpleGrid>
     </Container>
   );
