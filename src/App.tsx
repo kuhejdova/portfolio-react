@@ -24,6 +24,9 @@ export function App(props: IAppProps) {
         <OutletOrChildren>
           <SimpleGrid spacing="40px" columns={{ base: 1, md: 2, lg: 3, xl: 4 }}>
             {projects
+              .sort(
+                (proj1, proj2) => proj2.date.getTime() - proj1.date.getTime()
+              )
               .filter(
                 (proj) =>
                   !filter ||
