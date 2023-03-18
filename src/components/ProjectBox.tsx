@@ -17,19 +17,19 @@ export interface IProjectBoxProps {
 
 export default function ProjectBox(props: IProjectBoxProps) {
   return (
-    <Center py={12}>
+    <Center py={5}>
       <Link to={props.project.path}>
         <Box
           role={"group"}
           p={6}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          boxShadow={"dark-lg"}
           rounded={"lg"}
           pos={"relative"}
           zIndex={1}
         >
-          <Box rounded={"lg"} mt={-12} pos={"relative"} height={"230px"}>
+          <Box rounded={"lg"} mt={0} pos={"relative"} height={"230px"}>
             <Image
               rounded={"lg"}
               height={230}

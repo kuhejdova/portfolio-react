@@ -365,11 +365,13 @@ const NAV_ITEMS: Array<NavItem> = [
     submenu: [
       {
         label: "Generative design",
+        tag: ProjectTags.GENERATIVE,
         // subLabel: "something",
         href: "/",
       },
       {
         label: "Visual identity",
+        tag: ProjectTags.VISUAL,
         // subLabel: "something",
         href: "/",
       },
