@@ -1,21 +1,16 @@
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
   HStack,
   Image,
-  List,
   ListItem,
-  SimpleGrid,
-  Stack,
-  StackDivider,
   Text,
+  UnorderedList,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
-import { MdLocalShipping } from "react-icons/md";
 import { Project } from "../projects";
 import { BackButton } from "./utils/BackButton";
 
@@ -27,7 +22,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
   return (
     <Container maxW={"7xl"}>
       <HStack paddingBottom={30}>
-        <BackButton/>
+        <BackButton />
         <Box as={"header"}>
           <Heading
             lineHeight={1.1}
@@ -63,68 +58,78 @@ export default function ProjectPage(props: IProjectBoxProps) {
         >
           {props.project.description}
         </Text>
-        <Text fontSize={"lg"}>
-          {props.project.text}
-        </Text>
-      </VStack><Image
-              rounded={"md"}
-              alt={"product image"}
-              src={props.project.projectImages[1]}
-              fit={"contain"}
-              align={"center"}
-              w={"100%"}
-              h={{ base: "100%"}}
-              paddingTop={10}
-            />
-            <Image
-              rounded={"md"}
-              alt={"product image"}
-              src={props.project.projectImages[2]}
-              fit={"contain"}
-              align={"center"}
-              w={"100%"}
-              h={{ base: "100%"}}
-              paddingTop={10}
-            />
-      <SimpleGrid
+        <Text fontSize={"lg"}>{props.project.text}</Text>
+      </VStack>
+      <Image
+        rounded={"md"}
+        alt={"product image"}
+        src={props.project.projectImages[1]}
+        fit={"contain"}
+        align={"center"}
+        w={"100%"}
+        h={{ base: "100%" }}
+        paddingTop={10}
+      />
+      <Image
+        rounded={"md"}
+        alt={"product image"}
+        src={props.project.projectImages[2]}
+        fit={"contain"}
+        align={"center"}
+        w={"100%"}
+        h={{ base: "100%" }}
+        paddingTop={10}
+      />
+      {/* <SimpleGrid
         columns={{ base: 1, lg: 2 }}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 18, md: 24 }}
         // paddingTop = {0}
-      >
-        
-        <Flex >
-          <HStack>
+      > */}
+
+      <Flex py={{ base: 18, md: 20 }} w={"100%"}>
+        <HStack w={"100%"}>
           <Image
-              rounded={"md"}
-              alt={"product image"}
-              src={props.project.projectImages[3]}
-              fit={"cover"}
-              align={"center"}
-              w={"100%"}
-              h={{ base: "100%", sm: "400px", lg: "500px" }}
-            />
-            <Image
-              rounded={"md"}
-              alt={"product image"}
-              src={props.project.projectImages[4]}
-              fit={"cover"}
-              align={"center"}
-              w={"100%"}
-              h={{ base: "100%", sm: "400px", lg: "500px" }}
-            />
-            <Image
-              rounded={"md"}
-              alt={"product image"}
-              src={props.project.projectImages[5]}
-              fit={"cover"}
-              align={"center"}
-              w={"100%"}
-              h={{ base: "100%", sm: "400px", lg: "500px" }}
-            />
-            </HStack>
-        </Flex>
-        {/* <Stack spacing={{ base: 6, md: 10 }}>
+            rounded={"md"}
+            alt={"product image"}
+            src={props.project.projectImages[3]}
+            fit={"cover"}
+            align={"center"}
+            w={"100%"}
+            h={{ base: "100%", sm: "400px", lg: "500px" }}
+          />
+          <Image
+            rounded={"md"}
+            alt={"product image"}
+            src={props.project.projectImages[4]}
+            fit={"cover"}
+            align={"center"}
+            w={"100%"}
+            h={{ base: "100%", sm: "400px", lg: "500px" }}
+          />
+          <Image
+            rounded={"md"}
+            alt={"product image"}
+            src={props.project.projectImages[5]}
+            fit={"cover"}
+            align={"center"}
+            w={"100%"}
+            h={{ base: "100%", sm: "400px", lg: "500px" }}
+          />
+        </HStack>
+      </Flex>
+
+      <Box>
+        <Heading size="md" mb={2}>
+          Used tools
+        </Heading>
+        <UnorderedList spacing={2}>
+          {props.project.tools.map((tool) => (
+            <ListItem>{tool}</ListItem>
+          ))}
+        </UnorderedList>
+      </Box>
+      {/* <Stack spacing={{ base: 6, md: 10 }}>
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={"column"}
@@ -247,7 +252,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
             <Text>2-3 business days delivery</Text>
           </Stack>
         </Stack> */}
-      </SimpleGrid>
+      {/* </SimpleGrid> */}
     </Container>
   );
 }

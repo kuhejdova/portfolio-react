@@ -38,17 +38,17 @@ export default function ProjectBox(props: IProjectBoxProps) {
               src={props.project.image}
             />
           </Box>
-          <Stack pt={10} align={"center"}>
+          <Stack pt={5} align={"center"}>
             <Text
               color={"gray.500"}
               fontSize={"sm"}
               textTransform={"uppercase"}
             >
               {props.project.tags.map((tag) => (
-                <Badge mx="2">{tag}</Badge>
+                <Badge mx="1">{tag}</Badge>
               ))}
             </Text>
-            <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
+            <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500} textAlign={"center"} py={2}>
               {props.project.name}
             </Heading>
           </Stack>

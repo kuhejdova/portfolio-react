@@ -15,7 +15,9 @@ export const router = [
         //tri tecky rozbali pole, at nemam pole v poli
         path: proj.path,
         // path: "kocourkov",
-        element: proj.component || <ProjectPage project={proj} />,
+        element: (typeof proj.component === "function"
+          ? proj.component(proj)
+          : proj.component) || <ProjectPage project={proj} />,
       })),
     ],
   },

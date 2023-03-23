@@ -1,3 +1,6 @@
+import ProjectPage from "./components/ProjectPage";
+import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
+
 export enum ProjectTags {
   GRAPHIC_DESIGN = "Graphic design",
   UX = "UX",
@@ -24,10 +27,11 @@ export type Project = {
   date: Date;
   description: string;
   text: string;
+  tools: string[];
   text2?: string;
   text3?: string;
   text4?: string;
-  component?: React.ReactNode;
+  component?: React.ReactNode | ((project: Project) => React.ReactNode);
 };
 
 export const projects: Project[] = [
@@ -44,6 +48,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
     path: "/kocourkov",
     date: new Date(2019, 10, 1),
+    tools: ["Adobe Illustrator"],
     description: "The visual identity for imaginary cat café",
     text: "Visual identity works with stylized cats and is combined with coffee stains. The cat positions are inspired by living with one chunky cat. It consists of logo, pictograms and ideograms, which can be used in some real café.",
   },
@@ -59,6 +64,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
     path: "/archeryfont",
     date: new Date(2020, 10, 1),
+    tools: ["Adobe Illustrator", "Fontlab 3"],
     description: "The font based on archery elements",
     text: "It's a linear font that is decorated with part of the arrow or target. Due to its high stylization, it's mainly used for headlines. This font also contains numbers and Czech localization. You can dowload it here - https://typefoundry.fi.muni.cz/cs/archery",
   },
@@ -76,6 +82,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
     path: "/department_anthropology",
     date: new Date(2020, 3, 1),
+    tools: ["Adobe Illustrator"],
     description: "string",
     text: "string",
   },
@@ -92,6 +99,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
     path: "/babylonfest",
     date: new Date(2020, 4, 1),
+    tools: ["Adobe Illustrator"],
     description: "string",
     text: "string",
   },
@@ -106,8 +114,10 @@ export const projects: Project[] = [
     tags: [ProjectTags.GRAPHIC_DESIGN],
     path: "/wake_up_call",
     date: new Date(2020, 5, 1),
+    tools: ["Adobe Illustrator"],
     description: "string",
     text: "string",
+    component: (project) => <ProjectPage project={project} />,
   },
   {
     name: "Garden app",
@@ -122,6 +132,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.UX],
     path: "/garden",
     date: new Date(2020, 6, 1),
+    tools: ["Figma"],
     description: "string",
     text: "Ve spolupráci s Martin Petr, Odkazy web - https://pv278-garden.web.app/ prototyp - https://www.figma.com/file/u47pOhmfyumOV0gJh14ncu/prototyp?node-id=5%3A58",
   },
@@ -136,6 +147,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.MODELLING],
     path: "/meduse",
     date: new Date(2020, 11, 1),
+    tools: ["Blender"],
     description: "string",
     text: "String",
   },
@@ -150,6 +162,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.MODELLING],
     path: "/human_head",
     date: new Date(2021, 1, 1),
+    tools: ["Blender"],
     description: "3D model of man's head with heterochromia eyes",
     text: "Sem přijde i video, nějak",
   },
@@ -165,6 +178,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.GENERATIVE],
     path: "/treeclock",
     date: new Date(2020, 11, 2),
+    tools: ["Processing"],
     description: "string",
     text: "String",
   },
@@ -181,6 +195,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.GRAPHIC_DESIGN],
     path: "/archeryjersey",
     date: new Date(2020, 6, 2),
+    tools: ["Adobe Illustrator"],
     description: "Redesign of the plain white jerseys for Archery club Ostrava",
     text: "I have chosen two shades of blue, the lighter represents the color of the Ostrava city, and the darker means one of the colors of the Moravian-Silesian Region.",
   },
@@ -197,6 +212,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.GENERATIVE],
     path: "/rewritethestars",
     date: new Date(2021, 2, 1),
+    tools: ["Processing"],
     description: "string",
     text: "String",
   },
@@ -215,6 +231,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
     path: "/alenakuhejdova",
     date: new Date(2021, 1, 1),
+    tools: ["Adobe Illustrator"],
     description: "string",
     text: "String",
   },
@@ -234,6 +251,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
     path: "/handicraftbooks",
     date: new Date(2021, 1, 2),
+    tools: ["Adobe Illustrator", "Adobe InDesign"],
     description: "string",
     text: "String",
   },
@@ -244,6 +262,7 @@ export const projects: Project[] = [
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
     path: "/visegradgroup",
     date: new Date(2020, 10, 1),
+    tools: ["Adobe Illustrator"],
     description: "30 Years of the Visegrad group poster competiton",
     text: '<a href="https://www.freepik.com/free-psd/two-framed-posters-mockup-design_8961022.htm#query=two%20posters%20mockup&position=6&from_view=search&track=ais">Image by BiZkettE1</a> on Freepik',
   },
@@ -263,8 +282,10 @@ export const projects: Project[] = [
     tags: [ProjectTags.VISUALIZATION],
     path: "/archeryresults",
     date: new Date(2021, 1, 3),
-    description: "string",
-    text: "https://github.com/kuhejdova/archery-results-visualization",
+    tools: ["d3.js"],
+    description: "Improved visualization of archery results",
+    text: "Visualization of the archery results in seasons 2018/19 and 2019/20. As the page with results provides confusing and visually confusing results, I decided to try to remake it to be more readable for archers. Results visualization helps archers to see their score in comparison with the other competitions and in this one, they can check the whole season or just one of the competitions.",
+    component: (project) => <ProjectPageArcheryResults project={project} />,
   },
 
   // SOMETHING WITH COMPONENT
