@@ -1,5 +1,7 @@
 import ProjectPage from "./components/ProjectPage";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
+import ProjectPageHandicraftBooks from "./components/ProjectPageHandicraftBooks";
+import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
 
 export enum ProjectTags {
   GRAPHIC_DESIGN = "Graphic design",
@@ -203,7 +205,7 @@ export const projects: Project[] = [
     name: "Rewrite the stars",
     image: "/cover_images/rts_sign.png",
     projectImages: [
-      "/cover_images/rts_sign.png",
+      "/project_images/rts_5.png",
       "/project_images/rts_1.png",
       "/project_images/rts_3.png",
       "/project_images/rts_2.png",
@@ -212,9 +214,10 @@ export const projects: Project[] = [
     tags: [ProjectTags.GENERATIVE],
     path: "/rewritethestars",
     date: new Date(2021, 2, 1),
-    tools: ["Processing"],
-    description: "string",
-    text: "String",
+    tools: ["Processing 3", "Kinect for Windows v2, knihovna KinectPV2"],
+    description: "Interactive project where you can be a part of the night sky",
+    text: "Rewrite the stars je kreativní projekt, postavený na myšlence, že všichni jsme složení z hvězdného prachu, tedy každý z nás je unikátním seskupením hvězd. Zároveň máme moc ovlivňovat podobu jiných věcí a schopnost tvořit. Pomocí Kinectu je snímána postava člověka, která se zobrazí složená z tísíců hvězdiček a jedna hvězda, která je počátkem tvorby. Člověk může tuto hvězdu chytit a začít spojovat své vlastní souhvězdí tak jak to cítí, nijak omezován rovnými čárami.",
+    component: (project) => <ProjectPageRewriteTheStars project={project} />,
   },
   {
     name: "Alena Kuhejdová",
@@ -254,6 +257,7 @@ export const projects: Project[] = [
     tools: ["Adobe Illustrator", "Adobe InDesign"],
     description: "string",
     text: "String",
+    component: (project) => <ProjectPageHandicraftBooks project={project} />,
   },
   {
     name: "30 Years of the Visegrad group",
