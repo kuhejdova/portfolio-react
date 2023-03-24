@@ -1,7 +1,10 @@
-import ProjectPage from "./components/ProjectPage";
+import ProjectPageAnthropology from "./components/ProjectPageAnthropology";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
+import ProjectPageBabylonfest from "./components/ProjectPageBabylonfest";
 import ProjectPageHandicraftBooks from "./components/ProjectPageHandicraftBooks";
 import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
+import ProjectPageVisegradGroup from "./components/ProjectPageVisegradGroup";
+import ProjectPageWakeUpCall from "./components/ProjectPageWakeUpCall";
 
 export enum ProjectTags {
   GRAPHIC_DESIGN = "Graphic design",
@@ -30,9 +33,6 @@ export type Project = {
   description: string;
   text: string;
   tools: string[];
-  text2?: string;
-  text3?: string;
-  text4?: string;
   component?: React.ReactNode | ((project: Project) => React.ReactNode);
 };
 
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     date: new Date(2019, 10, 1),
     tools: ["Adobe Illustrator"],
     description: "The visual identity for imaginary cat café",
-    text: "Visual identity works with stylized cats and is combined with coffee stains. The cat positions are inspired by living with one chunky cat. It consists of logo, pictograms and ideograms, which can be used in some real café.",
+    text: 'Visual identity works with stylized cats and is combined with coffee stains. Cats are simple and linear, and the cat positions are inspired by living with one chunky cat. Coffee stains are in the brown shades to create some playful element. There is logo of the café with its name Kocourkov ("the land of the cats"), pictograms and ideograms, which can be used in some real café.',
   },
   {
     name: "ArcheryFont",
@@ -85,8 +85,10 @@ export const projects: Project[] = [
     path: "/department_anthropology",
     date: new Date(2020, 3, 1),
     tools: ["Adobe Illustrator"],
-    description: "string",
-    text: "string",
+    description:
+      "Competiton to create visual identity for Department of Anthropology at MUNI",
+    text: "The task for this competiton was to create visual identity for Department of Anthropology at the Faculty of science at Masaryk univerzity. I didn't win this competition, but this was my idea. We had to work with the existing visual identity of Faculty of science hence the green color and Masaryk university logo. I used the letters from the MUNI font and I created simple bones and humans, which I combined with the green color.",
+    component: (project) => <ProjectPageAnthropology project={project} />,
   },
   {
     name: "Babylonfest",
@@ -102,8 +104,9 @@ export const projects: Project[] = [
     path: "/babylonfest",
     date: new Date(2020, 4, 1),
     tools: ["Adobe Illustrator"],
-    description: "string",
-    text: "string",
+    description: "Competiton to create visual identity for Babylonfest",
+    text: "Babylonfest is the festival of the minorities living in Brno city. The task was to create new visual identity which can be used on many objects and merch during the festival. The competition was canceled due to covid, but this is visual identity I have prepared. The main idea was to recreate the babylon tower with the letters and to use more colors to point out the diversity.",
+    component: (project) => <ProjectPageBabylonfest project={project} />,
   },
   {
     name: "Wake up call poster",
@@ -117,9 +120,9 @@ export const projects: Project[] = [
     path: "/wake_up_call",
     date: new Date(2020, 5, 1),
     tools: ["Adobe Illustrator"],
-    description: "string",
-    text: "string",
-    component: (project) => <ProjectPage project={project} />,
+    description: "Poster competition Wake up call",
+    text: "The topic for 11th Virtual bienale Prague 2020 was Wake up call. The keywords were climate change, pandemic, responsibility, zerowaste, human, nature, public space. One message, one goal: to inspire people with something positive. \n I wanted to point out the importance of our attitude to the nature, that our children and trees are growing together and should be living in the harmony.",
+    component: (project) => <ProjectPageWakeUpCall project={project} />,
   },
   {
     name: "Garden app",
@@ -199,7 +202,7 @@ export const projects: Project[] = [
     date: new Date(2020, 6, 2),
     tools: ["Adobe Illustrator"],
     description: "Redesign of the plain white jerseys for Archery club Ostrava",
-    text: "I have chosen two shades of blue, the lighter represents the color of the Ostrava city, and the darker means one of the colors of the Moravian-Silesian Region.",
+    text: "The goal was to create a new design of archery jerseys for the Archery club Ostrava Mariánské hory. Original jerseys were plain white with the logo in the front and in the back. I wanted to keep it simple and to select colors that are suitable for the amount of the time spend on the sun and in the nature. I have chosen two shades of blue, the lighter represents the color of the Ostrava city, and the darker means one of the colors of the Moravian-Silesian Region.",
   },
   {
     name: "Rewrite the stars",
@@ -220,7 +223,7 @@ export const projects: Project[] = [
     component: (project) => <ProjectPageRewriteTheStars project={project} />,
   },
   {
-    name: "Alena Kuhejdová",
+    name: "Dentist's visual identity",
     image: "/cover_images/ak_sign.png",
     projectImages: [
       "/project_images/ak_logo.png",
@@ -248,15 +251,40 @@ export const projects: Project[] = [
       "/project_images/hackovani_prebal_horni_strana.png",
       "/project_images/hackovani_predsadka.png",
       "/project_images/hackovani_vnitrek_prvni_strana.png",
+
+      "/project_images/kaligrafie_obalka.png",
+      "/project_images/kaligrafie_prebal.png",
+      "/project_images/kaligrafie_prebal_horni_strana.png",
+      "/project_images/kaligrafie_predsadka.png",
+      "/project_images/kaligrafie_vnitrek_prvni_strana.png",
+
+      "/project_images/koralky_obalka.png",
+      "/project_images/koralky_prebal.png",
+      "/project_images/koralky_prebal_horni_strana.png",
+      "/project_images/koralky_predsadka.png",
+      "/project_images/koralky_vnitrek_prvni_strana.png",
+
+      "/project_images/patchwork_obalka.png",
+      "/project_images/patchwork_prebal.png",
+      "/project_images/patchwork_prebal_horni_strana.png",
+      "/project_images/patchwork_predsadka.png",
+      "/project_images/patchwork_vnitrek_prvni_strana.png",
+
+      "/project_images/krizkovy_steh_obalka.png",
+      "/project_images/krizkovy_steh_prebal.png",
+      "/project_images/krizkovy_steh_prebal_predni_strana.png",
+      "/project_images/krizkovy_steh_predsadka.png",
+      "/project_images/krizkovy_steh_vnitrek_prvni_strana.png",
+
       "/project_images/hackovani_vnitrek.png",
       "/project_images/hackovani_vnitrek_2.png",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
     path: "/handicraftbooks",
     date: new Date(2021, 1, 2),
-    tools: ["Adobe Illustrator", "Adobe InDesign"],
-    description: "string",
-    text: "String",
+    tools: ["Adobe Illustrator", "Adobe InDesign", "Adobe AfterEffects"],
+    description: "Handicraft Book series design",
+    text: "Imaginary book series with handicrafts consists of five books and book series trailer.",
     component: (project) => <ProjectPageHandicraftBooks project={project} />,
   },
   {
@@ -268,7 +296,8 @@ export const projects: Project[] = [
     date: new Date(2020, 10, 1),
     tools: ["Adobe Illustrator"],
     description: "30 Years of the Visegrad group poster competiton",
-    text: '<a href="https://www.freepik.com/free-psd/two-framed-posters-mockup-design_8961022.htm#query=two%20posters%20mockup&position=6&from_view=search&track=ais">Image by BiZkettE1</a> on Freepik',
+    text: 'The topic of this competition was to create poster to celebrate the 30 years of existence the Visegrad group. My idea was to display this by simple designs focused on the numbers. The left one has counting in the middle and also represents that there are 4 countries. The second poster represents the numbers by the dots.',
+    component: (project) => <ProjectPageVisegradGroup project={project} />,
   },
   {
     name: "Archery results visualization",
@@ -290,6 +319,40 @@ export const projects: Project[] = [
     description: "Improved visualization of archery results",
     text: "Visualization of the archery results in seasons 2018/19 and 2019/20. As the page with results provides confusing and visually confusing results, I decided to try to remake it to be more readable for archers. Results visualization helps archers to see their score in comparison with the other competitions and in this one, they can check the whole season or just one of the competitions.",
     component: (project) => <ProjectPageArcheryResults project={project} />,
+  },
+
+  {
+    name: "Flower fairy",
+    image: "/cover_images/flower_fairy_sign.png",
+    projectImages: [
+      "/cover_images/flower_fairy_sign.png",
+      "/project_images/flower_fairy_2.png",
+      "/project_images/flower_fairy_3.png",
+      "/project_images/flower_fairy_4.png",
+    ],
+    tags: [ProjectTags.MODELLING],
+    path: "/flowerfairy",
+    date: new Date(2021, 6, 1),
+    tools: ["Blender"],
+    description: "Fairy with flower as her wings",
+    text: "3D modell created from the cube. Small baby girl fairy with flower growing from her back. She is dressed in leafs and she lives in the forest.",
+  },
+
+  {
+    name: "MjUNI advent",
+    image: "/cover_images/mjuni_advent_sign.png",
+    projectImages: [
+      "/cover_images/mjuni_advent_sign.png",
+      "/project_images/mjuni_advent_2.png",
+      "/project_images/mjuni_advent_3.png",
+      "/project_images/mjuni_advent_4.png",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/mjuniadvent",
+    date: new Date(2021, 11, 1),
+    tools: ["Affinity Designer"],
+    description: "Advent banners for Masaryk Juniverzity",
+    text: "Series of the facebook banners for MjUNI with the advent theme. There are four candles as the Czech tradition of lighting one candle every week of advent on the Sunday.",
   },
 
   // SOMETHING WITH COMPONENT

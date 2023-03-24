@@ -1,11 +1,11 @@
 import {
   Box,
   Container,
-  Flex,
   Heading,
   HStack,
   Image,
   ListItem,
+  SimpleGrid,
   Text,
   UnorderedList,
   useColorModeValue,
@@ -87,7 +87,33 @@ export default function ProjectPage(props: IProjectBoxProps) {
         // paddingTop = {0}
       > */}
 
-      <Flex py={{ base: 18, md: 20 }} w={"100%"}>
+      <SimpleGrid
+        columns={2}
+        spacing={5}
+        w={"100%"}
+        paddingBottom={5}
+        paddingTop={10}
+      >
+        <Image
+          rounded={"md"}
+          alt={"product image"}
+          src={props.project.projectImages[3]}
+          fit={"cover"}
+          align={"center"}
+          w={"100%"}
+          h={{ base: "100%", sm: "400px", lg: "500px" }}
+        />
+        <Image
+          rounded={"md"}
+          alt={"product image"}
+          src={props.project.projectImages[4]}
+          fit={"cover"}
+          align={"center"}
+          w={"100%"}
+          h={{ base: "100%", sm: "400px", lg: "500px" }}
+        />
+      </SimpleGrid>
+      {/* <Flex py={{ base: 18, md: 20 }} w={"100%"}>
         <HStack w={"100%"}>
           <Image
             rounded={"md"}
@@ -117,7 +143,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
             h={{ base: "100%", sm: "400px", lg: "500px" }}
           />
         </HStack>
-      </Flex>
+      </Flex> */}
 
       <Box>
         <Heading size="md" mb={2}>
