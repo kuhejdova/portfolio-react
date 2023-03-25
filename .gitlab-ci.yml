@@ -7,7 +7,7 @@ build:
   stage: build
   variables:
     # Replace this with your site URL
-    PUBLIC_URL: https://kuhejdova.gitlab.io/
+    PUBLIC_URL: https://kuhejdova.gitlab.io/portfolio-react
   script:
     - yarn install # Run `yarn install` and `yarn build`
     - yarn build
