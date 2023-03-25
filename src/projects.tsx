@@ -1,7 +1,10 @@
 import ProjectPageAnthropology from "./components/ProjectPageAnthropology";
+import ProjectPageArcheryfont from "./components/ProjectPageArcheryfont";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
 import ProjectPageBabylonfest from "./components/ProjectPageBabylonfest";
+import ProjectPageGarden from "./components/ProjectPageGarden";
 import ProjectPageHandicraftBooks from "./components/ProjectPageHandicraftBooks";
+import ProjectPageMeduse from "./components/ProjectPageMeduse";
 import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
 import ProjectPageVisegradGroup from "./components/ProjectPageVisegradGroup";
 import ProjectPageWakeUpCall from "./components/ProjectPageWakeUpCall";
@@ -62,13 +65,16 @@ export const projects: Project[] = [
       "/project_images/archeryfont_diplom.png",
       "/project_images/archeryfont_blue.png",
       "/project_images/archeryfont_score.png",
+      "/project_images/archeryfont_liga.png",
+      "/project_images/archeryfont_trefa.png",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
     path: "/archeryfont",
     date: new Date(2020, 10, 1),
     tools: ["Adobe Illustrator", "Fontlab 3"],
     description: "The font based on archery elements",
-    text: "It's a linear font that is decorated with part of the arrow or target. Due to its high stylization, it's mainly used for headlines. This font also contains numbers and Czech localization. You can dowload it here - https://typefoundry.fi.muni.cz/cs/archery",
+    text: "It's a linear font that is decorated with parts of the arrow or target. Due to its high stylization, it's mainly used for headlines. This font also contains numbers and Czech localization. You can dowload it here - https://typefoundry.fi.muni.cz/cs/archery",
+    component: (project) => <ProjectPageArcheryfont project={project} />,
   },
   {
     name: "Department of Anthropology",
@@ -133,13 +139,16 @@ export const projects: Project[] = [
       "/project_images/garden_web_fin2.png",
       "/project_images/garden_web_fin3.png",
       "/project_images/garden_web_fin4.png",
+      "/project_images/garden_persona.jpg",
+      "/project_images/garden_storyboard.jpg",
     ],
     tags: [ProjectTags.UX],
     path: "/garden",
     date: new Date(2020, 6, 1),
-    tools: ["Figma"],
-    description: "string",
-    text: "Ve spolupráci s Martin Petr, Odkazy web - https://pv278-garden.web.app/ prototyp - https://www.figma.com/file/u47pOhmfyumOV0gJh14ncu/prototyp?node-id=5%3A58",
+    tools: ["Figma", "React"],
+    description: "Gardening app for the helpless gardeners",
+    text: "The app was created in collaboration with Martin Petr, I have focused on the design part and he programmed the app. Our task was to design and create an app which is using the data about the weather - temperature, sunlight and pressure. We have decided to create an app that can help predict when is the best time to plant some basic plants in the garden.",
+    component: (project) => <ProjectPageGarden project={project} />,
   },
   {
     name: "Medus-e",
@@ -153,8 +162,9 @@ export const projects: Project[] = [
     path: "/meduse",
     date: new Date(2020, 11, 1),
     tools: ["Blender"],
-    description: "string",
-    text: "String",
+    description: "This robot can help you... or petrify you",
+    text: '3D model of the robot, which was inpired by Wall-e robot from Pixar and by Meduse from the Ancient Greek myths. The bottom part is cleaning robot, which can help you at home and it has many hands coming from the "head". It also has blindfold, as in the myth you were not supposed to look to Medusa\'s eyes. If you look at her, she will petrify you, as this housecleening robot will do.',
+    component: (project) => <ProjectPageMeduse project={project} />,
   },
   {
     name: "Human head",
@@ -296,7 +306,7 @@ export const projects: Project[] = [
     date: new Date(2020, 10, 1),
     tools: ["Adobe Illustrator"],
     description: "30 Years of the Visegrad group poster competiton",
-    text: 'The topic of this competition was to create poster to celebrate the 30 years of existence the Visegrad group. My idea was to display this by simple designs focused on the numbers. The left one has counting in the middle and also represents that there are 4 countries. The second poster represents the numbers by the dots.',
+    text: "The topic of this competition was to create poster to celebrate the 30 years of existence the Visegrad group. My idea was to display this by simple designs focused on the numbers. The left one has counting in the middle and also represents that there are 4 countries. The second poster represents the numbers by the dots.",
     component: (project) => <ProjectPageVisegradGroup project={project} />,
   },
   {
