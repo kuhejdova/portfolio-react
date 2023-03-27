@@ -6,6 +6,7 @@ import ProjectPageGarden from "./components/ProjectPageGarden";
 import ProjectPageHandicraftBooks from "./components/ProjectPageHandicraftBooks";
 import ProjectPageMeduse from "./components/ProjectPageMeduse";
 import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
+import ProjectPageTreeClock from "./components/ProjectPageTreeClock";
 import ProjectPageVisegradGroup from "./components/ProjectPageVisegradGroup";
 import ProjectPageWakeUpCall from "./components/ProjectPageWakeUpCall";
 
@@ -185,7 +186,7 @@ export const projects: Project[] = [
     name: "Tree clock",
     image: "/cover_images/treeclock_sign.png",
     projectImages: [
-      "/project_images/treeclock_1.png",
+      "/project_images/treeclock_cropped.png",
       "/project_images/treeclock_2.png",
       "/project_images/treeclock_3.png",
       "/project_images/treeclock_4.png",
@@ -194,8 +195,9 @@ export const projects: Project[] = [
     path: "/treeclock",
     date: new Date(2020, 11, 2),
     tools: ["Processing"],
-    description: "string",
-    text: "String",
+    description: "If you count carefully, you can find out what time it is",
+    text: "This generative clock was created with two constraints - Work with only two colors. Keep it random. The main idea was to create night and day forest - day is between 6am and 6pm and the night otherwise. You can read the clock in this way, one tree is one hour, wan bigger star is one minute and one smaller star is one second. So let's get lost in the forest and remember, do not forget to count.",
+    component: (project) => <ProjectPageTreeClock project={project} />,
   },
   {
     name: "Archery jersey",
@@ -239,9 +241,9 @@ export const projects: Project[] = [
       "/project_images/ak_logo.png",
       "/project_images/ak_business_cards.jpg",
       "/project_images/ak_stationery.png",
-      "/project_images/ak_web.png",
       "/project_images/ak_face_masks.jpg",
       "/project_images/ak_tshirt.png",
+      "/project_images/ak_web.png",
       "/project_images/ak_manual.png",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
