@@ -68,17 +68,17 @@ export default function ProjectPage(props: IProjectBoxProps) {
         paddingBottom={10}
       />
       <Text>
-        Pro svůj projekt jsem si vybrala vizualizaci datasetu, který jsem si
-        vytáhla ze stránek{" "}
+        As my project topic, I have chosen the visualization of the dataset I
+        extracted from the{" "}
         <Link
           href="https://www.rcherz.com/cs/users/viewProfile/52cf7168/eva_kuhejdova"
           color="teal.500"
         >
-          Rcherz
+          Rcherz webpage
         </Link>
-        . Na těchto stránkách se také nachází vizualizace, které mi ale přijdou
-        nepřehledné a ne moc hezky zpracované. Data jsem si vytáhla do dvou csv
-        souborů - zvlášť vnitřní a zvlášť venkovní sezónu.{" "}
+        . This page has some visualization but is confusing, unclear and not
+        visually appealing. I divided data into two .csv files - the indoor and
+        outdoor seasons.{" "}
       </Text>
       <Image
         rounded={"md"}
@@ -92,28 +92,28 @@ export default function ProjectPage(props: IProjectBoxProps) {
         paddingBottom={10}
       />
       <Text paddingBottom={5}>
-        V tomto grafu (nalevo) jsou úplně všechny výsledky bez ohledu na to,
-        jestli se jedná o venkovní nebo vnitřní sezónu (je tam rozdíl i v
-        maximálním skóre i v počtu vystřelených šípů) a také se tam nebere ohled
-        na to, že v mladších kategoriích se střílí jiná vzdálenost (třeba
-        40/30m, 60m).
+        In this graph (on the left side), there are all the results, no matter
+        if it's an outdoor or indoor season (it depends because the maximal
+        score and the number of arrows shot are different). Also, it doesn't
+        consider that distances in younger categories are different (e.g.,
+        40/30m, 60m), so comparing these results in one graph is impossible.
       </Text>
       <Text paddingBottom={10}>
-        Já jsem se rozhodla tento graf použít, ale rozdělit na jednotlivé sezóny
-        (napravo), tedy oddělit hlavně venkovní a vnitřní sezónu. Vzdálenost je
-        vždy napsaná nahoře v informacích, tedy dalo by se to snadno rozšířit i
-        na jiné vzdálenosti (já tam mám pouze 70m, protože podrobná data ze
-        závodů máme pouze poslední dva roky). Uživatel si tedy nahoře vpravo
-        zvolí sezónu a rok a podle toho se mu překreslí data. Je tam také label,
-        který se zobrazí, když je myš nad daným kolečkem - je tam přesné datum a
-        přesná hodnota výsledku.
+        I have decided to use this graph but divide it into seasons (on the
+        right side), mainly the outdoor and indoor seasons. The distance is
+        always written at the top in the information panel to be easily
+        extendable to other distances (I have only 70m because detailed data we
+        have only from the past two years). The user selects the season and year
+        in the top right corner, and that draws the relevant data. There is also
+        a label showing the exact date, and score displayed when the mouse
+        hovers over the circle.
       </Text>
       <Text>
-        Barvy jsem zvolila podle typických barev pro danou sezónu (tyto barvy se
-        nachází na diplomech, pohárech a dalších) - červená je pro venkovní
-        sezónu a modrá pro vnitřní. Graf zásahů jsem obarvila podle hodnoty na
-        terči, protože pro lukostřelce je hned zřejmé, jaké jsou jeho
-        nejčastější zásahy.
+        I have chosen the color palette by the typical colors used for the
+        relevant season (these colors are used for diplomas, trophies, and
+        others) - the red is for the outdoor season, and the blue is for the
+        indoor season. The target colors color the graph of hits because, for
+        archers, it is apparent at first sight what the most frequent hits are.
       </Text>
       <Center>
         <Image
@@ -129,11 +129,11 @@ export default function ProjectPage(props: IProjectBoxProps) {
         />
       </Center>
       <Text>
-        Barchart (napravo) jsem zvolila z důvodu, že ve venkovní sezóně
-        potřebujeme rozlišit až 12 různých hodnot, což v původním piechartu může
-        působit už hodně nepřehledně. Původní vizualizace ze stránek Rcherz
-        vypadá takto (nalevo). Barvy na stránkách jsou naprosto náhodné a nijak
-        nesouvisí s hodnotami na terči.
+        I have selected the bar chart (on the right side) because we need to
+        distinguish up to 12 different values in the outdoor season, which can
+        be too much for the initially used pie chart. On the left side, you can
+        see the original visualization from the Rcherz webpage; the colors are
+        random and don't correspond to the target values.
       </Text>
       <Image
         rounded={"md"}
@@ -147,13 +147,12 @@ export default function ProjectPage(props: IProjectBoxProps) {
         paddingBottom={10}
       />
       <Text>
-        Dále jsem přidala heatmap, která znázorňuje hodnoty po jednotlivých
-        závodních sadách (vždy po 3 - vevnitř a 6 - venku šípech se jde
-        zapisovat k terči - 1 sada). Lze tam sledovat například která závodní
-        sada bývá pravidelně nejhorší a která nejlepší (na obrázku jde vidět, že
-        nejlepší výsledky dosahuju pravidelně v 15 a 16 sadě, zatímco první bývá
-        většinou nejhorší). Je tam také label, který zobrazí hodnotu pro
-        obdélník když je na něm myš.
+        A heatmap also displays values per set (after three arrows indoors and
+        six arrows outdoors, there is time to sum up, and write the score). It
+        is possible to check which set is the worst and the best (you can see
+        that I have the best results, mainly in the 15th or 16th set, and the
+        first one is usually the worst). A label also displays the value for the
+        selected rectangle on mouse hover.
       </Text>
       <Center>
         <Image
@@ -169,8 +168,8 @@ export default function ProjectPage(props: IProjectBoxProps) {
         />
       </Center>
       <Text>
-        Na kolečka v scatter plotu se dá kliknout, což zobrazí detail
-        konkrétního závodu.
+        The scatter plot circles are clickable and display the selected
+        competition's detail.
       </Text>
       <Image
         rounded={"md"}
@@ -184,12 +183,12 @@ export default function ProjectPage(props: IProjectBoxProps) {
         paddingBottom={10}
       />
       <Text>
-        Kolečko se zvýrazní, zásahy se změní jen na zásahy v tomto konkrétním
-        závodě a heatmap se překreslí na barchart, který zachovává barvy z
-        daného řádku heatmap. V původním provedení je to také barchart, ovšem ve
-        variantě stacked barchart, která mi přijde poměrně zbytečná. Jednotlivé
-        barvy opět odpovídají výše vygenerovaným náhodně v piechartu, tedy není
-        to ani příliš intuitivní a zřejmé na první pohled.
+        The circle is highlighted, and the hits are changed only to those in
+        this selected competition. The heatmap is redrawn to a bar chart, which
+        keeps colors from the relevant heatmap line. In the original
+        implementation, it is also a bar chart, but in the stacked variant,
+        which is unnecessary, and colors are also randomly generated, so it
+        isn't clear and intuitive.
       </Text>
       <Center>
         <Image
@@ -204,48 +203,6 @@ export default function ProjectPage(props: IProjectBoxProps) {
           paddingBottom={10}
         />
       </Center>
-      {/* <Image
-        rounded={"md"}
-        alt={"product image"}
-        src={props.project.projectImages[2]}
-        fit={"contain"}
-        align={"center"}
-        w={"100%"}
-        h={{ base: "100%" }}
-        paddingTop={10}
-      /> */}
-
-      {/* <Flex py={{ base: 18, md: 20 }} w={"100%"}>
-        <HStack w={"100%"}>
-          <Image
-            rounded={"md"}
-            alt={"product image"}
-            src={props.project.projectImages[3]}
-            fit={"cover"}
-            align={"center"}
-            w={"100%"}
-            h={{ base: "100%", sm: "400px", lg: "500px" }}
-          />
-          <Image
-            rounded={"md"}
-            alt={"product image"}
-            src={props.project.projectImages[4]}
-            fit={"cover"}
-            align={"center"}
-            w={"100%"}
-            h={{ base: "100%", sm: "400px", lg: "500px" }}
-          />
-          <Image
-            rounded={"md"}
-            alt={"product image"}
-            src={props.project.projectImages[5]}
-            fit={"cover"}
-            align={"center"}
-            w={"100%"}
-            h={{ base: "100%", sm: "400px", lg: "500px" }}
-          />
-        </HStack>
-      </Flex> */}
 
       <Box>
         <Heading size="md" mb={2}>

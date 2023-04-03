@@ -35,7 +35,7 @@ export default function ProjectBox(props: IProjectBoxProps) {
               height={230}
               width={282}
               objectFit={"cover"}
-              src={props.project.image}
+              src={`${process.env.PUBLIC_URL}/${props.project.image}`}
             />
           </Box>
           <Stack pt={5} align={"center"}>
@@ -43,12 +43,19 @@ export default function ProjectBox(props: IProjectBoxProps) {
               color={"gray.500"}
               fontSize={"sm"}
               textTransform={"uppercase"}
+              align={"center"}
             >
               {props.project.tags.map((tag) => (
                 <Badge mx="1">{tag}</Badge>
               ))}
             </Text>
-            <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500} textAlign={"center"} py={2}>
+            <Heading
+              fontSize={"2xl"}
+              fontFamily={"body"}
+              fontWeight={500}
+              textAlign={"center"}
+              py={2}
+            >
               {props.project.name}
             </Heading>
           </Stack>

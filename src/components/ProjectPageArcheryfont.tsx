@@ -55,8 +55,8 @@ export default function ProjectPage(props: IProjectBoxProps) {
           {props.project.description}
         </Text>
         <Text fontSize={"lg"}>
-          It's a linear font that is decorated with parts of the arrow or
-          target, based on the shape of the letter. The font is derived from the{" "}
+          It's a linear font that is decorated with parts of the arrow or target
+          based on the shape of the letter. The font is derived from the{" "}
           <Link
             color="teal.500"
             href="https://fonts.google.com/specimen/Quicksand"
@@ -64,7 +64,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
             Quicksand font
           </Link>
           . Due to its high stylization, it's mainly used for headlines as it
-          can be hardly readable in smaller sizes. This font also contains
+          can hardly be readable in smaller sizes. This font also contains
           numbers and Czech localization.
         </Text>
       </VStack>

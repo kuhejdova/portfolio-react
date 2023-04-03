@@ -1,5 +1,6 @@
 import {
   Box,
+  Center,
   Container,
   Heading,
   HStack,
@@ -55,7 +56,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
       </VStack>
 
       <Heading size="md" mb={2}>
-        Crochet
+        Crocheting for beginers
       </Heading>
 
       <SimpleGrid
@@ -144,7 +145,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
       </SimpleGrid>
 
       <Heading size="md" mb={2}>
-        Caligraphy
+        Modern calligraphy
       </Heading>
 
       <SimpleGrid
@@ -210,7 +211,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
       </SimpleGrid>
 
       <Heading size="md" mb={2}>
-        Beads
+        Beaded animals
       </Heading>
 
       <SimpleGrid
@@ -276,7 +277,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
       </SimpleGrid>
 
       <Heading size="md" mb={2}>
-        Patchwork
+        Easy patchwork
       </Heading>
 
       <SimpleGrid
@@ -342,7 +343,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
       </SimpleGrid>
 
       <Heading size="md" mb={2}>
-        Embroidery
+        Learn the cross stitch
       </Heading>
 
       <SimpleGrid
@@ -384,7 +385,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         />
       </SimpleGrid>
 
-      <SimpleGrid columns={2} spacing={5} w={"100%"} paddingBottom={5}>
+      <SimpleGrid columns={2} spacing={5} w={"100%"} paddingBottom={10}>
         <Image
           rounded={"md"}
           alt={"product image"}
@@ -410,7 +411,16 @@ export default function ProjectPage(props: IProjectBoxProps) {
       <Heading size="md" mb={2}>
         Trailer for the book series
       </Heading>
-      <Text>EMBED VIDEO HERE!</Text>
+      <Center py={10}>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/y3Llg0A4CYc"
+          title="Book series trailer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </Center>
 
       <Box>
         <Heading size="md" mb={2}>

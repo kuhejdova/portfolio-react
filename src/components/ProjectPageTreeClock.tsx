@@ -86,7 +86,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         paddingTop={10}
       />
 
-      <Text paddingTop={10}>EMBED VIDEOS HERE!</Text>
+      <Text paddingTop={10}>Video will be added</Text>
 
       <Box paddingTop={10}>
         <Heading size="md" mb={2}>

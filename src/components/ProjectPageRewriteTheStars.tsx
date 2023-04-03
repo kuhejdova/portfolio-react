@@ -2,13 +2,13 @@ import {
   Box,
   Center,
   Container,
-  Flex,
   Heading,
   HStack,
   IconButton,
   Image,
   Link,
   ListItem,
+  SimpleGrid,
   Text,
   UnorderedList,
   useColorModeValue,
@@ -58,47 +58,52 @@ export default function ProjectPage(props: IProjectBoxProps) {
         <Text fontSize={"lg"}>{props.project.text}</Text>
       </VStack>
 
-      <Flex py={{ base: 10, md: 10 }} w={"100%"}>
-        <HStack w={"100%"}>
-          <Image
-            rounded={"md"}
-            alt={"product image"}
-            src={props.project.projectImages[1]}
-            fit={"cover"}
-            align={"center"}
-            w={"100%"}
-            h={{ base: "100%", sm: "400px", lg: "500px" }}
-          />
-          <Image
-            rounded={"md"}
-            alt={"product image"}
-            src={props.project.projectImages[2]}
-            fit={"cover"}
-            align={"center"}
-            w={"100%"}
-            h={{ base: "100%", sm: "400px", lg: "500px" }}
-          />
-        </HStack>
-      </Flex>
+      <SimpleGrid
+        columns={2}
+        spacing={5}
+        w={"100%"}
+        paddingTop={10}
+        paddingBottom={10}
+      >
+        <Image
+          rounded={"md"}
+          alt={"product image"}
+          src={props.project.projectImages[1]}
+          fit={"contain"}
+          align={"center"}
+          w={"100%"}
+          h={{ base: "100%", sm: "400px", lg: "500px" }}
+        />
+        <Image
+          rounded={"md"}
+          alt={"product image"}
+          src={props.project.projectImages[2]}
+          fit={"contain"}
+          align={"center"}
+          w={"100%"}
+          h={{ base: "100%", sm: "400px", lg: "500px" }}
+        />
+      </SimpleGrid>
 
       <Heading size="md" mb={2}>
-          Controls
-        </Heading>
-      <Text >
-        Pohybem před Kinectem, pro uchopení hvězdy je třeba sevřít ruku v pěst
-        (chytit ji) a přitom s ní pohybovat směrem k další hvězdě pro změnu
-        barvy. Je možnost využít pravou nebo levou ruku, případně hvězdu pustit
-        a chytit druhou rukou. Pro puštění hvězdy je třeba držet ruku otevřenou
-        proti Kinectu alespoň 15 snímků. Po propojení všech hvězd zůstane
-        možnost kreslit naprosto volně.
+        Controls
+      </Heading>
+      <Text>
+        Everything is controlled by the movement in front of the Kinect device.
+        To catch the star, it is necessary to clench the fist and then move it
+        to the next star to change the color. You can use your right or left
+        hand, and there is the possibility to drop it and change hands. To drop
+        the star, you need to hold your hand open in front of the Kinect for 15
+        frames. After connecting all stars, there is an option to draw entirely
+        freely.
       </Text>
 
-      <HStack w={"100%"} paddingTop={10}>
+      <SimpleGrid columns={2} spacing={5} w={"100%"} paddingTop={10}>
         <Image
           rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[3]}
-          fit={"cover"}
+          fit={"contain"}
           align={"center"}
           w={"100%"}
           h={{ base: "100%", sm: "400px", lg: "500px" }}
@@ -107,12 +112,12 @@ export default function ProjectPage(props: IProjectBoxProps) {
           rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[4]}
-          fit={"cover"}
+          fit={"contain"}
           align={"center"}
           w={"100%"}
           h={{ base: "100%", sm: "400px", lg: "500px" }}
         />
-      </HStack>
+      </SimpleGrid>
 
       <Center py={10}>
         <iframe

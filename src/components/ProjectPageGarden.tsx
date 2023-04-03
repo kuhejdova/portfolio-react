@@ -60,10 +60,10 @@ export default function ProjectPage(props: IProjectBoxProps) {
 
       <Text paddingTop={10}>
         {" "}
-        First step was to define a persona, who will interact with our app. Our
-        persona was grandma Agnes, who is helpless gardener and her plants are
-        still dying. Her grandchildren suggests to her to find an app, as she
-        can use computers.
+        The first step was defining a persona to interact with our app. Our
+        persona was grandma Agnes, a helpless gardener whose plants are still
+        dying. Her grandchildren suggest finding an app, as she can use
+        computers.
       </Text>
       <Center>
         <Image
@@ -78,7 +78,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         />
       </Center>
       <Text paddingTop={10}>
-        Next, we created the storyboard with scenario to demonstrate the usage
+        Next, we created the storyboard with a scenario to demonstrate the usage
         of our app.
       </Text>
       <Center>
@@ -96,15 +96,15 @@ export default function ProjectPage(props: IProjectBoxProps) {
       </Center>
 
       <Text paddingTop={10} paddingBottom={10}>
-        Than we have prepared low fidelity and high fidelity prototypes. High-fi
-        prototype was created in Figma and it is provided below. Flow 1 is
+        Then, we prepared low-fidelity and high-fidelity prototypes. High-fi
+        prototype was created in Figma, and it is provided below. Flow 1 is the
         desktop version and Flow 2 is mobile version. This prototype is
         clickable and demonstrates how the app can be used. We wanted to create
-        simple app anyone can use, even the elderly people.
+        simple app anyone can use, even older people.
       </Text>
 
       <iframe
-      title="garden_hifi"
+        title="garden_hifi"
         width={"100%"}
         height={"600"}
         src={
@@ -114,10 +114,9 @@ export default function ProjectPage(props: IProjectBoxProps) {
       ></iframe>
 
       <Text paddingTop={10}>
-        This design Martin programmed in React and the app is available on the
-        link below. There were a few design changes, as we used heatmap graph
-        instead of bar charts and also we used the top menu instead of the left
-        side menu.
+        This design Martin programmed in React, and the app is available on the
+        link below. There were a few design changes, as we used a heatmap graph
+        instead of bar charts and the top menu instead of the left side menu.
       </Text>
       <Link color="teal.500" href="https://pv278-garden.web.app/">
         <Center>
@@ -134,12 +133,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         </Center>
       </Link>
 
-      <SimpleGrid
-        columns={2}
-        spacing={5}
-        w={"100%"}
-        h={"400px"}
-      >
+      <SimpleGrid columns={2} spacing={5} w={"100%"} h={"400px"}>
         <Image
           rounded={"md"}
           alt={"product image"}

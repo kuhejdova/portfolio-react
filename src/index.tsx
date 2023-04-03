@@ -12,7 +12,9 @@ root.render(
   <React.StrictMode>
     <ChakraProvider>
       {/* tady predat theme viz https://chakra-ui.com/docs/styled-system/theme */}
-      <RouterProvider router={createBrowserRouter(router)} />
+      <RouterProvider
+        router={createBrowserRouter(router)}
+      />
     </ChakraProvider>
   </React.StrictMode>
 );
