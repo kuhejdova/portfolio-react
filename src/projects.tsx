@@ -4,6 +4,9 @@ import ProjectPageAnthropology from "./components/ProjectPageAnthropology";
 import ProjectPageArcheryfont from "./components/ProjectPageArcheryfont";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
 import ProjectPageBabylonfest from "./components/ProjectPageBabylonfest";
+import ProjectPageElderlyBanking from "./components/ProjectPageElderlyBanking";
+import ProjectPageFastr from "./components/ProjectPageFastr";
+import ProjectPageFFFIMU from "./components/ProjectPageFFFIMU";
 import ProjectPageGarden from "./components/ProjectPageGarden";
 import ProjectPageHandicraftBooks from "./components/ProjectPageHandicraftBooks";
 import ProjectPageHead from "./components/ProjectPageHead";
@@ -12,6 +15,7 @@ import ProjectPageMeduse from "./components/ProjectPageMeduse";
 import ProjectPageMjuniAdvent from "./components/ProjectPageMjuniAdvent";
 import ProjectPageMocap from "./components/ProjectPageMocap";
 import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
+import ProjectPageSupernova from "./components/ProjectPageSupernova";
 import ProjectPageTreeClock from "./components/ProjectPageTreeClock";
 import ProjectPageVisegradGroup from "./components/ProjectPageVisegradGroup";
 import ProjectPageWakeUpCall from "./components/ProjectPageWakeUpCall";
@@ -27,11 +31,24 @@ export enum ProjectTags {
   ANIMATION = "Animation",
 
   OTHER = "Other",
+  ALL = "All",
 }
 
 export const otherCategories: ProjectTags[] = [
   ProjectTags.VISUALIZATION,
   ProjectTags.ANIMATION,
+];
+
+export const allCategories: ProjectTags[] = [
+  ProjectTags.GRAPHIC_DESIGN,
+  ProjectTags.UX,
+  ProjectTags.TYPOGRAPHY,
+  ProjectTags.MODELLING,
+  ProjectTags.GENERATIVE,
+  ProjectTags.VISUAL,
+  ProjectTags.VISUALIZATION,
+  ProjectTags.ANIMATION,
+  ProjectTags.OTHER,
 ];
 
 export type Project = {
@@ -462,7 +479,7 @@ export const projects: Project[] = [
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
     path: "/akademikpro",
-    date: new Date(2021, 11, 1),
+    date: new Date(2021, 11, 2),
     tools: ["Affinity Designer"],
     description: "Competition to create a visual identity for AkademikPRO",
     text: "This competition aimed to create the logo and visual identity for the project called AkademikPRO focused mainly on social networks, youtube, and electronic devices. This project is focused on educating young academics in the sphere of the communication of science and research. Part of the task was also to create just a simple prototype of the animation for the educational videos and a webpage and certificate for the participating in their courses.",
@@ -487,5 +504,91 @@ export const projects: Project[] = [
       "Competition to create a visual identity for the Centre for Artificial Intelligence in Oncology",
     text: "This competition focused on creating the logo and visual identity for the Centre for AI in Oncology. Their requirements were to make a webpage, Word, and Powerpoint template. My idea was to connect the ribbon, which represents the oncology, with the integrated circuit's parts. The color palette also blended yellow, which represents the color of intelligence, and violet, which is the general color for oncology. This logo ended up in second place.",
     component: (project) => <ProjectPageAkademikpro project={project} />,
+  },
+
+  {
+    name: "PR & Visual for Film Festival FI MU 2022",
+    image: "cover_images/fffimu22_sign.png",
+    projectImages: [
+      "project_images/fffimu22_thanks.png",
+      "project_images/fffimu22_mediakit1.png",
+      "project_images/fffimu22_mediakit2.png",
+      "project_images/fffimu22_tshirt.png",
+      "project_images/fffimu22_placky1.png",
+      "project_images/fffimu22_placky2.png",
+      "project_images/fffimu22_placky3.png",
+      "project_images/fffimu22_placky.jpg",
+      "project_images/fffimu22_sitotisk.jpg",
+      "project_images/fffimu22_instagram.png",
+      "project_images/fffimu22_easter.png",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/fffimu22",
+    date: new Date(2022, 5, 1),
+    tools: ["Affinity Designer"],
+    description: "22nd Film festival of Faculty of Informatics at MU",
+    text: "I was a part of the Public relations and Visual teams for preparations of the 22nd FFFI MU, a student film festival; students entirely organized that. My role was to work with the visual identity my friend Šárka Portešová created. I was also working with social networks, combining PR and Visual.",
+    component: (project) => <ProjectPageFFFIMU project={project} />,
+  },
+
+  {
+    name: "FaStR app",
+    image: "cover_images/fastr_sign.png",
+    projectImages: ["cover_images/fastr_sign.png"],
+    tags: [ProjectTags.UX],
+    path: "/fastr",
+    date: new Date(2022, 5, 2),
+    tools: ["Figma"],
+    description: "UX/UI study of an app FaStR - FAncy STudent Recipes",
+    text: "This project was created with my two friends Hana Tokárová and Filip Zlacký. We wanted to create an e-cookbook with easy recipes mainly focused on the students. We did a whole study and research, containing interviews, sketches, low-fidelity and high-fidelity prototypes, user testing, and final evaluation.",
+    component: (project) => <ProjectPageFastr project={project} />,
+  },
+
+  {
+    name: "Elderly Banking app",
+    image: "cover_images/elderlybanking_sign.png",
+    projectImages: ["project_images/elderlybanking_1.png"],
+    tags: [ProjectTags.UX],
+    path: "/elderlybanking",
+    date: new Date(2022, 12, 1),
+    tools: ["Figma"],
+    description: "UX/UI study of a banking app for the elderly people",
+    text: "I have created this study with Hana Tokárová. The main goal was to research how to create a banking app for older people who may or may not know how to use their smartphones. We make our personas and try to think like them to discover all the troubles they can have. We chose the orange color because it is warm and calming, and contrasting enough.",
+    component: (project) => <ProjectPageElderlyBanking project={project} />,
+  },
+
+  {
+    name: "Supernova",
+    image: "cover_images/supernova_sign.png",
+    projectImages: [
+      "project_images/supernova_2.png",
+      "project_images/supernova_3.png",
+      "project_images/supernova_5.png",
+      "project_images/supernova_6.png",
+    ],
+    tags: [ProjectTags.GENERATIVE],
+    path: "/supernova",
+    date: new Date(2022, 11, 1),
+    tools: ["p5.js"],
+    description: "Exploding star for the Prototyp installation",
+    text: "My work was a part of the Festival of Arts, Sciences and Technology - Prototyp 2022, which took place in the Underground reservoirs in Brno. Our installation was called Portal, and it was the presentation of 14 works of current and former students of Generative design at the Faculty of Informatics at MUNI. The works were presented on holographic foil, and the installation was about five meters high.",
+    component: (project) => <ProjectPageSupernova project={project} />,
+  },
+
+  {
+    name: "Kafe",
+    image: "cover_images/kafe_sign.png",
+    projectImages: [
+      "project_images/kafe_usage.png",
+      "project_images/kafe_light.png",
+      "project_images/kafe_dark.png",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/kafe",
+    date: new Date(2023, 2, 1),
+    tools: ["Affinity Designer"],
+    description: "A combination of KAFE (coffee) and films is the best",
+    text: "My friends asked me to create a logo and a few icons for their project KAFE, a video archive, and a registration form for the films for the Film Festival of the Faculty of Informatics MU. I wanted to combine the coffee icon with the film tape, and as you are supposed to save your films into the KAFE system, I designed the videotape that sinks into the coffee mug. There is a dark and light option, but it is also used in colored lines on the webpage.",
+    component: (project) => <ProjectPageMeduse project={project} />,
   },
 ];

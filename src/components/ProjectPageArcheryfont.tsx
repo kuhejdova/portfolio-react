@@ -75,7 +75,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
             <IconButton
               variant="outline"
               colorScheme="teal"
-              aria-label="Garden app"
+              aria-label="Archery font"
               fontSize="20px"
               icon={<BsGlobe />}
             />{" "}

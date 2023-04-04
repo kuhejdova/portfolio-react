@@ -3,7 +3,12 @@ import { useState } from "react";
 import Menu from "./components/Menu";
 import ProjectBox from "./components/ProjectBox";
 import { OutletOrChildren } from "./components/utils/OutletOrChildren";
-import { otherCategories, projects, ProjectTags } from "./projects";
+import {
+  allCategories,
+  otherCategories,
+  projects,
+  ProjectTags,
+} from "./projects";
 
 interface IAppProps {}
 
@@ -32,7 +37,9 @@ export function App(props: IAppProps) {
                   !filter ||
                   (filter === ProjectTags.OTHER &&
                     otherCategories.some((cat) => proj.tags.includes(cat))) ||
-                  proj.tags.includes(filter)
+                  proj.tags.includes(filter) ||
+                  (filter === ProjectTags.ALL &&
+                    allCategories.some((cat) => proj.tags.includes(cat)))
               )
               .map((proj) => (
                 <ProjectBox project={proj} />

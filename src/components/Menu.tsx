@@ -13,6 +13,7 @@ import {
   Flex,
   Icon,
   IconButton,
+  Image,
   Link,
   LinkProps,
   Popover,
@@ -66,12 +67,18 @@ export default function WithSubnavigation({ onMenuClicked }: IMenuProps) {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+          <Image
+            alt={"logo"}
+            src={useColorModeValue("logo_black.png", "logo_white.png")}
+            h={7}
+            paddingRight={2}
+          ></Image>
           <Text
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            Logo
+            Eva Kuhejdová
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} mx={"auto"}>
@@ -106,7 +113,7 @@ export default function WithSubnavigation({ onMenuClicked }: IMenuProps) {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav onMenuClicked={onMenuClicked} />
+        <MobileNav onMenuClicked={onMenuClicked} onToggle={onToggle} />
       </Collapse>
     </Box>
   );
@@ -235,8 +242,10 @@ const DesktopSubNav = ({
 
 const MobileNav = ({
   onMenuClicked,
+  onToggle,
 }: {
   onMenuClicked: (tag: ProjectTags) => void;
+  onToggle: () => any;
 }) => {
   return (
     <Stack
@@ -249,6 +258,7 @@ const MobileNav = ({
           key={navItem.label}
           onMenuClicked={onMenuClicked}
           navItem={navItem}
+          onToggle={onToggle}
         />
       ))}
     </Stack>
@@ -258,32 +268,47 @@ const MobileNav = ({
 const MobileNavItem = ({
   navItem: { label, submenu: children, href, tag },
   onMenuClicked,
+  onToggle: onMenuToggle,
 }: {
   navItem: NavItem;
   onMenuClicked: (tag: ProjectTags) => void;
+  onToggle: () => any;
 }) => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle: onSumbenuToggle } = useDisclosure();
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack spacing={4}>
       <Flex
         py={2}
-        as={Link}
-        href={href ?? "#"}
         justify={"space-between"}
         align={"center"}
         _hover={{
           textDecoration: "none",
         }}
+        cursor="pointer"
       >
         <Text
           fontWeight={600}
           color={useColorModeValue("gray.600", "gray.200")}
+          {...(href
+            ? {
+                as: ReactRouterLink,
+                to: href!,
+                onClick: () => {
+                  onMenuToggle();
+                  tag && onMenuClicked(tag);
+                },
+              }
+            : {
+                to: "",
+                onClick: () => tag && onMenuClicked(tag),
+              })}
         >
           {label}
         </Text>
         {children && (
           <Icon
+            onClick={children && onSumbenuToggle}
             as={ChevronDownIcon}
             transition={"all .25s ease-in-out"}
             transform={isOpen ? "rotate(180deg)" : ""}
@@ -305,6 +330,7 @@ const MobileNavItem = ({
           {children &&
             children.map((child) => (
               <LinkOrNot
+                onClick={onMenuToggle}
                 key={child.label}
                 menuItem={child}
                 onMenuClicked={onMenuClicked}
@@ -331,15 +357,24 @@ const LinkOrNot = ({
 }) => {
   return href ? (
     <Link
+      {...rest}
       as={ReactRouterLink}
       to={href}
-      onClick={() => tag && onMenuClicked(tag!)}
-      {...rest}
+      onClick={(event) => {
+        tag && onMenuClicked(tag!);
+        rest.onClick && rest.onClick(event);
+      }}
     >
       {children}
     </Link>
   ) : (
-    <Link onClick={() => tag && onMenuClicked(tag!)} {...rest}>
+    <Link
+      {...rest}
+      onClick={(event) => {
+        tag && onMenuClicked(tag!);
+        rest.onClick && rest.onClick(event);
+      }}
+    >
       {children}
     </Link>
   );
@@ -357,6 +392,11 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "About",
     href: "/about",
+  },
+  {
+    label: "All projects",
+    tag: ProjectTags.ALL,
+    href: "/",
   },
   {
     label: "Graphic design",

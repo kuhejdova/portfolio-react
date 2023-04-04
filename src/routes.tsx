@@ -1,4 +1,5 @@
 import { App } from "./App";
+import AboutPage from "./components/AboutPage";
 import ProjectPage from "./components/ProjectPage";
 import { projects } from "./projects";
 
@@ -9,7 +10,7 @@ export const router = [
     children: [
       {
         path: "about", //:smh je promenna (param)
-        element: <div>hello</div>,
+        element: <AboutPage />,
       },
       ...projects.map((proj) => ({
         //tri tecky rozbali pole, at nemam pole v poli
