@@ -5,6 +5,7 @@ import ProjectPageApplepunk from "./components/ProjectPageApplepunk";
 import ProjectPageArcheryfont from "./components/ProjectPageArcheryfont";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
 import ProjectPageBabylonfest from "./components/ProjectPageBabylonfest";
+import ProjectPageEffecta from "./components/ProjectPageEffecta";
 import ProjectPageElderlyBanking from "./components/ProjectPageElderlyBanking";
 import ProjectPageFastr from "./components/ProjectPageFastr";
 import ProjectPageFFFIMU from "./components/ProjectPageFFFIMU";
@@ -653,5 +654,49 @@ export const projects: Project[] = [
     description: "Local co-op game where the flower wants to expand its ship",
     text: "The game was created in 48 hours for Game Jam at Game Development Dungeon 2023. It was made by Adam Štěpánek, Jonáš Rosecký, Vojtěch Brůža, Hana Tokárová and me. Hanka and I were responsible for the overall visual style, sprites, and graphics. The pixel art game called Orgot is a local co-op game where one player controls the mouse and the other keyboard. The goal is to expand the spaceship created from the floating islands, grow seeds, and protect the ship from insects.",
     component: (project) => <ProjectPageOrgot project={project} />,
+  },
+
+  {
+    name: "Effecta",
+    image: "cover_images/effecta_sign.png",
+    projectImages: [
+      "project_images/effecta_0.png",
+      "project_images/effecta_1.png",
+      "project_images/effecta_2.png",
+      "project_images/effecta_3.png",
+      "project_images/effecta_4.png",
+      "project_images/effecta_5.png",
+      "project_images/effecta_6.png",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/effecta",
+    date: new Date(2023, 10, 1),
+    tools: ["Affinity Designer"],
+    description:
+      "Competition to create visual motives for a company Effecta group",
+    text: "The goal was to create visual motives (T-shirt, wall design, and car design) for a company, Effecta group, which works with documents and data. One of the ideas from brainstorming was to try to have a bit of fun in this field, so I've decided to create clothes with some puns and simple visuals in the style of comic books. I've chosen the marks used in the paper shredding for the wall design.",
+    component: (project) => <ProjectPageEffecta project={project} />,
+  },
+
+  {
+    name: "Auversum Fashion & AR",
+    image: "cover_images/auversum_sign.jpg",
+    projectImages: [
+      "project_images/auversum_0.jpg",
+      "project_images/effecta_1.png",
+      "project_images/effecta_2.png",
+      "project_images/effecta_3.png",
+      "project_images/effecta_4.png",
+      "project_images/effecta_5.png",
+      "project_images/effecta_6.png",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/auversum",
+    date: new Date(2023, 7, 1),
+    tools: ["Affinity Designer"],
+    description:
+      "Competition to create visual motives for a company Effecta group",
+    text: "The goal was to create visual motives (T-shirt, wall design, and car design) for a company, Effecta group, which works with documents and data. One of the ideas from brainstorming was to try to have a bit of fun in this field, so I've decided to create clothes with some puns and simple visuals in the style of comic books. I've chosen the marks used in the paper shredding for the wall design.",
+    component: (project) => <ProjectPageEffecta project={project} />,
   },
 ];
