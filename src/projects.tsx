@@ -1,6 +1,7 @@
 import ProjectPageAkademikpro from "./components/ProjectPageAkademikpro";
 import ProjectPageAlenaKuhejdova from "./components/ProjectPageAlenaKuhejdova";
 import ProjectPageAnthropology from "./components/ProjectPageAnthropology";
+import ProjectPageApplepunk from "./components/ProjectPageApplepunk";
 import ProjectPageArcheryfont from "./components/ProjectPageArcheryfont";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
 import ProjectPageBabylonfest from "./components/ProjectPageBabylonfest";
@@ -14,6 +15,8 @@ import ProjectPageHGAnimation from "./components/ProjectPageHGAnimation";
 import ProjectPageMeduse from "./components/ProjectPageMeduse";
 import ProjectPageMjuniAdvent from "./components/ProjectPageMjuniAdvent";
 import ProjectPageMocap from "./components/ProjectPageMocap";
+import ProjectPageOrgot from "./components/ProjectPageOrgot";
+import ProjectPagePhysarum from "./components/ProjectPagePhysarum";
 import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
 import ProjectPageSupernova from "./components/ProjectPageSupernova";
 import ProjectPageTreeClock from "./components/ProjectPageTreeClock";
@@ -29,6 +32,7 @@ export enum ProjectTags {
   VISUALIZATION = "Visualization",
   VISUAL = "Visual identity",
   ANIMATION = "Animation",
+  GAMES = "Games",
 
   OTHER = "Other",
   ALL = "All",
@@ -37,6 +41,7 @@ export enum ProjectTags {
 export const otherCategories: ProjectTags[] = [
   ProjectTags.VISUALIZATION,
   ProjectTags.ANIMATION,
+  ProjectTags.GAMES,
 ];
 
 export const allCategories: ProjectTags[] = [
@@ -48,6 +53,7 @@ export const allCategories: ProjectTags[] = [
   ProjectTags.VISUAL,
   ProjectTags.VISUALIZATION,
   ProjectTags.ANIMATION,
+  ProjectTags.GAMES,
   ProjectTags.OTHER,
 ];
 
@@ -590,5 +596,62 @@ export const projects: Project[] = [
     description: "A combination of KAFE (coffee) and films is the best",
     text: "My friends asked me to create a logo and a few icons for their project KAFE, a video archive, and a registration form for the films for the Film Festival of the Faculty of Informatics MU. I wanted to combine the coffee icon with the film tape, and as you are supposed to save your films into the KAFE system, I designed the videotape that sinks into the coffee mug. There is a dark and light option, but it is also used in colored lines on the webpage.",
     component: (project) => <ProjectPageMeduse project={project} />,
+  },
+
+  {
+    name: "Physarum simulation",
+    image: "cover_images/physarum_simulation_sign.png",
+    projectImages: [
+      "project_images/physarum_simulation_07.png",
+      "project_images/physarum_simulation_1.png",
+      "project_images/physarum_simulation_2.png",
+      "project_images/physarum_simulation_4.png",
+      "project_images/physarum_simulation_5.png",
+    ],
+    tags: [ProjectTags.GENERATIVE],
+    path: "/physarumsimulation",
+    date: new Date(2023, 6, 1),
+    tools: ["WebGPU", "Javascript"],
+    description: "Computer simulation inspired by the physarum organism",
+    text: "Physarum polycephalum is a unicellular multinucleate organism that can behave in such a complex way. It can effectively find the shortest paths, and the local behaviors based on chemotaxis can create beautiful graphical results. This project simulates the behavior of this organism and, by adjusting many parameters and using different coloring, can produce a huge amount of various outputs. I was fascinated that this simple ruleset could lead to such different visuals. The final application runs on web browsers that support WebGPU.",
+    component: (project) => <ProjectPagePhysarum project={project} />,
+  },
+
+  {
+    name: "Applepunk",
+    image: "cover_images/applepunk_cover_sign.jpg",
+    projectImages: [
+      "project_images/applepunk_header.jpg",
+      "project_images/applepunk_1.png",
+      "project_images/applepunk_2.png",
+      "project_images/applepunk_3.png",
+      "project_images/applepunk_4.png",
+    ],
+    tags: [ProjectTags.GAMES],
+    path: "/applepunk",
+    date: new Date(2023, 7, 17),
+    tools: ["Unity", "Affinity Designer"],
+    description: "Snake, but you are the apple.",
+    text: "The game was made originally in 48 hours for GMTK Game Jam 2023 but missed submission by 2 minutes. It was made by Jakub Slezáček, Matěj Zavrtálek and me. I created all the graphics and UI, and the guys programmed the game mechanics. The Applepunk game is very similar to the original Snake game, but the player controls the apple, and their goal is to destroy snakes before they get eaten.",
+    component: (project) => <ProjectPageApplepunk project={project} />,
+  },
+
+  {
+    name: "Orgot",
+    image: "cover_images/orgot_sign.png",
+    projectImages: [
+      "project_images/orgot_0.png",
+      "project_images/orgot_4.png",
+      "project_images/orgot_3.png",
+      "project_images/orgot_1.png",
+      "project_images/orgot_2.png",
+    ],
+    tags: [ProjectTags.GAMES],
+    path: "/orgot",
+    date: new Date(2023, 9, 14),
+    tools: ["Godot", "Aseprite"],
+    description: "Local co-op game where the flower wants to expand its ship",
+    text: "The game was created in 48 hours for Game Jam at Game Development Dungeon 2023. It was made by Adam Štěpánek, Jonáš Rosecký, Vojtěch Brůža, Hana Tokárová and me. Hanka and I were responsible for the overall visual style, sprites, and graphics. The pixel art game called Orgot is a local co-op game where one player controls the mouse and the other keyboard. The goal is to expand the spaceship created from the floating islands, grow seeds, and protect the ship from insects.",
+    component: (project) => <ProjectPageOrgot project={project} />,
   },
 ];

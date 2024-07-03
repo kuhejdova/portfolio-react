@@ -62,12 +62,13 @@ export default function ProjectPage() {
           {"What do I do?"}
         </Text>
         <Text fontSize={"lg"}>
-          I'm studying for a master's degree at the Faculty of Informatics at
-          Masaryk University in Brno. I study Visual informatics with a
-          specialization in Graphic design. During my studies, I tried many
-          fields in graphic design - from logo design and typography to UX
-          design, generative design programming, 3D modeling, and photography.
-          Sometimes I do graphic work for my friends or as a job.
+          I finished my studies and got a master's degree from the Faculty of
+          Informatics at Masaryk University in Brno. I studied Visual
+          informatics with a specialization in Graphic design. During my
+          studies, I tried many fields in graphic design - from logo design and
+          typography to UX design, generative design programming, 3D modeling,
+          and photography. Sometimes I do graphic work for my friends or as a
+          job.
         </Text>
         <Text
           color={useColorModeValue("gray.500", "gray.400")}
