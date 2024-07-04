@@ -717,4 +717,24 @@ export const projects: Project[] = [
     text: "The goal was to design a brochure for Research laboratories at the Faculty of Informatics at Masaryk University. One of the requirements was to use the faculty colors - yellow and black. The idea was to create a short overview instead of the catalog version, which is foldable and easily understandable. For several fields, icons were created, and each field has its own color. The map is shaped into the motherboard design, where in the middle is a QR code with a link to the detailed description of the laboratories.",
     component: (project) => <ProjectPageAkademikpro project={project} />,
   },
+
+  {
+    name: "Merch for FI MUNI",
+    image: "cover_images/fi_merch_sign.jpg",
+    projectImages: [
+      "project_images/fi_merch_0.png",
+      "project_images/fi_merch_2.jpg",
+      "project_images/fi_merch_1.jpg",
+      "project_images/fi_merch_3.jpg",
+      "project_images/fi_merch_4.jpg",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/fimerch",
+    date: new Date(2023, 12, 1),
+    tools: ["Affinity Designer"],
+    description:
+      "Competition to create ideas for merch at the Faculty of Informatics",
+    text: "The goal was to develop ideas for potential future expansion of the merch at the Faculty of Informatics. The restrictions were to work with the faculty colors - yellow and black - and to develop some original ideas. There were several categories - cheap gifts for events, fancy gifts for partners, gifts for students as price, and gifts for new employees.",
+    component: (project) => <ProjectPageAkademikpro project={project} />,
+  },
 ];
