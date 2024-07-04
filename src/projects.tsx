@@ -4,6 +4,7 @@ import ProjectPageAnthropology from "./components/ProjectPageAnthropology";
 import ProjectPageApplepunk from "./components/ProjectPageApplepunk";
 import ProjectPageArcheryfont from "./components/ProjectPageArcheryfont";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
+import ProjectPageAuversum from "./components/ProjectPageAuversum";
 import ProjectPageBabylonfest from "./components/ProjectPageBabylonfest";
 import ProjectPageEffecta from "./components/ProjectPageEffecta";
 import ProjectPageElderlyBanking from "./components/ProjectPageElderlyBanking";
@@ -683,20 +684,37 @@ export const projects: Project[] = [
     image: "cover_images/auversum_sign.jpg",
     projectImages: [
       "project_images/auversum_0.jpg",
-      "project_images/effecta_1.png",
-      "project_images/effecta_2.png",
+      "project_images/auversum_1.jpg",
+      "project_images/auversum_2.jpg",
       "project_images/effecta_3.png",
       "project_images/effecta_4.png",
-      "project_images/effecta_5.png",
-      "project_images/effecta_6.png",
     ],
-    tags: [ProjectTags.GRAPHIC_DESIGN],
+    tags: [ProjectTags.UX, ProjectTags.GRAPHIC_DESIGN],
     path: "/auversum",
     date: new Date(2023, 7, 1),
+    tools: ["Affinity Designer", "Figma", "Unity"],
+    description: "AR application for the AUVERSUM fashion project",
+    text: "Application AUVERSUM is part of the fashion project, where patterns printed on the fabric of the garments serve as AR markers for displaying augmented reality content. Since each garment varies and is not identical, this application allows the user to create their marker by photographing the garment's pattern. The application was developed with Hana Tokárová and Milan Doležal. AUVERSUM application is available on the Google Play and App Store.",
+    component: (project) => <ProjectPageAuversum project={project} />,
+  },
+
+  {
+    name: "Research brochure for FI MUNI",
+    image: "cover_images/fi_research_sign.jpg",
+    projectImages: [
+      "project_images/fi_research_0.png",
+      "project_images/fi_brochure_1.png",
+      "project_images/fi_brochure_2.png",
+      "project_images/fi_brochure_3.png",
+      "project_images/fi_brochure_4.png",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/firesearchbrochure",
+    date: new Date(2023, 11, 1),
     tools: ["Affinity Designer"],
     description:
-      "Competition to create visual motives for a company Effecta group",
-    text: "The goal was to create visual motives (T-shirt, wall design, and car design) for a company, Effecta group, which works with documents and data. One of the ideas from brainstorming was to try to have a bit of fun in this field, so I've decided to create clothes with some puns and simple visuals in the style of comic books. I've chosen the marks used in the paper shredding for the wall design.",
-    component: (project) => <ProjectPageEffecta project={project} />,
+      "Competition to create a design for a brochure of Research laboratories",
+    text: "The goal was to design a brochure for Research laboratories at the Faculty of Informatics at Masaryk University. One of the requirements was to use the faculty colors - yellow and black. The idea was to create a short overview instead of the catalog version, which is foldable and easily understandable. For several fields, icons were created, and each field has its own color. The map is shaped into the motherboard design, where in the middle is a QR code with a link to the detailed description of the laboratories.",
+    component: (project) => <ProjectPageAkademikpro project={project} />,
   },
 ];

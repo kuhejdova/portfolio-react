@@ -1,23 +1,30 @@
-import { Container, SimpleGrid } from "@chakra-ui/react";
+import {
+  Container,
+  SimpleGrid,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { useState } from "react";
 import Menu from "./components/Menu";
 import ProjectBox from "./components/ProjectBox";
 import { OutletOrChildren } from "./components/utils/OutletOrChildren";
 import {
+  ProjectTags,
   allCategories,
   otherCategories,
   projects,
-  ProjectTags,
 } from "./projects";
 
 interface IAppProps {}
 
 export function App(props: IAppProps) {
   const [filter, setFilter] = useState<ProjectTags | null>(null);
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
       <Menu onMenuClicked={(tag) => setFilter(tag || null)}></Menu>
       <Container
+        bg={useColorModeValue("gray.200", "gray.800")}
         py={6}
         maxW={{
           base: "full",

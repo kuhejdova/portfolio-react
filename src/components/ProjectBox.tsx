@@ -23,8 +23,8 @@ export default function ProjectBox(props: IProjectBoxProps) {
           role={"group"}
           p={6}
           w={"full"}
-          bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"dark-lg"}
+          bg={useColorModeValue("gray.100", "gray.800")}
+          boxShadow={useColorModeValue("lg", "dark-lg")}
           rounded={"lg"}
           pos={"relative"}
           zIndex={1}
