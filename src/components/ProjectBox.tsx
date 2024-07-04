@@ -33,7 +33,7 @@ export default function ProjectBox(props: IProjectBoxProps) {
             <Image
               rounded={"lg"}
               height={230}
-              width={282}
+              width={230}
               objectFit={"cover"}
               src={`${process.env.PUBLIC_URL}/${props.project.image}`}
             />

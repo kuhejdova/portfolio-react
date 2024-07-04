@@ -17,6 +17,7 @@ import ProjectPageHGAnimation from "./components/ProjectPageHGAnimation";
 import ProjectPageMeduse from "./components/ProjectPageMeduse";
 import ProjectPageMjuniAdvent from "./components/ProjectPageMjuniAdvent";
 import ProjectPageMocap from "./components/ProjectPageMocap";
+import ProjectPageNeardear from "./components/ProjectPageNeardear";
 import ProjectPageOrgot from "./components/ProjectPageOrgot";
 import ProjectPagePhysarum from "./components/ProjectPagePhysarum";
 import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
@@ -736,5 +737,45 @@ export const projects: Project[] = [
       "Competition to create ideas for merch at the Faculty of Informatics",
     text: "The goal was to develop ideas for potential future expansion of the merch at the Faculty of Informatics. The restrictions were to work with the faculty colors - yellow and black - and to develop some original ideas. There were several categories - cheap gifts for events, fancy gifts for partners, gifts for students as price, and gifts for new employees.",
     component: (project) => <ProjectPageAkademikpro project={project} />,
+  },
+
+  {
+    name: "AZUFont",
+    image: "cover_images/azufont_sign.png",
+    projectImages: [
+      "project_images/azufont_0.png",
+      "project_images/azufont_1.png",
+      "project_images/azufont_2.png",
+      "project_images/azufont_3.png",
+      "project_images/azufont_4.png",
+      "project_images/azufont_5.png",
+      "project_images/azufont_6.jpg",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
+    path: "/azufont",
+    date: new Date(2023, 11, 2),
+    tools: ["Affinity Designer"],
+    description: "The font based on azulejo tiles",
+    text: "The AzuFont is based on the twelve basic symbols used in the traditional Portuguese Azulejo tiles. The AzuFont consists of the upper case letters of the Latin alphabet. It has mainly decorative functions and is supposed to be used for short texts or headings, as the text is less readable when used in longer texts or smaller font sizes. Not only the letters but also the tiles were created as a part and extension for this font. Each tile contains the letter that represents it; however, it might not be visible at first sight. The tiles are highly decorative and could be used in propagation materials or as examples of what could be created with this application.",
+    component: (project) => <ProjectPageEffecta project={project} />,
+  },
+
+  {
+    name: "Near & Dear visuals generator",
+    image: "cover_images/neardear_sign.png",
+    projectImages: [
+      "project_images/neardear_0.png",
+      "project_images/neardear_1.png",
+      "project_images/neardear_2.png",
+      "project_images/neardear_3.png",
+      "project_images/neardear_4.png",
+    ],
+    tags: [ProjectTags.GENERATIVE],
+    path: "/neardear",
+    date: new Date(2023, 2, 17),
+    tools: ["p5.js"],
+    description: "Generator of the visuals for Near & Dear",
+    text: "This project was created in collaboration with Semibold, who designed the identity and asked for an application that would generate similar visuals based on their rules. The visuals are used mainly for social networks and can be downloaded in PNG and SVG formats. The application was created with Vojtěch Brůža.",
+    component: (project) => <ProjectPageNeardear project={project} />,
   },
 ];
