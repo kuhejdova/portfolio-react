@@ -68,7 +68,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        paddingTop={10}
+        marginTop={10}
       />
       <Image
         rounded={"md"}
@@ -78,7 +78,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        paddingTop={10}
+        marginTop={10}
       />
       {/* <SimpleGrid
         columns={{ base: 1, lg: 2 }}
