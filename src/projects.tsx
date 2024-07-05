@@ -5,6 +5,7 @@ import ProjectPageApplepunk from "./components/ProjectPageApplepunk";
 import ProjectPageArcheryfont from "./components/ProjectPageArcheryfont";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
 import ProjectPageAuversum from "./components/ProjectPageAuversum";
+import ProjectPageAzu from "./components/ProjectPageAzu";
 import ProjectPageBabylonfest from "./components/ProjectPageBabylonfest";
 import ProjectPageEffecta from "./components/ProjectPageEffecta";
 import ProjectPageElderlyBanking from "./components/ProjectPageElderlyBanking";
@@ -777,5 +778,24 @@ export const projects: Project[] = [
     description: "Generator of the visuals for Near & Dear",
     text: "This project was created in collaboration with Semibold, who designed the identity and asked for an application that would generate similar visuals based on their rules. The visuals are used mainly for social networks and can be downloaded in PNG and SVG formats. The application was created with Vojtěch Brůža.",
     component: (project) => <ProjectPageNeardear project={project} />,
+  },
+
+  {
+    name: "AZU: Emotions in tiles",
+    image: "cover_images/azu_sign.jpg",
+    projectImages: [
+      "project_images/azu_0.jpg",
+      "project_images/azu_1.jpg",
+      "project_images/azu_2.png",
+      "project_images/azu_3.png",
+      "project_images/azu_4.png",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.UX, ProjectTags.VISUAL ,ProjectTags.GENERATIVE],
+    path: "/azu",
+    date: new Date(2024, 6, 1),
+    tools: ["Affinity Designer", "Unity", "Javascript"],
+    description: "Use of generative design in psychology for emotions representation",
+    text: "For my Master's thesis, I have created an application where users can record their emotions and feelings through art by making tiles and mosaics inspired by the Portugal Azulejo tiles. In the application, the user can easily create a mosaic according to their feelings and imagination, and after that, they fill in the questionnaire, where they can evaluate their emotions. In the future, the application will guess emotions from the image, but currently, I'm collecting some data that will be used for neural network training. Therefore, the users need to evaluate the image themselves using a questionnaire. The application can be a journal of emotions and a tool for art therapy, and it is available on Google Play.",
+    component: (project) => <ProjectPageAzu project={project} />,
   },
 ];
