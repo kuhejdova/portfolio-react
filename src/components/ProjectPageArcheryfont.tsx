@@ -92,7 +92,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-      // paddingTop={10}
+        // paddingTop={10}
       />
 
       <Image
@@ -103,7 +103,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        marginTop={10}
+        marginTop={5}
       />
       <Image
         rounded={"md"}
@@ -113,7 +113,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        marginTop={10}
+        marginTop={5}
       />
       <Image
         rounded={"md"}
@@ -123,7 +123,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        marginTop={10}
+        marginTop={5}
       />
       <Image
         rounded={"md"}
@@ -133,7 +133,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        marginTop={10}
+        marginTop={5}
       />
 
       <Box paddingTop={10}>

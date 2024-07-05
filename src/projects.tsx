@@ -255,6 +255,7 @@ export const projects: Project[] = [
     description:
       "Redesign of the plain white jerseys for the Archery club Ostrava",
     text: "The goal was to create a new design of archery jerseys for the Archery club Ostrava Mariánské hory. The original jerseys were plain white with the logo on the front and back. I wanted to keep it simple and select colors suitable for the amount of time spent on the sun and in nature. I have chosen two shades of blue, the lighter represents the color of Ostrava city, and the darker means one of the colors of the Moravian-Silesian Region.",
+    component: (project) => <ProjectPageBabylonfest project={project} />,
   },
   {
     name: "Rewrite the stars",
@@ -358,7 +359,7 @@ export const projects: Project[] = [
     name: "Archery results visualization",
     image: "cover_images/archery_results_sign.png",
     projectImages: [
-      "project_images/archery_results_7.png",
+      "project_images/archery_results_7.jpg",
       "project_images/archery_results_2.png",
       "project_images/archery_results_3.jpg",
       "project_images/archery_results_4.png",
@@ -392,6 +393,7 @@ export const projects: Project[] = [
     tools: ["Blender"],
     description: "Fairy with a flower as her wings",
     text: "3D model created from the cube. Tiny baby girl fairy with a flower growing from her back. She is dressed in leaves, and she lives in the forest. The red flower is not only for cover and beauty but also works as her wings. She is so tiny she can hide in the blooming meadow and calmly sleep.",
+  
   },
 
   {

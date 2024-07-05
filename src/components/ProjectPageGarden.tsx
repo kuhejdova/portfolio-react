@@ -44,7 +44,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         fit={"cover"}
         align={"center"}
         w={"100%"}
-        h={{ base: "100%"}}
+        h={{ base: "100%" }}
       />
       <VStack spacing={{ base: 4, sm: 6 }}>
         <Text
@@ -132,8 +132,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         </Center>
       </Link>
 
-      <SimpleGrid columns={2} spacing={5} w={"100%"} paddingBottom={5}
-        paddingTop={5}>
+      <SimpleGrid columns={2} spacing={5} w={"100%"}>
         <Image
           rounded={"md"}
           alt={"product image"}
@@ -154,8 +153,13 @@ export default function ProjectPage(props: IProjectBoxProps) {
         />
       </SimpleGrid>
 
-      <SimpleGrid columns={2} spacing={5} w={"100%"} paddingBottom={5}
-        paddingTop={5}>
+      <SimpleGrid
+        columns={2}
+        spacing={5}
+        w={"100%"}
+        paddingBottom={5}
+        paddingTop={5}
+      >
         <Image
           rounded={"md"}
           alt={"product image"}

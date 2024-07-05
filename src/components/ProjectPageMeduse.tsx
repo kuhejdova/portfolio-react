@@ -61,7 +61,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        marginTop={10}
+        marginTop={5}
       />
 
       <Image
@@ -72,7 +72,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        marginTop={10}
+        marginTop={5}
       />
 
       <Box paddingTop={10}>
