@@ -1,19 +1,29 @@
 import ProjectPageAkademikpro from "./components/ProjectPageAkademikpro";
 import ProjectPageAlenaKuhejdova from "./components/ProjectPageAlenaKuhejdova";
 import ProjectPageAnthropology from "./components/ProjectPageAnthropology";
+import ProjectPageApplepunk from "./components/ProjectPageApplepunk";
 import ProjectPageArcheryfont from "./components/ProjectPageArcheryfont";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
+import ProjectPageAuversum from "./components/ProjectPageAuversum";
+import ProjectPageAzu from "./components/ProjectPageAzu";
 import ProjectPageBabylonfest from "./components/ProjectPageBabylonfest";
+import ProjectPageEffecta from "./components/ProjectPageEffecta";
 import ProjectPageElderlyBanking from "./components/ProjectPageElderlyBanking";
 import ProjectPageFastr from "./components/ProjectPageFastr";
 import ProjectPageFFFIMU from "./components/ProjectPageFFFIMU";
 import ProjectPageGarden from "./components/ProjectPageGarden";
+import ProjectPageGarrigueGames from "./components/ProjectPageGarrigueGames";
 import ProjectPageHandicraftBooks from "./components/ProjectPageHandicraftBooks";
 import ProjectPageHead from "./components/ProjectPageHead";
+import ProjectPageHexabe from "./components/ProjectPageHexabe";
 import ProjectPageHGAnimation from "./components/ProjectPageHGAnimation";
+import ProjectPageKurzM365 from "./components/ProjectPageKurzM365";
 import ProjectPageMeduse from "./components/ProjectPageMeduse";
 import ProjectPageMjuniAdvent from "./components/ProjectPageMjuniAdvent";
 import ProjectPageMocap from "./components/ProjectPageMocap";
+import ProjectPageNeardear from "./components/ProjectPageNeardear";
+import ProjectPageOrgot from "./components/ProjectPageOrgot";
+import ProjectPagePhysarum from "./components/ProjectPagePhysarum";
 import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
 import ProjectPageSupernova from "./components/ProjectPageSupernova";
 import ProjectPageTreeClock from "./components/ProjectPageTreeClock";
@@ -29,6 +39,7 @@ export enum ProjectTags {
   VISUALIZATION = "Visualization",
   VISUAL = "Visual identity",
   ANIMATION = "Animation",
+  GAMES = "Games",
 
   OTHER = "Other",
   ALL = "All",
@@ -37,6 +48,7 @@ export enum ProjectTags {
 export const otherCategories: ProjectTags[] = [
   ProjectTags.VISUALIZATION,
   ProjectTags.ANIMATION,
+  ProjectTags.GAMES,
 ];
 
 export const allCategories: ProjectTags[] = [
@@ -48,6 +60,7 @@ export const allCategories: ProjectTags[] = [
   ProjectTags.VISUAL,
   ProjectTags.VISUALIZATION,
   ProjectTags.ANIMATION,
+  ProjectTags.GAMES,
   ProjectTags.OTHER,
 ];
 
@@ -69,11 +82,11 @@ export const projects: Project[] = [
     name: "Cat café Kocourkov",
     image: "cover_images/kocourkov_sign.png",
     projectImages: [
-      "cover_images/kocourkov_sign.png",
+      "project_images/kocourkov_sign.jpg",
       "project_images/kocourkov_pictograms-16.png",
       "project_images/kocourkov_ideograms-17.png",
-      "project_images/kocourkov_paper_cup.png",
-      "project_images/kocourkov_menu.png",
+      "project_images/kocourkov_paper_cup.jpg",
+      "project_images/kocourkov_menu.jpg",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
     path: "/kocourkov",
@@ -106,10 +119,10 @@ export const projects: Project[] = [
     image: "cover_images/anthropology_sign.png",
     projectImages: [
       "project_images/anthropology_banner.png",
-      "project_images/anthropology_door.png",
-      "project_images/anthropology_poster.png",
-      "project_images/anthropology_wcman.png",
-      "project_images/anthropology_wcwoman.png",
+      "project_images/anthropology_door.jpg",
+      "project_images/anthropology_poster.jpg",
+      "project_images/anthropology_wcman.jpg",
+      "project_images/anthropology_wcwoman.jpg",
       "project_images/anthropology_human.png",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
@@ -125,11 +138,11 @@ export const projects: Project[] = [
     name: "Babylonfest",
     image: "cover_images/babylonfest_sign.png",
     projectImages: [
-      "cover_images/babylonfest_sign.png",
-      "project_images/babylonfest_food.png",
+      "project_images/babylonfest_sign.jpg",
+      "project_images/babylonfest_food.jpg",
       "project_images/babylonfest_badge.png",
-      "project_images/babylonfest_name1.png",
-      "project_images/babylonfest_poster.png",
+      "project_images/babylonfest_name1.jpg",
+      "project_images/babylonfest_poster.jpg",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
     path: "/babylonfest",
@@ -143,7 +156,8 @@ export const projects: Project[] = [
     name: "Wake up call poster",
     image: "cover_images/wakeup_sign.png",
     projectImages: [
-      "cover_images/wakeup_sign.png",
+      "project_images/wakeup_banner.png",
+      "project_images/wakeup_poster_2.png",
       "project_images/wakeup_poster1.png",
       "project_images/wakeup_poster3.png",
     ],
@@ -157,13 +171,13 @@ export const projects: Project[] = [
   },
   {
     name: "Garden app",
-    image: "cover_images/garden_sign.png",
+    image: "cover_images/garden_sign.jpg",
     projectImages: [
-      "cover_images/garden_sign.png",
-      "project_images/garden_web_fin1.png",
-      "project_images/garden_web_fin2.png",
-      "project_images/garden_web_fin3.png",
-      "project_images/garden_web_fin4.png",
+      "project_images/garden_sign.jpg",
+      "project_images/garden_web_fin1.jpg",
+      "project_images/garden_web_fin2.jpg",
+      "project_images/garden_web_fin3.jpg",
+      "project_images/garden_web_fin4.jpg",
       "project_images/garden_persona.jpg",
       "project_images/garden_storyboard.jpg",
     ],
@@ -179,9 +193,9 @@ export const projects: Project[] = [
     name: "Medus-e",
     image: "cover_images/meduse_sign.png",
     projectImages: [
-      "cover_images/meduse_sign.png",
-      "project_images/meduse_1.png",
-      "project_images/meduse_2.png",
+      "project_images/meduse_sign.jpg",
+      "project_images/meduse_1.jpg",
+      "project_images/meduse_2.jpg",
     ],
     tags: [ProjectTags.MODELLING],
     path: "/meduse",
@@ -195,9 +209,9 @@ export const projects: Project[] = [
     name: "Human head",
     image: "cover_images/head_sign.png",
     projectImages: [
-      "cover_images/head_sign.png",
-      "project_images/head_1.png",
-      "project_images/head_2.png",
+      "project_images/head_sign.jpg",
+      "project_images/head_1.jpg",
+      "project_images/head_2.jpg",
     ],
     tags: [ProjectTags.MODELLING],
     path: "/human_head",
@@ -228,11 +242,11 @@ export const projects: Project[] = [
     name: "Archery jersey",
     image: "cover_images/archeryjersey_me.JPG",
     projectImages: [
-      "cover_images/archeryjersey_me.JPG",
+      "project_images/archeryjersey_me.JPG",
       "project_images/archeryjersey_front.jpg",
       "project_images/archeryjersey_back.jpg",
-      "project_images/archeryjersey_mock1.png",
-      "project_images/archeryjersey_mock2.png",
+      "project_images/archeryjersey_mock1.jpg",
+      "project_images/archeryjersey_mock2.jpg",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN],
     path: "/archeryjersey",
@@ -241,6 +255,7 @@ export const projects: Project[] = [
     description:
       "Redesign of the plain white jerseys for the Archery club Ostrava",
     text: "The goal was to create a new design of archery jerseys for the Archery club Ostrava Mariánské hory. The original jerseys were plain white with the logo on the front and back. I wanted to keep it simple and select colors suitable for the amount of time spent on the sun and in nature. I have chosen two shades of blue, the lighter represents the color of Ostrava city, and the darker means one of the colors of the Moravian-Silesian Region.",
+    component: (project) => <ProjectPageBabylonfest project={project} />,
   },
   {
     name: "Rewrite the stars",
@@ -267,11 +282,11 @@ export const projects: Project[] = [
     projectImages: [
       "project_images/ak_logo.png",
       "project_images/ak_business_cards.jpg",
-      "project_images/ak_stationery.png",
+      "project_images/ak_stationery.jpg",
       "project_images/ak_face_masks.jpg",
-      "project_images/ak_tshirt.png",
-      "project_images/ak_web.png",
-      "project_images/ak_manual.png",
+      "project_images/ak_tshirt.jpg",
+      "project_images/ak_web.jpg",
+      "project_images/ak_manual.jpg",
       "project_images/ak_animace.gif",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
@@ -284,41 +299,41 @@ export const projects: Project[] = [
   },
   {
     name: "Handicrafts book edition",
-    image: "cover_images/handicraft_sign.png",
+    image: "cover_images/handicraft_sign.jpg",
     projectImages: [
-      "cover_images/handicraft_sign.png",
-      "project_images/hackovani_obalka.png",
-      "project_images/hackovani_prebal.png",
-      "project_images/hackovani_prebal_horni_strana.png",
-      "project_images/hackovani_predsadka.png",
-      "project_images/hackovani_vnitrek_prvni_strana.png",
+      "project_images/handicraft_sign.jpg",
+      "project_images/hackovani_obalka.jpg",
+      "project_images/hackovani_prebal.jpg",
+      "project_images/hackovani_prebal_horni_strana.jpg",
+      "project_images/hackovani_predsadka.jpg",
+      "project_images/hackovani_vnitrek_prvni_strana.jpg",
 
-      "project_images/kaligrafie_obalka.png",
-      "project_images/kaligrafie_prebal.png",
-      "project_images/kaligrafie_prebal_horni_strana.png",
-      "project_images/kaligrafie_predsadka.png",
-      "project_images/kaligrafie_vnitrek_prvni_strana.png",
+      "project_images/kaligrafie_obalka.jpg",
+      "project_images/kaligrafie_prebal.jpg",
+      "project_images/kaligrafie_prebal_horni_strana.jpg",
+      "project_images/kaligrafie_predsadka.jpg",
+      "project_images/kaligrafie_vnitrek_prvni_strana.jpg",
 
-      "project_images/koralky_obalka.png",
-      "project_images/koralky_prebal.png",
-      "project_images/koralky_prebal_horni_strana.png",
-      "project_images/koralky_predsadka.png",
-      "project_images/koralky_vnitrek_prvni_strana.png",
+      "project_images/koralky_obalka.jpg",
+      "project_images/koralky_prebal.jpg",
+      "project_images/koralky_prebal_horni_strana.jpg",
+      "project_images/koralky_predsadka.jpg",
+      "project_images/koralky_vnitrek_prvni_strana.jpg",
 
-      "project_images/patchwork_obalka.png",
-      "project_images/patchwork_prebal.png",
-      "project_images/patchwork_prebal_horni_strana.png",
-      "project_images/patchwork_predsadka.png",
-      "project_images/patchwork_vnitrek_prvni_strana.png",
+      "project_images/patchwork_obalka.jpg",
+      "project_images/patchwork_prebal.jpg",
+      "project_images/patchwork_prebal_horni_strana.jpg",
+      "project_images/patchwork_predsadka.jpg",
+      "project_images/patchwork_vnitrek_prvni_strana.jpg",
 
-      "project_images/krizkovy_steh_obalka.png",
-      "project_images/krizkovy_steh_prebal.png",
-      "project_images/krizkovy_steh_prebal_predni_strana.png",
-      "project_images/krizkovy_steh_predsadka.png",
-      "project_images/krizkovy_steh_vnitrek_prvni_strana.png",
+      "project_images/krizkovy_steh_obalka.jpg",
+      "project_images/krizkovy_steh_prebal.jpg",
+      "project_images/krizkovy_steh_prebal_predni_strana.jpg",
+      "project_images/krizkovy_steh_predsadka.jpg",
+      "project_images/krizkovy_steh_vnitrek_prvni_strana.jpg",
 
-      "project_images/hackovani_vnitrek.png",
-      "project_images/hackovani_vnitrek_2.png",
+      "project_images/hackovani_vnitrek.jpg",
+      "project_images/hackovani_vnitrek_2.jpg",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
     path: "/handicraftsbooks",
@@ -331,7 +346,7 @@ export const projects: Project[] = [
   {
     name: "30 Years of the Visegrad group",
     image: "cover_images/v4_sign.png",
-    projectImages: ["cover_images/v4_sign.png"],
+    projectImages: ["project_images/v4_sign.jpg"],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
     path: "/visegradgroup",
     date: new Date(2020, 10, 1),
@@ -344,14 +359,14 @@ export const projects: Project[] = [
     name: "Archery results visualization",
     image: "cover_images/archery_results_sign.png",
     projectImages: [
-      "cover_images/archery_results_sign.png",
+      "project_images/archery_results_7.jpg",
       "project_images/archery_results_2.png",
-      "project_images/archery_results_3.png",
+      "project_images/archery_results_3.jpg",
       "project_images/archery_results_4.png",
-      "project_images/archery_results_5.png",
-      "project_images/archery_results_6.png",
-      "project_images/archery_results_7.png",
-      "project_images/archery_results_8.png",
+      "project_images/archery_results_5.jpg",
+      "project_images/archery_results_6.jpg",
+      "project_images/archery_results_7.jpg",
+      "project_images/archery_results_8.jpg",
     ],
     tags: [ProjectTags.VISUALIZATION],
     path: "/archeryresults",
@@ -366,11 +381,11 @@ export const projects: Project[] = [
     name: "Flower fairy",
     image: "cover_images/flower_fairy_sign.png",
     projectImages: [
-      "cover_images/flower_fairy_sign.png",
-      "project_images/flower_fairy_6.png",
-      "project_images/flower_fairy_3.png",
-      "project_images/flower_fairy_5.png",
-      "project_images/flower_fairy_2.png",
+      "project_images/flower_fairy_0.jpg",
+      "project_images/flower_fairy_6.jpg",
+      "project_images/flower_fairy_3.jpg",
+      "project_images/flower_fairy_5.jpg",
+      "project_images/flower_fairy_2.jpg",
     ],
     tags: [ProjectTags.MODELLING],
     path: "/flowerfairy",
@@ -378,23 +393,26 @@ export const projects: Project[] = [
     tools: ["Blender"],
     description: "Fairy with a flower as her wings",
     text: "3D model created from the cube. Tiny baby girl fairy with a flower growing from her back. She is dressed in leaves, and she lives in the forest. The red flower is not only for cover and beauty but also works as her wings. She is so tiny she can hide in the blooming meadow and calmly sleep.",
+  
   },
 
   {
     name: "MjUNI advent",
     image: "cover_images/mjuni_advent_sign.png",
     projectImages: [
-      "cover_images/mjuni_advent_sign.png",
+      "project_images/mjuni_advent_sign.png",
       "project_images/mjuni_advent_2.png",
       "project_images/mjuni_advent_3.png",
       "project_images/mjuni_advent_4.png",
+      "project_images/mjuni_advent_5.png",
+      "project_images/mjuni_advent_6.png",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN],
     path: "/mjuniadvent",
     date: new Date(2021, 11, 1),
     tools: ["Affinity Designer"],
     description: "Advent banners for Masaryk Juniverzity",
-    text: "This project aimed to create a series of Facebook banners for MjUNI with the advent theme. There are four candles, as in the Czech tradition of lighting one candle every week of advent on Sunday. It's based on the MUNI font, as this job was done for the university.",
+    text: "This project aimed to create a series of Facebook banners for MjUNI with the advent theme. There are four candles, as in the Czech tradition of lighting one candle every week of Advent on Sunday. It's based on the MUNI font, as this job was done for the university. Another task was to create a design for an advent calendar, so I continued with the idea of the candles.",
     component: (project) => <ProjectPageMjuniAdvent project={project} />,
   },
 
@@ -438,7 +456,7 @@ export const projects: Project[] = [
     name: "Hunger Games animation",
     image: "cover_images/hg_sign.png",
     projectImages: [
-      "cover_images/hg_sign.png",
+      "project_images/hg_sign.png",
       "project_images/hg_2.png",
       "project_images/hg_3.png",
     ],
@@ -455,7 +473,7 @@ export const projects: Project[] = [
     name: "Generative design via Motion Capture",
     image: "cover_images/mocap_sign.png",
     projectImages: [
-      "cover_images/mocap_sign.png",
+      "project_images/mocap_sign.jpg",
       "project_images/mocap_1.gif",
     ],
     tags: [ProjectTags.ANIMATION],
@@ -469,7 +487,7 @@ export const projects: Project[] = [
 
   {
     name: "AkademikPRO",
-    image: "cover_images/akademikpro_sign.png",
+    image: "cover_images/akademikpro_sign.jpg",
     projectImages: [
       "project_images/akademikpro_1.png",
       "project_images/akademikpro_colors.png",
@@ -491,10 +509,10 @@ export const projects: Project[] = [
     image: "cover_images/caio_sign.png",
     projectImages: [
       "project_images/caio_1.png",
-      "cover_images/caio_sign.png",
-      "project_images/caio_3.png",
+      "project_images/caio_sign.png",
+      "project_images/caio_3.jpg",
       "project_images/caio_2.png",
-      "project_images/caio_4.png",
+      "project_images/caio_4.jpg",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
     path: "/caio",
@@ -510,16 +528,16 @@ export const projects: Project[] = [
     name: "PR & Visual for Film Festival FI MU 2022",
     image: "cover_images/fffimu22_sign.png",
     projectImages: [
-      "project_images/fffimu22_thanks.png",
+      "project_images/fffimu22_thanks.jpg",
       "project_images/fffimu22_mediakit1.png",
       "project_images/fffimu22_mediakit2.png",
-      "project_images/fffimu22_tshirt.png",
+      "project_images/fffimu22_tshirt.jpg",
       "project_images/fffimu22_placky1.png",
       "project_images/fffimu22_placky2.png",
       "project_images/fffimu22_placky3.png",
       "project_images/fffimu22_placky.jpg",
       "project_images/fffimu22_sitotisk.jpg",
-      "project_images/fffimu22_instagram.png",
+      "project_images/fffimu22_instagram.jpg",
       "project_images/fffimu22_easter.png",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN],
@@ -533,8 +551,8 @@ export const projects: Project[] = [
 
   {
     name: "FaStR app",
-    image: "cover_images/fastr_sign.png",
-    projectImages: ["cover_images/fastr_sign.png"],
+    image: "cover_images/fastr_sign.jpg",
+    projectImages: ["project_images/fastr_1.png"],
     tags: [ProjectTags.UX],
     path: "/fastr",
     date: new Date(2022, 5, 2),
@@ -561,10 +579,10 @@ export const projects: Project[] = [
     name: "Supernova",
     image: "cover_images/supernova_sign.png",
     projectImages: [
-      "project_images/supernova_2.png",
-      "project_images/supernova_3.png",
-      "project_images/supernova_5.png",
-      "project_images/supernova_6.png",
+      "project_images/supernova_2.jpg",
+      "project_images/supernova_3.jpg",
+      "project_images/supernova_5.jpg",
+      "project_images/supernova_6.jpg",
     ],
     tags: [ProjectTags.GENERATIVE],
     path: "/supernova",
@@ -590,5 +608,272 @@ export const projects: Project[] = [
     description: "A combination of KAFE (coffee) and films is the best",
     text: "My friends asked me to create a logo and a few icons for their project KAFE, a video archive, and a registration form for the films for the Film Festival of the Faculty of Informatics MU. I wanted to combine the coffee icon with the film tape, and as you are supposed to save your films into the KAFE system, I designed the videotape that sinks into the coffee mug. There is a dark and light option, but it is also used in colored lines on the webpage.",
     component: (project) => <ProjectPageMeduse project={project} />,
+  },
+
+  {
+    name: "Physarum simulation",
+    image: "cover_images/physarum_simulation_sign.png",
+    projectImages: [
+      "project_images/physarum_simulation_07.jpg",
+      "project_images/physarum_simulation_1.jpg",
+      "project_images/physarum_simulation_2.jpg",
+      "project_images/physarum_simulation_4.jpg",
+      "project_images/physarum_simulation_5.jpg",
+    ],
+    tags: [ProjectTags.GENERATIVE],
+    path: "/physarumsimulation",
+    date: new Date(2023, 6, 1),
+    tools: ["WebGPU", "Javascript"],
+    description: "Computer simulation inspired by the physarum organism",
+    text: "Physarum polycephalum is a unicellular multinucleate organism that can behave in such a complex way. It can effectively find the shortest paths, and the local behaviors based on chemotaxis can create beautiful graphical results. This project simulates the behavior of this organism and, by adjusting many parameters and using different coloring, can produce a huge amount of various outputs. I was fascinated that this simple ruleset could lead to such different visuals. The final application runs on web browsers that support WebGPU.",
+    component: (project) => <ProjectPagePhysarum project={project} />,
+  },
+
+  {
+    name: "Applepunk",
+    image: "cover_images/applepunk_cover_sign.jpg",
+    projectImages: [
+      "project_images/applepunk_header.jpg",
+      "project_images/applepunk_1.png",
+      "project_images/applepunk_2.png",
+      "project_images/applepunk_3.png",
+      "project_images/applepunk_4.png",
+    ],
+    tags: [ProjectTags.GAMES],
+    path: "/applepunk",
+    date: new Date(2023, 7, 17),
+    tools: ["Unity", "Affinity Designer"],
+    description: "Snake, but you are the apple.",
+    text: "The game was made originally in 48 hours for GMTK Game Jam 2023 but missed submission by 2 minutes. It was made by Jakub Slezáček, Matěj Zavrtálek and me. I created all the graphics and UI, and the guys programmed the game mechanics. The Applepunk game is very similar to the original Snake game, but the player controls the apple, and their goal is to destroy snakes before they get eaten.",
+    component: (project) => <ProjectPageApplepunk project={project} />,
+  },
+
+  {
+    name: "Orgot",
+    image: "cover_images/orgot_sign.png",
+    projectImages: [
+      "project_images/orgot_0.jpg",
+      "project_images/orgot_4.jpg",
+      "project_images/orgot_3.jpg",
+      "project_images/orgot_1.jpg",
+      "project_images/orgot_2.jpg",
+    ],
+    tags: [ProjectTags.GAMES],
+    path: "/orgot",
+    date: new Date(2023, 9, 14),
+    tools: ["Godot", "Aseprite"],
+    description: "Local co-op game where the flower wants to expand its ship",
+    text: "The game was created in 48 hours for Game Jam at Game Development Dungeon 2023. It was made by Adam Štěpánek, Jonáš Rosecký, Vojtěch Brůža, Hana Tokárová and me. Hanka and I were responsible for the overall visual style, sprites, and graphics. The pixel art game called Orgot is a local co-op game where one player controls the mouse and the other keyboard. The goal is to expand the spaceship created from the floating islands, grow seeds, and protect the ship from insects.",
+    component: (project) => <ProjectPageOrgot project={project} />,
+  },
+
+  {
+    name: "Effecta",
+    image: "cover_images/effecta_sign.png",
+    projectImages: [
+      "project_images/effecta_0.png",
+      "project_images/effecta_1.jpg",
+      "project_images/effecta_2.jpg",
+      "project_images/effecta_3.jpg",
+      "project_images/effecta_4.jpg",
+      "project_images/effecta_5.jpg",
+      "project_images/effecta_6.jpg",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/effecta",
+    date: new Date(2023, 10, 1),
+    tools: ["Affinity Designer"],
+    description:
+      "Competition to create visual motives for a company Effecta group",
+    text: "The goal was to create visual motives (T-shirt, wall design, and car design) for a company, Effecta group, which works with documents and data. One of the ideas from brainstorming was to try to have a bit of fun in this field, so I've decided to create clothes with some puns and simple visuals in the style of comic books. I've chosen the marks used in the paper shredding for the wall design.",
+    component: (project) => <ProjectPageEffecta project={project} />,
+  },
+
+  {
+    name: "Auversum Fashion\u00A0&\u00A0AR",
+    image: "cover_images/auversum_sign.jpg",
+    projectImages: [
+      "project_images/auversum_0.jpg",
+      "project_images/auversum_1.jpg",
+      "project_images/auversum_2.jpg",
+    ],
+    tags: [ProjectTags.UX, ProjectTags.GRAPHIC_DESIGN],
+    path: "/auversum",
+    date: new Date(2023, 7, 1),
+    tools: ["Affinity Designer", "Figma", "Unity"],
+    description: "AR application for the AUVERSUM fashion project",
+    text: "Application AUVERSUM is part of the fashion project, where patterns printed on the fabric of the garments serve as AR markers for displaying augmented reality content. Since each garment varies and is not identical, this application allows the user to create their marker by photographing the garment's pattern. The application was developed with Hana Tokárová and Milan Doležal. AUVERSUM application is available on the Google Play and App Store.",
+    component: (project) => <ProjectPageAuversum project={project} />,
+  },
+
+  {
+    name: "Research brochure for FI MUNI",
+    image: "cover_images/fi_research_sign.jpg",
+    projectImages: [
+      "project_images/fi_research_0.png",
+      "project_images/fi_brochure_1.png",
+      "project_images/fi_brochure_2.png",
+      "project_images/fi_brochure_3.jpg",
+      "project_images/fi_brochure_4.jpg",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/firesearchbrochure",
+    date: new Date(2023, 11, 1),
+    tools: ["Affinity Designer"],
+    description:
+      "Competition to create a design for a brochure of Research laboratories",
+    text: "The goal was to design a brochure for Research laboratories at the Faculty of Informatics at Masaryk University. One of the requirements was to use the faculty colors - yellow and black. The idea was to create a short overview instead of the catalog version, which is foldable and easily understandable. For several fields, icons were created, and each field has its own color. The map is shaped into the motherboard design, where in the middle is a QR code with a link to the detailed description of the laboratories.",
+    component: (project) => <ProjectPageAkademikpro project={project} />,
+  },
+
+  {
+    name: "Merch for FI MUNI",
+    image: "cover_images/fi_merch_sign.jpg",
+    projectImages: [
+      "project_images/fi_merch_0.png",
+      "project_images/fi_merch_2.jpg",
+      "project_images/fi_merch_1.jpg",
+      "project_images/fi_merch_3.jpg",
+      "project_images/fi_merch_4.jpg",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/fimerch",
+    date: new Date(2023, 12, 1),
+    tools: ["Affinity Designer"],
+    description:
+      "Competition to create ideas for merch at the Faculty of Informatics",
+    text: "The goal was to develop ideas for potential future expansion of the merch at the Faculty of Informatics. The restrictions were to work with the faculty colors - yellow and black - and to develop some original ideas. There were several categories - cheap gifts for events, fancy gifts for partners, gifts for students as price, and gifts for new employees.",
+    component: (project) => <ProjectPageAkademikpro project={project} />,
+  },
+
+  {
+    name: "AZUFont",
+    image: "cover_images/azufont_sign.png",
+    projectImages: [
+      "project_images/azufont_0.png",
+      "project_images/azufont_1.png",
+      "project_images/azufont_2.png",
+      "project_images/azufont_3.png",
+      "project_images/azufont_4.png",
+      "project_images/azufont_5.png",
+      "project_images/azufont_6.jpg",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
+    path: "/azufont",
+    date: new Date(2023, 11, 2),
+    tools: ["Affinity Designer"],
+    description: "The font based on azulejo tiles",
+    text: "The AzuFont is based on the twelve basic symbols used in the traditional Portuguese Azulejo tiles. The AzuFont consists of the upper case letters of the Latin alphabet. It has mainly decorative functions and is supposed to be used for short texts or headings, as the text is less readable when used in longer texts or smaller font sizes. Not only the letters but also the tiles were created as a part and extension for this font. Each tile contains the letter that represents it; however, it might not be visible at first sight. The tiles are highly decorative and could be used in propagation materials or as examples of what could be created with this application.",
+    component: (project) => <ProjectPageEffecta project={project} />,
+  },
+
+  {
+    name: "Near & Dear visuals generator",
+    image: "cover_images/neardear_sign.png",
+    projectImages: [
+      "project_images/neardear_0.png",
+      "project_images/neardear_1.png",
+      "project_images/neardear_2.png",
+      "project_images/neardear_3.png",
+      "project_images/neardear_4.png",
+    ],
+    tags: [ProjectTags.GENERATIVE],
+    path: "/neardear",
+    date: new Date(2023, 2, 17),
+    tools: ["p5.js"],
+    description: "Generator of the visuals for Near & Dear",
+    text: "This project was created in collaboration with Semibold, who designed the identity and asked for an application that would generate similar visuals based on their rules. The visuals are used mainly for social networks and can be downloaded in PNG and SVG formats. The application was created with Vojtěch Brůža.",
+    component: (project) => <ProjectPageNeardear project={project} />,
+  },
+
+  {
+    name: "AZU: Emotions in tiles",
+    image: "cover_images/azu_sign.jpg",
+    projectImages: [
+      "project_images/azu_0.jpg",
+      "project_images/azu_1.jpg",
+      "project_images/azu_2.png",
+      "project_images/azu_3.png",
+      "project_images/azu_4.png",
+    ],
+    tags: [
+      ProjectTags.GRAPHIC_DESIGN,
+      ProjectTags.UX,
+      ProjectTags.VISUAL,
+      ProjectTags.GENERATIVE,
+    ],
+    path: "/azu",
+    date: new Date(2024, 6, 1),
+    tools: ["Affinity Designer", "Unity", "Javascript"],
+    description:
+      "Use of generative design in psychology for emotions representation",
+    text: "For my Master's thesis, I have created an application where users can record their emotions and feelings through art by making tiles and mosaics inspired by the Portugal Azulejo tiles. In the application, the user can easily create a mosaic according to their feelings and imagination, and after that, they fill in the questionnaire, where they can evaluate their emotions. In the future, the application will guess emotions from the image, but currently, I'm collecting some data that will be used for neural network training. Therefore, the users need to evaluate the image themselves using a questionnaire. The application can be a journal of emotions and a tool for art therapy, and it is available on Google Play.",
+    component: (project) => <ProjectPageAzu project={project} />,
+  },
+
+  {
+    name: "Garrigue Games",
+    image: "cover_images/gg_sign.jpg",
+    projectImages: [
+      "project_images/gg_0.png",
+      "project_images/gg_3.png",
+      "project_images/gg_5.png",
+      "project_images/gg_1.jpg",
+      "project_images/gg_4.png",
+    ],
+    tags: [ProjectTags.UX],
+    path: "/garriguegames",
+    date: new Date(2024, 4, 1),
+    tools: ["Figma", "React"],
+    description: "Webpage for Game Development at Faculty of Informatics",
+    text: "This project aimed to design and implement a webpage for Game Development at the Faculty of Informatics at Masaryk University. The webpage serves as a public presentation of the course results and an information page about courses, events, and others. It supports dark and light modes, and it is also responsive. This project was created with Hana Tokárová and was a Dean's project - MUNI/33/0026/2024. The page is currently under development.",
+    component: (project) => <ProjectPageGarrigueGames project={project} />,
+  },
+
+  {
+    name: "Hexabe",
+    image: "cover_images/hexabe_sign.jpg",
+    projectImages: [
+      "project_images/hexabe_0.jpg",
+      "project_images/hexabe_1.jpg",
+      "project_images/hexabe_2.jpg",
+      "project_images/hexabe_3.jpg",
+      "project_images/hexabe_4.jpg",
+      "project_images/hexabe_5.jpg",
+      "project_images/hexabe_6.jpg",
+    ],
+    tags: [ProjectTags.GAMES],
+    path: "/hexabe",
+    date: new Date(2023, 7, 4),
+    tools: [
+      "Affinity Designer",
+      "Procreate",
+      "Cutting machine, cardboard, real world stuff",
+    ],
+    description: "A strategy building game with hexagonal tiles",
+    text: "In the beginning, there are four hexagons. In the end, there is one winner. Hexabe is a strategic logic game where players take turns placing hexagonal tiles on the game board and trying to find patterns among them. Each player has a pile of cubes in front of them and tries to be the first to get rid of them. This game targets players who enjoy fast-paced competitive games, and thanks to the simplicity of the rules, even casual board game players will enjoy it. This game was created with Hana Tokárová and Jonáš Rosecký, and we plan to publish this game through the publisher or crowdfunding campaign.",
+    component: (project) => <ProjectPageHexabe project={project} />,
+  },
+
+  {
+    name: "Kurz M365",
+    image: "cover_images/uvt_sign.jpg",
+    projectImages: [
+      "project_images/uvt_0.png",
+      "project_images/uvt_1.jpg",
+      "project_images/uvt_4.jpg",
+      "project_images/uvt_5.png",
+      "project_images/uvt_6.png",
+      "project_images/uvt_2.jpg",
+      "project_images/uvt_3.jpg",
+      "project_images/uvt_animace.gif",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.ANIMATION],
+    path: "/kurzm365",
+    date: new Date(2023, 4, 4),
+    tools: ["Affinity Designer", "Adobe After Effects", "Adobe Premiere Pro"],
+    description: "Online education course on Microsoft 365 tools",
+    text: "For several months, I worked at ICT MUNI as a graphic designer, animator, and video creator of an online course on Microsoft 365 tools. My task was to create characters, that would introduce users to some basic concepts of various Microsoft 365 tools. Another task was to create animation and concepts for the series of educational videos and also create these videos. I made around 15 out of 40 videos; later, several people joined to create videos based on my template video. The course is available online only to students and teachers of Masaryk University.",
+    component: (project) => <ProjectPageKurzM365 project={project} />,
   },
 ];

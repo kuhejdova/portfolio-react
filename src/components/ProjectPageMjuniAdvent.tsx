@@ -102,6 +102,29 @@ export default function ProjectPage(props: IProjectBoxProps) {
         />
       </SimpleGrid>
 
+      
+        <Image
+          rounded={"md"}
+          alt={"product image"}
+          src={props.project.projectImages[4]}
+          fit={"contain"}
+          align={"center"}
+          w={"100%"}
+          h={{ base: "100%" }}
+          marginTop={5}
+        />
+        <Image
+          rounded={"md"}
+          alt={"product image"}
+          src={props.project.projectImages[5]}
+          fit={"contain"}
+          align={"center"}
+          w={"100%"}
+          h={{ base: "100%" }}
+          marginTop={5}
+        />
+      
+
       <Box paddingTop={10}>
         <Heading size="md" mb={2}>
           Used tools

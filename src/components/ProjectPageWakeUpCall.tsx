@@ -40,7 +40,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         fit={"cover"}
         align={"center"}
         w={"100%"}
-        h={{ base: "100%", sm: "400px", lg: "500px" }}
+        h={{ base: "100%"}}
       />
       <VStack spacing={{ base: 4, sm: 6 }}>
         <Text
@@ -58,19 +58,9 @@ export default function ProjectPage(props: IProjectBoxProps) {
         columns={3}
         spacing={5}
         w={"100%"}
-        h={"500px"}
-        paddingTop={10}
+        marginTop={5}
+        marginBottom={5}
       >
-        <Image
-          rounded={"md"}
-          alt={"product image"}
-          src={props.project.projectImages[0]}
-          fit={"contain"}
-          align={"center"}
-          w={"100%"}
-          h={{ base: "70%" }}
-          paddingTop={10}
-        />
         <Image
           rounded={"md"}
           alt={"product image"}
@@ -78,8 +68,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           fit={"contain"}
           align={"center"}
           w={"100%"}
-          h={{ base: "70%" }}
-          paddingTop={10}
+          h={{ base: "100%" }}
         />
         <Image
           rounded={"md"}
@@ -88,8 +77,16 @@ export default function ProjectPage(props: IProjectBoxProps) {
           fit={"contain"}
           align={"center"}
           w={"100%"}
-          h={{ base: "70%" }}
-          paddingTop={10}
+          h={{ base: "100%" }}
+        />
+        <Image
+          rounded={"md"}
+          alt={"product image"}
+          src={props.project.projectImages[3]}
+          fit={"contain"}
+          align={"center"}
+          w={"100%"}
+          h={{ base: "100%" }}
         />
       </SimpleGrid>
 

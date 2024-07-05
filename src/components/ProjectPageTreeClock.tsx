@@ -39,7 +39,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         fit={"cover"}
         align={"center"}
         w={"100%"}
-        h={{ base: "100%", sm: "400px", lg: "500px" }}
+        h={{ base: "100%"}}
       />
       <VStack spacing={{ base: 4, sm: 6 }}>
         <Text
@@ -61,7 +61,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        paddingTop={10}
+        paddingTop={5}
       />
 
       <Image
@@ -72,7 +72,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        paddingTop={10}
+        paddingTop={5}
       />
 
       <Image
@@ -83,7 +83,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         align={"center"}
         w={"100%"}
         h={{ base: "100%" }}
-        paddingTop={10}
+        paddingTop={5}
       />
 
       <Text paddingTop={10}>Video will be added</Text>

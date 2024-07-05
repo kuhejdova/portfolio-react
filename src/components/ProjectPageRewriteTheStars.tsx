@@ -72,7 +72,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           fit={"contain"}
           align={"center"}
           w={"100%"}
-          h={{ base: "100%", sm: "400px", lg: "500px" }}
+          h={{ base: "100%"}}
         />
         <Image
           rounded={"md"}
@@ -81,7 +81,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           fit={"contain"}
           align={"center"}
           w={"100%"}
-          h={{ base: "100%", sm: "400px", lg: "500px" }}
+          h={{ base: "100%"}}
         />
       </SimpleGrid>
 
@@ -106,7 +106,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           fit={"contain"}
           align={"center"}
           w={"100%"}
-          h={{ base: "100%", sm: "400px", lg: "500px" }}
+          h={{ base: "100%"}}
         />
         <Image
           rounded={"md"}
@@ -115,7 +115,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           fit={"contain"}
           align={"center"}
           w={"100%"}
-          h={{ base: "100%", sm: "400px", lg: "500px" }}
+          h={{ base: "100%"}}
         />
       </SimpleGrid>
 

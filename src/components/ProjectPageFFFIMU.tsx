@@ -44,7 +44,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         fit={"cover"}
         align={"center"}
         w={"100%"}
-        h={{ base: "100%", sm: "600px", lg: "600px" }}
+        h={{ base: "100%" }}
       />
       <VStack spacing={{ base: 4, sm: 6 }}>
         <Text
@@ -58,7 +58,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         <Text fontSize={"lg"}>{props.project.text}</Text>
       </VStack>
 
-      <Link color="teal.500" href="https://fffimu22.gatsbyjs.io/">
+      <Link color="teal.500" href="https://fffimu22.vercel.app/">
         <Center>
           <HStack py={5} align={"center"}>
             <IconButton
@@ -73,7 +73,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         </Center>
       </Link>
 
-      <Text fontSize={"lg"} >
+      <Text fontSize={"lg"}>
         One of my jobs was to create Mediakit, which we were sending to our
         media partners, propagating the festival. I wrote all texts describing
         our festival, history, and technical details, and I had to use visuals.
@@ -83,11 +83,11 @@ export default function ProjectPage(props: IProjectBoxProps) {
         columns={2}
         spacing={5}
         w={"100%"}
-        paddingBottom={5}
-        paddingTop={10}
+        marginBottom={5}
+        marginTop={10}
       >
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[1]}
           fit={"contain"}
@@ -96,7 +96,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           h={{ base: "100%" }}
         />
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[2]}
           fit={"contain"}
@@ -116,9 +116,9 @@ export default function ProjectPage(props: IProjectBoxProps) {
         organizers.
       </Text>
 
-      <SimpleGrid columns={2} spacing={5} w={"100%"} paddingTop={10}>
+      <SimpleGrid columns={2} spacing={5} w={"100%"} marginTop={10}>
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[3]}
           fit={"contain"}
@@ -127,7 +127,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           h={{ base: "100%" }}
         />
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[4]}
           fit={"contain"}
@@ -138,8 +138,8 @@ export default function ProjectPage(props: IProjectBoxProps) {
       </SimpleGrid>
 
       <Image
-        //   rounded={"md"}
-        paddingTop={10}
+        rounded={"md"}
+        marginTop={5}
         alt={"product image"}
         src={props.project.projectImages[5]}
         fit={"contain"}
@@ -149,9 +149,9 @@ export default function ProjectPage(props: IProjectBoxProps) {
       />
 
       <Image
-        //   rounded={"md"}
-        paddingTop={10}
-        paddingBottom={10}
+        rounded={"md"}
+        marginTop={5}
+        marginBottom={5}
         alt={"product image"}
         src={props.project.projectImages[6]}
         fit={"contain"}
@@ -162,7 +162,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
 
       <SimpleGrid columns={2} spacing={5} w={"100%"}>
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[7]}
           fit={"contain"}
@@ -171,7 +171,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           h={{ base: "100%" }}
         />
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[8]}
           fit={"contain"}
@@ -190,9 +190,9 @@ export default function ProjectPage(props: IProjectBoxProps) {
         the circles, I made ellipses that look like Easter eggs.
       </Text>
 
-      <SimpleGrid columns={2} spacing={5} w={"100%"} paddingTop={10}>
+      <SimpleGrid columns={2} spacing={5} w={"100%"} marginTop={10}>
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[10]}
           fit={"contain"}
@@ -201,7 +201,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           h={{ base: "100%" }}
         />
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[9]}
           fit={"contain"}
