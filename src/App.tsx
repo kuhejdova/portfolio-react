@@ -1,4 +1,5 @@
 import {
+  Box,
   Container,
   SimpleGrid,
   useColorMode,
@@ -34,7 +35,11 @@ export function App(props: IAppProps) {
         }}
       >
         <OutletOrChildren>
-          <SimpleGrid spacing="40px" columns={{ base: 1, md: 2, lg: 3, xl: 4 }}>
+          <SimpleGrid
+            spacing="40px"
+            columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
+            justifyItems={"center"}
+          >
             {projects
               .sort(
                 (proj1, proj2) => proj2.date.getTime() - proj1.date.getTime()
@@ -49,7 +54,14 @@ export function App(props: IAppProps) {
                     allCategories.some((cat) => proj.tags.includes(cat)))
               )
               .map((proj) => (
-                <ProjectBox project={proj} />
+                <Box
+                  key={proj.name}
+                  display={"flex"}
+                  h={"full"}
+                  justifyContent="center"
+                >
+                  <ProjectBox project={proj} />
+                </Box>
               ))}
           </SimpleGrid>
         </OutletOrChildren>

@@ -357,7 +357,7 @@ export const projects: Project[] = [
     name: "Archery results visualization",
     image: "cover_images/archery_results_sign.png",
     projectImages: [
-      "cover_images/archery_results_sign.png",
+      "project_images/archery_results_7.png",
       "project_images/archery_results_2.png",
       "project_images/archery_results_3.png",
       "project_images/archery_results_4.png",
@@ -379,7 +379,7 @@ export const projects: Project[] = [
     name: "Flower fairy",
     image: "cover_images/flower_fairy_sign.png",
     projectImages: [
-      "cover_images/flower_fairy_sign.png",
+      "project_images/flower_fairy_0.jpg",
       "project_images/flower_fairy_6.png",
       "project_images/flower_fairy_3.png",
       "project_images/flower_fairy_5.png",
@@ -482,7 +482,7 @@ export const projects: Project[] = [
 
   {
     name: "AkademikPRO",
-    image: "cover_images/akademikpro_sign.png",
+    image: "cover_images/akademikpro_sign.jpg",
     projectImages: [
       "project_images/akademikpro_1.png",
       "project_images/akademikpro_colors.png",
@@ -546,8 +546,8 @@ export const projects: Project[] = [
 
   {
     name: "FaStR app",
-    image: "cover_images/fastr_sign.png",
-    projectImages: ["cover_images/fastr_sign.png"],
+    image: "cover_images/fastr_sign.jpg",
+    projectImages: ["project_images/fastr_1.png"],
     tags: [ProjectTags.UX],
     path: "/fastr",
     date: new Date(2022, 5, 2),
@@ -685,14 +685,12 @@ export const projects: Project[] = [
   },
 
   {
-    name: "Auversum Fashion & AR",
+    name: "Auversum Fashion\u00A0&\u00A0AR",
     image: "cover_images/auversum_sign.jpg",
     projectImages: [
       "project_images/auversum_0.jpg",
       "project_images/auversum_1.jpg",
       "project_images/auversum_2.jpg",
-      "project_images/effecta_3.png",
-      "project_images/effecta_4.png",
     ],
     tags: [ProjectTags.UX, ProjectTags.GRAPHIC_DESIGN],
     path: "/auversum",
@@ -842,7 +840,11 @@ export const projects: Project[] = [
     tags: [ProjectTags.GAMES],
     path: "/hexabe",
     date: new Date(2023, 7, 4),
-    tools: ["Affinity Designer", "Procreate", "Cutting machine, cardboard, real world stuff"],
+    tools: [
+      "Affinity Designer",
+      "Procreate",
+      "Cutting machine, cardboard, real world stuff",
+    ],
     description: "A strategy building game with hexagonal tiles",
     text: "In the beginning, there are four hexagons. In the end, there is one winner. Hexabe is a strategic logic game where players take turns placing hexagonal tiles on the game board and trying to find patterns among them. Each player has a pile of cubes in front of them and tries to be the first to get rid of them. This game targets players who enjoy fast-paced competitive games, and thanks to the simplicity of the rules, even casual board game players will enjoy it. This game was created with Hana Tokárová and Jonáš Rosecký, and we plan to publish this game through the publisher or crowdfunding campaign.",
     component: (project) => <ProjectPageHexabe project={project} />,

@@ -17,19 +17,22 @@ export interface IProjectBoxProps {
 
 export default function ProjectBox(props: IProjectBoxProps) {
   return (
-    <Center py={5}>
       <Link to={props.project.path}>
         <Box
           role={"group"}
           p={6}
           w={"full"}
+          h={"full"} // Ensure the box takes full height
           bg={useColorModeValue("gray.100", "gray.800")}
           boxShadow={useColorModeValue("lg", "dark-lg")}
           rounded={"lg"}
           pos={"relative"}
           zIndex={1}
+          display={"flex"}
+          flexDirection={"column"} // Ensure the content is laid out in a column
+          justifyContent={"space-between"} // Distribute space between elements
         >
-          <Center rounded={"lg"} mt={0} pos={"relative"} height={"230px"}>
+          <Center rounded={"lg"} pos={"relative"} height={"230px"}>
             <Image
               rounded={"lg"}
               height={230}
@@ -39,15 +42,17 @@ export default function ProjectBox(props: IProjectBoxProps) {
               src={`${process.env.PUBLIC_URL}/${props.project.image}`}
             />
           </Center>
-          <Stack pt={5} align={"center"} width={230}>
+          <Stack pt={5} align={"center"} flex={"1 1 auto"} width={230} >
             <Text
               color={"gray.500"}
               fontSize={"sm"}
               textTransform={"uppercase"}
               align={"center"}
             >
-              {props.project.tags.map((tag) => (
-                <Badge mx="1">{tag}</Badge>
+              {props.project.tags.map((tag, index) => (
+                <Badge key={index} mx="1">
+                  {tag}
+                </Badge>
               ))}
             </Text>
             <Heading
@@ -62,6 +67,5 @@ export default function ProjectBox(props: IProjectBoxProps) {
           </Stack>
         </Box>
       </Link>
-    </Center>
   );
 }
