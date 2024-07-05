@@ -156,6 +156,7 @@ export const projects: Project[] = [
     name: "Wake up call poster",
     image: "cover_images/wakeup_sign.png",
     projectImages: [
+      "project_images/wakeup_banner.png",
       "project_images/wakeup_poster_2.png",
       "project_images/wakeup_poster1.png",
       "project_images/wakeup_poster3.png",
