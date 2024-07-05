@@ -67,7 +67,7 @@ import {
           fit={"cover"}
           align={"center"}
           w={"100%"}
-          h={{ base: "100%", sm: "400px", lg: "500px" }}
+          h={{ base: "100%" }}
         />
         <Image
           rounded={"md"}
@@ -76,7 +76,7 @@ import {
           fit={"cover"}
           align={"center"}
           w={"100%"}
-          h={{ base: "100%", sm: "400px", lg: "500px" }}
+          h={{ base: "100%" }}
         />
       </SimpleGrid>
   
@@ -94,7 +94,6 @@ import {
             fit={"cover"}
             align={"center"}
             w={"100%"}
-            h={"70%"}
           />
           <Image
             rounded={"md"}
@@ -103,7 +102,6 @@ import {
             fit={"cover"}
             align={"center"}
             w={"100%"}
-            h={"70%"}
           />
         </SimpleGrid>
   
