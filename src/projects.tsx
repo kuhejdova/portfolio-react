@@ -447,7 +447,7 @@ export const projects: Project[] = [
     name: "Hunger Games animation",
     image: "cover_images/hg_sign.png",
     projectImages: [
-      "cover_images/hg_sign.png",
+      "project_images/hg_sign.png",
       "project_images/hg_2.png",
       "project_images/hg_3.png",
     ],
