@@ -464,7 +464,7 @@ export const projects: Project[] = [
     name: "Generative design via Motion Capture",
     image: "cover_images/mocap_sign.png",
     projectImages: [
-      "cover_images/mocap_sign.png",
+      "project_images/mocap_sign.jpg",
       "project_images/mocap_1.gif",
     ],
     tags: [ProjectTags.ANIMATION],
