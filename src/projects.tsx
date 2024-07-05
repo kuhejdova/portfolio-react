@@ -12,9 +12,12 @@ import ProjectPageElderlyBanking from "./components/ProjectPageElderlyBanking";
 import ProjectPageFastr from "./components/ProjectPageFastr";
 import ProjectPageFFFIMU from "./components/ProjectPageFFFIMU";
 import ProjectPageGarden from "./components/ProjectPageGarden";
+import ProjectPageGarrigueGames from "./components/ProjectPageGarrigueGames";
 import ProjectPageHandicraftBooks from "./components/ProjectPageHandicraftBooks";
 import ProjectPageHead from "./components/ProjectPageHead";
+import ProjectPageHexabe from "./components/ProjectPageHexabe";
 import ProjectPageHGAnimation from "./components/ProjectPageHGAnimation";
+import ProjectPageKurzM365 from "./components/ProjectPageKurzM365";
 import ProjectPageMeduse from "./components/ProjectPageMeduse";
 import ProjectPageMjuniAdvent from "./components/ProjectPageMjuniAdvent";
 import ProjectPageMocap from "./components/ProjectPageMocap";
@@ -664,12 +667,12 @@ export const projects: Project[] = [
     image: "cover_images/effecta_sign.png",
     projectImages: [
       "project_images/effecta_0.png",
-      "project_images/effecta_1.png",
-      "project_images/effecta_2.png",
-      "project_images/effecta_3.png",
-      "project_images/effecta_4.png",
-      "project_images/effecta_5.png",
-      "project_images/effecta_6.png",
+      "project_images/effecta_1.jpg",
+      "project_images/effecta_2.jpg",
+      "project_images/effecta_3.jpg",
+      "project_images/effecta_4.jpg",
+      "project_images/effecta_5.jpg",
+      "project_images/effecta_6.jpg",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN],
     path: "/effecta",
@@ -790,12 +793,80 @@ export const projects: Project[] = [
       "project_images/azu_3.png",
       "project_images/azu_4.png",
     ],
-    tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.UX, ProjectTags.VISUAL ,ProjectTags.GENERATIVE],
+    tags: [
+      ProjectTags.GRAPHIC_DESIGN,
+      ProjectTags.UX,
+      ProjectTags.VISUAL,
+      ProjectTags.GENERATIVE,
+    ],
     path: "/azu",
     date: new Date(2024, 6, 1),
     tools: ["Affinity Designer", "Unity", "Javascript"],
-    description: "Use of generative design in psychology for emotions representation",
+    description:
+      "Use of generative design in psychology for emotions representation",
     text: "For my Master's thesis, I have created an application where users can record their emotions and feelings through art by making tiles and mosaics inspired by the Portugal Azulejo tiles. In the application, the user can easily create a mosaic according to their feelings and imagination, and after that, they fill in the questionnaire, where they can evaluate their emotions. In the future, the application will guess emotions from the image, but currently, I'm collecting some data that will be used for neural network training. Therefore, the users need to evaluate the image themselves using a questionnaire. The application can be a journal of emotions and a tool for art therapy, and it is available on Google Play.",
     component: (project) => <ProjectPageAzu project={project} />,
+  },
+
+  {
+    name: "Garrigue Games",
+    image: "cover_images/gg_sign.jpg",
+    projectImages: [
+      "project_images/gg_0.png",
+      "project_images/gg_3.png",
+      "project_images/gg_5.png",
+      "project_images/gg_1.jpg",
+      "project_images/gg_4.png",
+    ],
+    tags: [ProjectTags.UX],
+    path: "/garriguegames",
+    date: new Date(2024, 4, 1),
+    tools: ["Figma", "React"],
+    description: "Webpage for Game Development at Faculty of Informatics",
+    text: "This project aimed to design and implement a webpage for Game Development at the Faculty of Informatics at Masaryk University. The webpage serves as a public presentation of the course results and an information page about courses, events, and others. It supports dark and light modes, and it is also responsive. This project was created with Hana Tokárová and was a Dean's project - MUNI/33/0026/2024. The page is currently under development.",
+    component: (project) => <ProjectPageGarrigueGames project={project} />,
+  },
+
+  {
+    name: "Hexabe",
+    image: "cover_images/hexabe_sign.jpg",
+    projectImages: [
+      "project_images/hexabe_0.jpg",
+      "project_images/hexabe_1.jpg",
+      "project_images/hexabe_2.jpg",
+      "project_images/hexabe_3.jpg",
+      "project_images/hexabe_4.jpg",
+      "project_images/hexabe_5.jpg",
+      "project_images/hexabe_6.jpg",
+    ],
+    tags: [ProjectTags.GAMES],
+    path: "/hexabe",
+    date: new Date(2023, 7, 4),
+    tools: ["Affinity Designer", "Procreate", "Cutting machine, cardboard, real world stuff"],
+    description: "A strategy building game with hexagonal tiles",
+    text: "In the beginning, there are four hexagons. In the end, there is one winner. Hexabe is a strategic logic game where players take turns placing hexagonal tiles on the game board and trying to find patterns among them. Each player has a pile of cubes in front of them and tries to be the first to get rid of them. This game targets players who enjoy fast-paced competitive games, and thanks to the simplicity of the rules, even casual board game players will enjoy it. This game was created with Hana Tokárová and Jonáš Rosecký, and we plan to publish this game through the publisher or crowdfunding campaign.",
+    component: (project) => <ProjectPageHexabe project={project} />,
+  },
+
+  {
+    name: "Kurz M365",
+    image: "cover_images/uvt_sign.jpg",
+    projectImages: [
+      "project_images/uvt_0.png",
+      "project_images/uvt_1.jpg",
+      "project_images/uvt_4.jpg",
+      "project_images/uvt_5.png",
+      "project_images/uvt_6.png",
+      "project_images/uvt_2.jpg",
+      "project_images/uvt_3.jpg",
+      "project_images/uvt_animace.gif",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.ANIMATION],
+    path: "/kurzm365",
+    date: new Date(2023, 4, 4),
+    tools: ["Affinity Designer", "Adobe After Effects", "Adobe Premiere Pro"],
+    description: "Online education course on Microsoft 365 tools",
+    text: "For several months, I worked at ICT MUNI as a graphic designer, animator, and video creator of an online course on Microsoft 365 tools. My task was to create characters, that would introduce users to some basic concepts of various Microsoft 365 tools. Another task was to create animation and concepts for the series of educational videos and also create these videos. I made around 15 out of 40 videos; later, several people joined to create videos based on my template video. The course is available online only to students and teachers of Masaryk University.",
+    component: (project) => <ProjectPageKurzM365 project={project} />,
   },
 ];
