@@ -58,7 +58,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         <Text fontSize={"lg"}>{props.project.text}</Text>
       </VStack>
 
-      <Link color="teal.500" href="https://fffimu22.gatsbyjs.io/">
+      <Link color="teal.500" href="https://fffimu22.vercel.app/">
         <Center>
           <HStack py={5} align={"center"}>
             <IconButton
