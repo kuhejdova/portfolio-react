@@ -204,9 +204,9 @@ export const projects: Project[] = [
     name: "Human head",
     image: "cover_images/head_sign.png",
     projectImages: [
-      "cover_images/head_sign.png",
-      "project_images/head_1.png",
-      "project_images/head_2.png",
+      "project_images/head_sign.jpg",
+      "project_images/head_1.jpg",
+      "project_images/head_2.jpg",
     ],
     tags: [ProjectTags.MODELLING],
     path: "/human_head",
