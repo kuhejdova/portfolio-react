@@ -190,9 +190,9 @@ export default function ProjectPage(props: IProjectBoxProps) {
         the circles, I made ellipses that look like Easter eggs.
       </Text>
 
-      <SimpleGrid columns={2} spacing={5} w={"100%"} paddingTop={10}>
+      <SimpleGrid columns={2} spacing={5} w={"100%"} marginTop={10}>
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[10]}
           fit={"contain"}
@@ -201,7 +201,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           h={{ base: "100%" }}
         />
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[9]}
           fit={"contain"}
