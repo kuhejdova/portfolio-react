@@ -29,16 +29,17 @@ export default function ProjectBox(props: IProjectBoxProps) {
           pos={"relative"}
           zIndex={1}
         >
-          <Box rounded={"lg"} mt={0} pos={"relative"} height={"230px"}>
+          <Center rounded={"lg"} mt={0} pos={"relative"} height={"230px"}>
             <Image
               rounded={"lg"}
               height={230}
               width={230}
               objectFit={"cover"}
+              align={"center"}
               src={`${process.env.PUBLIC_URL}/${props.project.image}`}
             />
-          </Box>
-          <Stack pt={5} align={"center"}>
+          </Center>
+          <Stack pt={5} align={"center"} width={230}>
             <Text
               color={"gray.500"}
               fontSize={"sm"}
