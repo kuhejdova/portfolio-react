@@ -54,7 +54,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         <Text fontSize={"lg"}>{props.project.text}</Text>
       </VStack>
 
-      <Text fontSize={"lg"} paddingBottom={5}>
+      <Text fontSize={"lg"} paddingBottom={5} fontWeight={"bold"}>
         Supernova
       </Text>
       <Text fontSize={"lg"} paddingBottom={5}>
@@ -65,15 +65,9 @@ export default function ProjectPage(props: IProjectBoxProps) {
         up.
       </Text>
 
-      <SimpleGrid
-        columns={2}
-        spacing={5}
-        w={"100%"}
-        paddingBottom={5}
-        paddingTop={10}
-      >
+      <SimpleGrid columns={4} spacing={5} w={"100%"}>
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[0]}
           fit={"contain"}
@@ -82,7 +76,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           h={{ base: "100%" }}
         />
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[1]}
           fit={"contain"}
@@ -90,11 +84,8 @@ export default function ProjectPage(props: IProjectBoxProps) {
           w={"100%"}
           h={{ base: "100%" }}
         />
-      </SimpleGrid>
-
-      <SimpleGrid columns={2} spacing={5} w={"100%"}>
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[2]}
           fit={"contain"}
@@ -103,7 +94,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           h={{ base: "100%" }}
         />
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[3]}
           fit={"contain"}
