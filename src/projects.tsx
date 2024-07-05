@@ -500,10 +500,10 @@ export const projects: Project[] = [
     image: "cover_images/caio_sign.png",
     projectImages: [
       "project_images/caio_1.png",
-      "cover_images/caio_sign.png",
-      "project_images/caio_3.png",
+      "project_images/caio_sign.png",
+      "project_images/caio_3.jpg",
       "project_images/caio_2.png",
-      "project_images/caio_4.png",
+      "project_images/caio_4.jpg",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.VISUAL],
     path: "/caio",

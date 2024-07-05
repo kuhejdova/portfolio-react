@@ -62,7 +62,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         paddingTop={10}
       >
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[2]}
           fit={"contain"}
@@ -71,7 +71,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           h={{ base: "100%" }}
         />
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[1]}
           fit={"contain"}
@@ -83,7 +83,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
 
       <SimpleGrid columns={2} spacing={5} w={"100%"}>
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[3]}
           fit={"contain"}
@@ -92,7 +92,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
           h={{ base: "100%" }}
         />
         <Image
-          //   rounded={"md"}
+          rounded={"md"}
           alt={"product image"}
           src={props.project.projectImages[4]}
           fit={"contain"}
