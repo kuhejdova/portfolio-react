@@ -393,7 +393,7 @@ export const projects: Project[] = [
     name: "MjUNI advent",
     image: "cover_images/mjuni_advent_sign.png",
     projectImages: [
-      "cover_images/mjuni_advent_sign.png",
+      "project_images/mjuni_advent_sign.png",
       "project_images/mjuni_advent_2.png",
       "project_images/mjuni_advent_3.png",
       "project_images/mjuni_advent_4.png",
