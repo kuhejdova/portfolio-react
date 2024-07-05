@@ -156,7 +156,7 @@ export const projects: Project[] = [
     name: "Wake up call poster",
     image: "cover_images/wakeup_sign.png",
     projectImages: [
-      "cover_images/wakeup_sign.png",
+      "project_images/wakeup_poster_2.png",
       "project_images/wakeup_poster1.png",
       "project_images/wakeup_poster3.png",
     ],
@@ -170,7 +170,7 @@ export const projects: Project[] = [
   },
   {
     name: "Garden app",
-    image: "cover_images/garden_sign.png",
+    image: "cover_images/garden_sign.jpg",
     projectImages: [
       "project_images/garden_sign.jpg",
       "project_images/garden_web_fin1.jpg",
@@ -297,7 +297,7 @@ export const projects: Project[] = [
   },
   {
     name: "Handicrafts book edition",
-    image: "cover_images/handicraft_sign.png",
+    image: "cover_images/handicraft_sign.jpg",
     projectImages: [
       "project_images/handicraft_sign.jpg",
       "project_images/hackovani_obalka.jpg",
@@ -344,7 +344,7 @@ export const projects: Project[] = [
   {
     name: "30 Years of the Visegrad group",
     image: "cover_images/v4_sign.png",
-    projectImages: ["cover_images/v4_sign.png"],
+    projectImages: ["project_images/v4_sign.jpg"],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
     path: "/visegradgroup",
     date: new Date(2020, 10, 1),
@@ -401,13 +401,15 @@ export const projects: Project[] = [
       "project_images/mjuni_advent_2.png",
       "project_images/mjuni_advent_3.png",
       "project_images/mjuni_advent_4.png",
+      "project_images/mjuni_advent_5.png",
+      "project_images/mjuni_advent_6.png",
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN],
     path: "/mjuniadvent",
     date: new Date(2021, 11, 1),
     tools: ["Affinity Designer"],
     description: "Advent banners for Masaryk Juniverzity",
-    text: "This project aimed to create a series of Facebook banners for MjUNI with the advent theme. There are four candles, as in the Czech tradition of lighting one candle every week of advent on Sunday. It's based on the MUNI font, as this job was done for the university.",
+    text: "This project aimed to create a series of Facebook banners for MjUNI with the advent theme. There are four candles, as in the Czech tradition of lighting one candle every week of Advent on Sunday. It's based on the MUNI font, as this job was done for the university. Another task was to create a design for an advent calendar, so I continued with the idea of the candles.",
     component: (project) => <ProjectPageMjuniAdvent project={project} />,
   },
 

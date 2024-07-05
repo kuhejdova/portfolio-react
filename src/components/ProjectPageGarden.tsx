@@ -44,7 +44,7 @@ export default function ProjectPage(props: IProjectBoxProps) {
         fit={"cover"}
         align={"center"}
         w={"100%"}
-        h={{ base: "100%", sm: "400px", lg: "500px" }}
+        h={{ base: "100%"}}
       />
       <VStack spacing={{ base: 4, sm: 6 }}>
         <Text
@@ -74,10 +74,10 @@ export default function ProjectPage(props: IProjectBoxProps) {
           align={"center"}
           w={"50%"}
           h={{ base: "100%" }}
-          paddingTop={10}
+          marginTop={5}
         />
       </Center>
-      <Text paddingTop={10}>
+      <Text paddingTop={5}>
         Next, we created the storyboard with a scenario to demonstrate the usage
         of our app.
       </Text>
@@ -90,12 +90,11 @@ export default function ProjectPage(props: IProjectBoxProps) {
           align={"center"}
           w={"50%"}
           h={{ base: "100%" }}
-          paddingTop={10}
-          paddingBottom={10}
+          marginTop={5}
         />
       </Center>
 
-      <Text paddingTop={10} paddingBottom={10}>
+      <Text paddingTop={5} paddingBottom={5}>
         Then, we prepared low-fidelity and high-fidelity prototypes. High-fi
         prototype was created in Figma, and it is provided below. Flow 1 is the
         desktop version and Flow 2 is mobile version. This prototype is
@@ -133,7 +132,8 @@ export default function ProjectPage(props: IProjectBoxProps) {
         </Center>
       </Link>
 
-      <SimpleGrid columns={2} spacing={5} w={"100%"} h={"400px"}>
+      <SimpleGrid columns={2} spacing={5} w={"100%"} paddingBottom={5}
+        paddingTop={5}>
         <Image
           rounded={"md"}
           alt={"product image"}
@@ -154,7 +154,8 @@ export default function ProjectPage(props: IProjectBoxProps) {
         />
       </SimpleGrid>
 
-      <SimpleGrid columns={2} spacing={5} w={"100%"} h={"500px"}>
+      <SimpleGrid columns={2} spacing={5} w={"100%"} paddingBottom={5}
+        paddingTop={5}>
         <Image
           rounded={"md"}
           alt={"product image"}
