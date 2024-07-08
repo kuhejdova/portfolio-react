@@ -429,8 +429,8 @@ const NAV_ITEMS: Array<NavItem> = [
     href: "/",
   },
   {
-    label: "3D modelling",
-    tag: ProjectTags.MODELLING,
+    label: "Games",
+    tag: ProjectTags.GAMES,
     href: "/",
   },
   {
