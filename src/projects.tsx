@@ -48,7 +48,7 @@ export enum ProjectTags {
 export const otherCategories: ProjectTags[] = [
   ProjectTags.VISUALIZATION,
   ProjectTags.ANIMATION,
-  ProjectTags.GAMES,
+  ProjectTags.MODELLING,
 ];
 
 export const allCategories: ProjectTags[] = [
@@ -393,7 +393,6 @@ export const projects: Project[] = [
     tools: ["Blender"],
     description: "Fairy with a flower as her wings",
     text: "3D model created from the cube. Tiny baby girl fairy with a flower growing from her back. She is dressed in leaves, and she lives in the forest. The red flower is not only for cover and beauty but also works as her wings. She is so tiny she can hide in the blooming meadow and calmly sleep.",
-  
   },
 
   {
