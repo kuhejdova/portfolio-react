@@ -32,7 +32,7 @@ import ProjectPageWakeUpCall from "./components/ProjectPageWakeUpCall";
 
 export enum ProjectTags {
   GRAPHIC_DESIGN = "Graphic design",
-  UX = "UX",
+  UX = "UX/UI",
   TYPOGRAPHY = "Typography",
   MODELLING = "3D modelling",
   GENERATIVE = "Generative Art",
@@ -695,13 +695,14 @@ export const projects: Project[] = [
       "project_images/auversum_0.jpg",
       "project_images/auversum_1.jpg",
       "project_images/auversum_2.jpg",
+      "project_images/auversum_3.jpg",
     ],
     tags: [ProjectTags.UX, ProjectTags.GRAPHIC_DESIGN],
     path: "/auversum",
     date: new Date(2023, 7, 1),
     tools: ["Affinity Designer", "Figma", "Unity"],
     description: "AR application for the AUVERSUM fashion project",
-    text: "Application AUVERSUM is part of the fashion project, where patterns printed on the fabric of the garments serve as AR markers for displaying augmented reality content. Since each garment varies and is not identical, this application allows the user to create their marker by photographing the garment's pattern. The application was developed with Hana Tokárová and Milan Doležal. AUVERSUM application is available on the Google Play and App Store.",
+    text: "Application AUVERSUM is part of the fashion project, where patterns printed on the fabric of the garments serve as AR markers for displaying augmented reality content. Since each garment varies and is not identical, this application allows the user to create their marker by photographing the garment's pattern. The application was developed with Hana Tokárová and Milan Doležal for the brand Auversum, a brand that specializes at nano clothing technology based in Czech Republic. AUVERSUM application is available on the Google Play and App Store. The application was first introduced at Meltingpot at Colours of Ostrava 2023. Since then, people from many countries have tried it and explored its possibilities at different fashion summits and shows.",
     component: (project) => <ProjectPageAuversum project={project} />,
   },
 
