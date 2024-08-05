@@ -57,8 +57,9 @@ export default function ProjectPage(props: IProjectBoxProps) {
         </Text>
         <Text fontSize={"lg"}>{props.project.text}</Text>
       </VStack>
+
       <SimpleGrid
-        columns={3}
+        columns={{ base: 1, sm: 3 }}
         spacing={5}
         w={"100%"}
         paddingBottom={5}
@@ -114,39 +115,58 @@ export default function ProjectPage(props: IProjectBoxProps) {
         </Link>
       </SimpleGrid>
 
-      <SimpleGrid
-        columns={2}
-        spacing={5}
+      <Image
+        rounded={"md"}
+        alt={"product image"}
+        src={props.project.projectImages[1]}
+        fit={"contain"}
+        align={"center"}
         w={"100%"}
-        paddingBottom={5}
+        h={{ base: "100%" }}
+        paddingBottom={10}
         paddingTop={10}
-      >
-        <Image
-          rounded={"md"}
-          alt={"product image"}
-          src={props.project.projectImages[1]}
-          fit={"contain"}
-          align={"center"}
-          w={"100%"}
-          h={{ base: "100%" }}
-        />
-        <Image
-          rounded={"md"}
-          alt={"product image"}
-          src={props.project.projectImages[2]}
-          fit={"contain"}
-          align={"center"}
-          w={"100%"}
-          h={{ base: "100%" }}
-        />
-      </SimpleGrid>
+      />
 
       <Text>
-        The application was first introduced at Meltingpot at Colours of Ostrava
-        2023. Since then, people from many countries have tried it and explored
-        its possibilities at different fashion summits and shows. The new
-        version is in progress and will be introduced soon.
+        The main idea for the application was to give clients that have a use
+        AUVERSUM clothing a new AR experience, where they can enjoy and try AR
+        designs of Helena Lukášová on their own clothing. Our goal was to create
+        a simple yet effective application for the clients to try and create
+        their own markers from the AUVERSUM designs, even if they did not have
+        any prior experience with AR technology before.
       </Text>
+
+      <Image
+        rounded={"md"}
+        alt={"product image"}
+        src={props.project.projectImages[2]}
+        fit={"contain"}
+        align={"center"}
+        w={"100%"}
+        h={{ base: "100%" }}
+        paddingBottom={10}
+        paddingTop={10}
+      />
+
+      <Text>
+        The development of the application was done through multiple stages,
+        from first consultations with the brand owner Lada Vyvialova about how
+        the app should operate, analyzing possible solutions on how to design
+        and develop the application, to final prototypes and development done
+        through Unity engine.
+      </Text>
+
+      <Image
+        rounded={"md"}
+        alt={"product image"}
+        src={props.project.projectImages[3]}
+        fit={"contain"}
+        align={"center"}
+        w={"100%"}
+        h={{ base: "100%" }}
+        paddingBottom={5}
+        paddingTop={10}
+      />
 
       <Link
         color="teal.500"

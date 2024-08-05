@@ -53,7 +53,7 @@ export default function ProjectBox(props: IProjectBoxProps) {
             align={"center"}
           >
             {props.project.tags.map((tag, index) => (
-              <Badge key={index} mx="1">
+              <Badge key={index} mx="1" >
                 {tag}
               </Badge>
             ))}
