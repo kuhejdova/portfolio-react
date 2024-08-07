@@ -26,6 +26,7 @@ import ProjectPageOrgot from "./components/ProjectPageOrgot";
 import ProjectPagePhysarum from "./components/ProjectPagePhysarum";
 import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
 import ProjectPageSupernova from "./components/ProjectPageSupernova";
+import ProjectPageThesis from "./components/ProjectPageThesis";
 import ProjectPageTreeClock from "./components/ProjectPageTreeClock";
 import ProjectPageVisegradGroup from "./components/ProjectPageVisegradGroup";
 import ProjectPageWakeUpCall from "./components/ProjectPageWakeUpCall";
@@ -875,5 +876,24 @@ export const projects: Project[] = [
     description: "Online education course on Microsoft 365 tools",
     text: "For several months, I worked at ICT MUNI as a graphic designer, animator, and video creator of an online course on Microsoft 365 tools. My task was to create characters, that would introduce users to some basic concepts of various Microsoft 365 tools. Another task was to create animation and concepts for the series of educational videos and also create these videos. I made around 15 out of 40 videos; later, several people joined to create videos based on my template video. The course is available online only to students and teachers of Masaryk University.",
     component: (project) => <ProjectPageKurzM365 project={project} />,
+  },
+
+  {
+    name: "Generative Art In Psychology",
+    image: "cover_images/thesis_sign.png",
+    projectImages: [
+      "project_images/thesis_0.jpg",
+      "project_images/thesis_1.jpg",
+      "project_images/thesis_2.jpg",
+      "project_images/thesis_3.jpg",
+      "project_images/thesis_4.jpg",
+    ],
+    tags: [ProjectTags.TYPOGRAPHY],
+    path: "/typographythesis",
+    date: new Date(2024, 6, 2),
+    tools: ["Affinity Designer", "Affinity Publisher"],
+    description: "Cover and typesetting of my diploma thesis",
+    text: "For my diploma thesis, I have decided to avoid the traditional template of our faculty, and as a graphic design student, I was able to create this typesetting. For the shape, I used the square, as the central motif of my thesis is Azulejo tiles, which are squares. The cover looks like one of those tiles and was created (without the texts) in the application I developed for this thesis. The typography is straightforward, and the sans serif font used in the application was also used in the text. The headings are blue, and the numbering is orange, the secondary color in my application. The images used in the thesis were mainly created for the needs of the text; however, several photos are adopted from the internet, and they match the overall color scheme.",
+    component: (project) => <ProjectPageThesis project={project} />,
   },
 ];
