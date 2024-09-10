@@ -58,43 +58,20 @@ export default function ProjectPage(props: IProjectBoxProps) {
         <Text fontSize={"lg"}>{props.project.text}</Text>
       </VStack>
 
-      <SimpleGrid
-        columns={2}
-        spacing={5}
-        w={"100%"}
-        paddingBottom={5}
-        paddingTop={10}
-      >
-        <Link color="teal.500" href="https://cafour.itch.io/orgot">
+        <Link color="teal.500" href="https://kubak-cz.itch.io/alice">
           <Center>
             <HStack paddingTop={5} align={"center"}>
               <IconButton
                 variant="outline"
                 colorScheme="teal"
-                aria-label="orgot itch.io"
+                aria-label="alice on itchio"
                 fontSize="20px"
                 icon={<BsGlobe />}
               />{" "}
-              <Text>Orgot game on Itch.io</Text>
+              <Text>Alice game on Itch.io</Text>
             </HStack>
           </Center>
         </Link>
-
-        <Link color="teal.500" href="https://orgot-team.gitlab.io/">
-          <Center>
-            <HStack paddingTop={5} align={"center"}>
-              <IconButton
-                variant="outline"
-                colorScheme="teal"
-                aria-label="download orgot"
-                fontSize="20px"
-                icon={<BsGlobe />}
-              />{" "}
-              <Text>Orgot game web</Text>
-            </HStack>
-          </Center>
-        </Link>
-      </SimpleGrid>
 
       <SimpleGrid
         columns={2}

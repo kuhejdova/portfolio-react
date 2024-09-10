@@ -1,5 +1,6 @@
 import ProjectPageAkademikpro from "./components/ProjectPageAkademikpro";
 import ProjectPageAlenaKuhejdova from "./components/ProjectPageAlenaKuhejdova";
+import ProjectPageAlice from "./components/ProjectPageAlice";
 import ProjectPageAnthropology from "./components/ProjectPageAnthropology";
 import ProjectPageApplepunk from "./components/ProjectPageApplepunk";
 import ProjectPageArcheryfont from "./components/ProjectPageArcheryfont";
@@ -17,6 +18,7 @@ import ProjectPageHandicraftBooks from "./components/ProjectPageHandicraftBooks"
 import ProjectPageHead from "./components/ProjectPageHead";
 import ProjectPageHexabe from "./components/ProjectPageHexabe";
 import ProjectPageHGAnimation from "./components/ProjectPageHGAnimation";
+import ProjectPageKori from "./components/ProjectPageKori";
 import ProjectPageKurzM365 from "./components/ProjectPageKurzM365";
 import ProjectPageMeduse from "./components/ProjectPageMeduse";
 import ProjectPageMjuniAdvent from "./components/ProjectPageMjuniAdvent";
@@ -644,7 +646,7 @@ export const projects: Project[] = [
     date: new Date(2023, 7, 17),
     tools: ["Unity", "Affinity Designer"],
     description: "Snake, but you are the apple.",
-    text: "The game was made originally in 48 hours for GMTK Game Jam 2023 but missed submission by 2 minutes. It was made by Jakub Slezáček, Matěj Zavrtálek and me. I created all the graphics and UI, and the guys programmed the game mechanics. The Applepunk game is very similar to the original Snake game, but the player controls the apple, and their goal is to destroy snakes before they get eaten.",
+    text: 'The game was made originally in 48 hours for GMTK Game Jam 2023 with theme "Roles reversed" but missed submission by 2 minutes. It was made by Jakub Slezáček, Matěj Zavrtálek and me. I created all the graphics and UI, and the guys programmed the game mechanics. The Applepunk game is very similar to the original Snake game, but the player controls the apple, and their goal is to destroy snakes before they get eaten.',
     component: (project) => <ProjectPageApplepunk project={project} />,
   },
 
@@ -663,7 +665,7 @@ export const projects: Project[] = [
     date: new Date(2023, 9, 14),
     tools: ["Godot", "Aseprite"],
     description: "Local co-op game where the flower wants to expand its ship",
-    text: "The game was created in 48 hours for Game Jam at Game Development Dungeon 2023. It was made by Adam Štěpánek, Jonáš Rosecký, Vojtěch Brůža, Hana Tokárová and me. Hanka and I were responsible for the overall visual style, sprites, and graphics. The pixel art game called Orgot is a local co-op game where one player controls the mouse and the other keyboard. The goal is to expand the spaceship created from the floating islands, grow seeds, and protect the ship from insects.",
+    text: 'The game was created in 48 hours for Game Jam at Game Development Dungeon 2023 with the theme "Sky Walk". It was made by Adam Štěpánek, Jonáš Rosecký, Vojtěch Brůža, Hana Tokárová and me. Hanka and I were responsible for the overall visual style, sprites, and graphics. The pixel art game called Orgot is a local co-op game where one player controls the mouse and the other keyboard. The goal is to expand the spaceship created from the floating islands, grow seeds, and protect the ship from insects.',
     component: (project) => <ProjectPageOrgot project={project} />,
   },
 
@@ -769,7 +771,7 @@ export const projects: Project[] = [
   },
 
   {
-    name: "Near & Dear visuals generator",
+    name: "Near&Dear visuals generator",
     image: "cover_images/neardear_sign.png",
     projectImages: [
       "project_images/neardear_0.png",
@@ -782,7 +784,7 @@ export const projects: Project[] = [
     path: "/neardear",
     date: new Date(2023, 2, 17),
     tools: ["p5.js"],
-    description: "Generator of the visuals for Near & Dear",
+    description: "Generator of the visuals for Near&Dear",
     text: "This project was created in collaboration with Semibold, who designed the identity and asked for an application that would generate similar visuals based on their rules. The visuals are used mainly for social networks and can be downloaded in PNG and SVG formats. The application was created with Vojtěch Brůža.",
     component: (project) => <ProjectPageNeardear project={project} />,
   },
@@ -871,7 +873,7 @@ export const projects: Project[] = [
     ],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.ANIMATION],
     path: "/kurzm365",
-    date: new Date(2023, 4, 4),
+    date: new Date(2023, 10, 4),
     tools: ["Affinity Designer", "Adobe After Effects", "Adobe Premiere Pro"],
     description: "Online education course on Microsoft 365 tools",
     text: "For several months, I worked at ICT MUNI as a graphic designer, animator, and video creator of an online course on Microsoft 365 tools. My task was to create characters, that would introduce users to some basic concepts of various Microsoft 365 tools. Another task was to create animation and concepts for the series of educational videos and also create these videos. I made around 15 out of 40 videos; later, several people joined to create videos based on my template video. The course is available online only to students and teachers of Masaryk University.",
@@ -895,5 +897,43 @@ export const projects: Project[] = [
     description: "Cover and typesetting of my diploma thesis",
     text: "For my diploma thesis, I have decided to avoid the traditional template of our faculty, and as a graphic design student, I was able to create this typesetting. For the shape, I used the square, as the central motif of my thesis is Azulejo tiles, which are squares. The cover looks like one of those tiles and was created (without the texts) in the application I developed for this thesis. The typography is straightforward, and the sans serif font used in the application was also used in the text. The headings are blue, and the numbering is orange, the secondary color in my application. The images used in the thesis were mainly created for the needs of the text; however, several photos are adopted from the internet, and they match the overall color scheme.",
     component: (project) => <ProjectPageThesis project={project} />,
+  },
+
+  {
+    name: "Alice",
+    image: "cover_images/alice_sign.jpg",
+    projectImages: [
+      "project_images/alice_1.jpg",
+      "project_images/alice_2.jpg",
+      "project_images/alice_3.jpg",
+      "project_images/alice_4.jpg",
+      "project_images/alice_5.jpg",
+    ],
+    tags: [ProjectTags.GAMES],
+    path: "/alice",
+    date: new Date(2024, 8, 4),
+    tools: ["Affinity Designer", "Unity"],
+    description: "A puzzle platformer game inspired by Alice in Wonderland",
+    text: 'The game was created in 96-hour GMTK Game Jam 2024 with the theme "Built to Scale". It was created with Jakub Slezáček, who programmed it, and I was in charge of graphics and all visuals. The book Alice in Wonderland by Lewis Carroll inspired the game. Alice falls through the rabbit hole and finds a room with doors with shapes she needs to fit into. She finds potions she tries to drink to get to the Wonderland. The theme Built to Scale is followed by the potions that change the size of Alice\'s body parts, which need to be fitted into the door shapes.',
+    component: (project) => <ProjectPageAlice project={project} />,
+  },
+
+  {
+    name: "Kōri",
+    image: "cover_images/kori_sign.jpg",
+    projectImages: [
+      "project_images/kori_1.jpg",
+      "project_images/kori_2.jpg",
+      "project_images/kori_3.jpg",
+      "project_images/kori_4.jpg",
+      "project_images/kori_5.jpg",
+    ],
+    tags: [ProjectTags.GAMES],
+    path: "/kori",
+    date: new Date(2024, 9, 4),
+    tools: ["Procreate", "GameMaker"],
+    description: "Slide across the kitchen counter as a bunch of ice cubes!",
+    text: 'The game was created in a 36-hour GameDev Dungeon 2024 game jam with the theme "Make it small". It was created by Jonáš Rosecký, Jakub Slezáček, Adam Štěpánek, Hana Tokárová and me. It is a fast-paced party racing game where players race as ice cubes through a Japanese-like kitchen. The game supports up to 18-player local multiplayer; it supports gamepads, keyboards, and also touchscreens. There is wide range of fruits from which players can pick their avatars. Hanka and I were responsible for the visuals; all assets were hand-drawn in Procreate with watercolor brushes.',
+    component: (project) => <ProjectPageKori project={project} />,
   },
 ];
