@@ -65,32 +65,32 @@ export default function ProjectPage(props: IProjectBoxProps) {
         paddingBottom={5}
         paddingTop={10}
       >
-        <Link color="teal.500" href="https://cafour.itch.io/orgot">
+        <Link color="teal.500" href="https://cafour.itch.io/kori">
           <Center>
             <HStack paddingTop={5} align={"center"}>
               <IconButton
                 variant="outline"
                 colorScheme="teal"
-                aria-label="orgot itch.io"
+                aria-label="kori itch.io"
                 fontSize="20px"
                 icon={<BsGlobe />}
               />{" "}
-              <Text>Orgot game on Itch.io</Text>
+              <Text>Kōri game on Itch.io</Text>
             </HStack>
           </Center>
         </Link>
 
-        <Link color="teal.500" href="https://orgot-team.gitlab.io/">
+        <Link color="teal.500" href="https://cafour.github.io/kori">
           <Center>
             <HStack paddingTop={5} align={"center"}>
               <IconButton
                 variant="outline"
                 colorScheme="teal"
-                aria-label="download orgot"
+                aria-label="play Kori"
                 fontSize="20px"
                 icon={<BsGlobe />}
               />{" "}
-              <Text>Orgot game web</Text>
+              <Text>Play Kōri</Text>
             </HStack>
           </Center>
         </Link>
