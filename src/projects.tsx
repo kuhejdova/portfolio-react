@@ -1,8 +1,6 @@
 import ProjectPageAkademikpro from "./components/ProjectPageAkademikpro";
 import ProjectPageAlenaKuhejdova from "./components/ProjectPageAlenaKuhejdova";
-import ProjectPageAlice from "./components/ProjectPageAlice";
 import ProjectPageAnthropology from "./components/ProjectPageAnthropology";
-import ProjectPageApplepunk from "./components/ProjectPageApplepunk";
 import ProjectPageArcheryfont from "./components/ProjectPageArcheryfont";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
 import ProjectPageAuversum from "./components/ProjectPageAuversum";
@@ -12,19 +10,15 @@ import ProjectPageEffecta from "./components/ProjectPageEffecta";
 import ProjectPageElderlyBanking from "./components/ProjectPageElderlyBanking";
 import ProjectPageFastr from "./components/ProjectPageFastr";
 import ProjectPageFFFIMU from "./components/ProjectPageFFFIMU";
+import ProjectPageGames from "./components/ProjectPageGames";
 import ProjectPageGarden from "./components/ProjectPageGarden";
-import ProjectPageGarrigueGames from "./components/ProjectPageGarrigueGames";
 import ProjectPageHandicraftBooks from "./components/ProjectPageHandicraftBooks";
 import ProjectPageHead from "./components/ProjectPageHead";
-import ProjectPageHexabe from "./components/ProjectPageHexabe";
 import ProjectPageHGAnimation from "./components/ProjectPageHGAnimation";
-import ProjectPageKori from "./components/ProjectPageKori";
 import ProjectPageKurzM365 from "./components/ProjectPageKurzM365";
 import ProjectPageMeduse from "./components/ProjectPageMeduse";
 import ProjectPageMjuniAdvent from "./components/ProjectPageMjuniAdvent";
 import ProjectPageMocap from "./components/ProjectPageMocap";
-import ProjectPageNeardear from "./components/ProjectPageNeardear";
-import ProjectPageOrgot from "./components/ProjectPageOrgot";
 import ProjectPagePhysarum from "./components/ProjectPagePhysarum";
 import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
 import ProjectPageSupernova from "./components/ProjectPageSupernova";
@@ -67,9 +61,16 @@ export const allCategories: ProjectTags[] = [
   ProjectTags.OTHER,
 ];
 
+export type MyLink = {
+  href: string;
+  ariaLabel: string;
+  text: string;
+};
+
 export type Project = {
   name: string;
   image: string;
+  headerImage?: string;
   projectImages: string[];
   tags: ProjectTags[];
   path: string;
@@ -77,6 +78,7 @@ export type Project = {
   description: string;
   text: string;
   tools: string[];
+  links?: MyLink[];
   component?: React.ReactNode | ((project: Project) => React.ReactNode);
 };
 
@@ -634,8 +636,8 @@ export const projects: Project[] = [
   {
     name: "Applepunk",
     image: "cover_images/applepunk_cover_sign.jpg",
+    headerImage: "project_images/applepunk_header.jpg",
     projectImages: [
-      "project_images/applepunk_header.jpg",
       "project_images/applepunk_1.png",
       "project_images/applepunk_2.png",
       "project_images/applepunk_3.png",
@@ -647,14 +649,21 @@ export const projects: Project[] = [
     tools: ["Unity", "Affinity Designer"],
     description: "Snake, but you are the apple.",
     text: 'The game was made originally in 48 hours for GMTK Game Jam 2023 with theme "Roles reversed" but missed submission by 2 minutes. It was made by Jakub Slezáček, Matěj Zavrtálek and me. I created all the graphics and UI, and the guys programmed the game mechanics. The Applepunk game is very similar to the original Snake game, but the player controls the apple, and their goal is to destroy snakes before they get eaten.',
-    component: (project) => <ProjectPageApplepunk project={project} />,
+    links: [
+      {
+        href: "https://kubak-cz.itch.io/applepunk",
+        ariaLabel: "applepunk itch.io",
+        text: "Play the game on Itch.io",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
     name: "Orgot",
     image: "cover_images/orgot_sign.png",
+    headerImage: "project_images/orgot_0.jpg",
     projectImages: [
-      "project_images/orgot_0.jpg",
       "project_images/orgot_4.jpg",
       "project_images/orgot_3.jpg",
       "project_images/orgot_1.jpg",
@@ -666,7 +675,19 @@ export const projects: Project[] = [
     tools: ["Godot", "Aseprite"],
     description: "Local co-op game where the flower wants to expand its ship",
     text: 'The game was created in 48 hours for Game Jam at Game Development Dungeon 2023 with the theme "Sky Walk". It was made by Adam Štěpánek, Jonáš Rosecký, Vojtěch Brůža, Hana Tokárová and me. Hanka and I were responsible for the overall visual style, sprites, and graphics. The pixel art game called Orgot is a local co-op game where one player controls the mouse and the other keyboard. The goal is to expand the spaceship created from the floating islands, grow seeds, and protect the ship from insects.',
-    component: (project) => <ProjectPageOrgot project={project} />,
+    links: [
+      {
+        href: "https://cafour.itch.io/orgot",
+        ariaLabel: "orgot itch.io",
+        text: "Orgot game on Itch.io",
+      },
+      {
+        href: "https://orgot-team.gitlab.io/",
+        ariaLabel: "download orgot",
+        text: "Orgot game web",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
@@ -773,8 +794,8 @@ export const projects: Project[] = [
   {
     name: "Near&Dear visuals generator",
     image: "cover_images/neardear_sign.png",
+    headerImage: "project_images/neardear_0.png",
     projectImages: [
-      "project_images/neardear_0.png",
       "project_images/neardear_1.png",
       "project_images/neardear_2.png",
       "project_images/neardear_3.png",
@@ -786,7 +807,19 @@ export const projects: Project[] = [
     tools: ["p5.js"],
     description: "Generator of the visuals for Near&Dear",
     text: "This project was created in collaboration with Semibold, who designed the identity and asked for an application that would generate similar visuals based on their rules. The visuals are used mainly for social networks and can be downloaded in PNG and SVG formats. The application was created with Vojtěch Brůža.",
-    component: (project) => <ProjectPageNeardear project={project} />,
+    links: [
+      {
+        href: "https://semibold.vercel.app/",
+        ariaLabel: "neardear application",
+        text: "Generative application for Near & Dear",
+      },
+      {
+        href: "https://www.semibold.cz/cs/portfolio/near-dear",
+        ariaLabel: "semibold identity",
+        text: "Visual identity created by Semibold",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
@@ -817,8 +850,8 @@ export const projects: Project[] = [
   {
     name: "Garrigue Games",
     image: "cover_images/gg_sign.jpg",
+    headerImage: "project_images/gg_0.png",
     projectImages: [
-      "project_images/gg_0.png",
       "project_images/gg_3.png",
       "project_images/gg_5.png",
       "project_images/gg_1.jpg",
@@ -830,14 +863,21 @@ export const projects: Project[] = [
     tools: ["Figma", "React"],
     description: "Webpage for Game Development at Faculty of Informatics",
     text: "This project aimed to design and implement a webpage for Game Development at the Faculty of Informatics at Masaryk University. The webpage serves as a public presentation of the course results and an information page about courses, events, and others. It supports dark and light modes, and it is also responsive. This project was created with Hana Tokárová and was a Dean's project - MUNI/33/0026/2024. The page is currently under development.",
-    component: (project) => <ProjectPageGarrigueGames project={project} />,
+    links: [
+      {
+        href: "https://games.muni.cz/",
+        ariaLabel: "garrigue games web",
+        text: "Garrigue Games webpage",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
     name: "Hexabe",
     image: "cover_images/hexabe_sign.jpg",
+    headerImage: "project_images/hexabe_0.jpg",
     projectImages: [
-      "project_images/hexabe_0.jpg",
       "project_images/hexabe_1.jpg",
       "project_images/hexabe_2.jpg",
       "project_images/hexabe_3.jpg",
@@ -855,7 +895,19 @@ export const projects: Project[] = [
     ],
     description: "A strategy building game with hexagonal tiles",
     text: "In the beginning, there are four hexagons. In the end, there is one winner. Hexabe is a strategic logic game where players take turns placing hexagonal tiles on the game board and trying to find patterns among them. Each player has a pile of cubes in front of them and tries to be the first to get rid of them. This game targets players who enjoy fast-paced competitive games, and thanks to the simplicity of the rules, even casual board game players will enjoy it. This game was created with Hana Tokárová and Jonáš Rosecký, and we plan to publish this game through the publisher or crowdfunding campaign.",
-    component: (project) => <ProjectPageHexabe project={project} />,
+    links: [
+      {
+        href: "https://hexabe.cz/",
+        ariaLabel: "hexabe web",
+        text: "Hexabe web",
+      },
+      {
+        href: "https://www.instagram.com/hexabe_game/",
+        ariaLabel: "hexabe instagram",
+        text: "Hexabe instagram",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
@@ -902,8 +954,8 @@ export const projects: Project[] = [
   {
     name: "Alice",
     image: "cover_images/alice_sign.jpg",
+    headerImage: "project_images/alice_1.jpg",
     projectImages: [
-      "project_images/alice_1.jpg",
       "project_images/alice_2.jpg",
       "project_images/alice_3.jpg",
       "project_images/alice_4.jpg",
@@ -915,14 +967,21 @@ export const projects: Project[] = [
     tools: ["Affinity Designer", "Unity"],
     description: "A puzzle platformer game inspired by Alice in Wonderland",
     text: 'The game was created in 96-hour GMTK Game Jam 2024 with the theme "Built to Scale". It was created with Jakub Slezáček, who programmed it, and I was in charge of graphics and all visuals. The book Alice in Wonderland by Lewis Carroll inspired the game. Alice falls through the rabbit hole and finds a room with doors with shapes she needs to fit into. She finds potions she tries to drink to get to the Wonderland. The theme Built to Scale is followed by the potions that change the size of Alice\'s body parts, which need to be fitted into the door shapes.',
-    component: (project) => <ProjectPageAlice project={project} />,
+    links: [
+      {
+        href: "https://kubak-cz.itch.io/alice",
+        ariaLabel: "alice itch.io",
+        text: "Alice game on Itch.io",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
     name: "Kōri",
     image: "cover_images/kori_sign.jpg",
+    headerImage: "project_images/kori_1.jpg",
     projectImages: [
-      "project_images/kori_1.jpg",
       "project_images/kori_2.jpg",
       "project_images/kori_3.jpg",
       "project_images/kori_4.jpg",
@@ -934,6 +993,66 @@ export const projects: Project[] = [
     tools: ["Procreate", "GameMaker"],
     description: "Slide across the kitchen counter as a bunch of ice cubes!",
     text: 'The game was created in a 36-hour GameDev Dungeon 2024 game jam with the theme "Make it small". It was created by Jonáš Rosecký, Jakub Slezáček, Adam Štěpánek, Hana Tokárová and me. It is a fast-paced party racing game where players race as ice cubes through a Japanese-like kitchen. The game supports up to 18-player local multiplayer; it supports gamepads, keyboards, and also touchscreens. There is wide range of fruits from which players can pick their avatars. Hanka and I were responsible for the visuals; all assets were hand-drawn in Procreate with watercolor brushes.',
-    component: (project) => <ProjectPageKori project={project} />,
+    links: [
+      {
+        href: "https://cafour.itch.io/kori",
+        ariaLabel: "kori itch.io",
+        text: "Kōri game on Itch.io",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
+  },
+
+  {
+    name: "Effervascent",
+    image: "cover_images/effervascent_sign.jpg",
+    headerImage: "project_images/effervascent-0.jpg",
+    projectImages: [
+      "project_images/effervascent-1.png",
+      "project_images/effervascent-2.png",
+      "project_images/effervascent-3.png",
+      "project_images/effervascent-4.png",
+    ],
+    tags: [ProjectTags.GAMES],
+    path: "/effervascent",
+    date: new Date(2025, 1, 4),
+    tools: ["Procreate", "Unity"],
+    description:
+      "A short puzzle platformer about a soap bubble with a long way up",
+    text: "It was created in 48 hours at the Gamer Pie GGJ 2025 event, which is part of the Global Game Jam 2025 initiative. The theme was 'Bubble'. It was created by Jonáš Rosecký, Jakub Slezáček, Adam Štěpánek and me. In the game, the player controls a bubble that must escape from a broken facility by reaching the surface. The bubble moves by propelling smaller bubbles, and there are lots of obstacles. I was responsible for the game's visuals and assets.",
+    links: [
+      {
+        href: "https://cafour.itch.io/effervascent",
+        ariaLabel: "effervascent itch.io",
+        text: "Effervascent game on Itch.io",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
+  },
+
+  {
+    name: "Pastcards",
+    image: "cover_images/pastcards_sign.webp",
+    headerImage: "project_images/pastcards-0.webp",
+    projectImages: [
+      "project_images/pastcards-1.png",
+      "project_images/pastcards-2.png",
+      "project_images/pastcards-3.png",
+      "project_images/pastcards-4.png",
+    ],
+    tags: [ProjectTags.GAMES],
+    path: "/pastcards",
+    date: new Date(2025, 9, 4),
+    tools: ["Adobe Illustrator", "Godot"],
+    description: "A postman finds a postcard without a recipient",
+    text: 'The game was created during the 36-hour GameDev Dungeon 2025 game jam with the theme "Delivery". It was created by Jonáš Rosecký, Adam Štěpánek, Nika Kunzová, Jakub Slezáček and me. It is a narrative game about a postman, who finds a postcard without a recipient and embarks on an unusual journey through its content. Nika and I were responsible for the game\'s visuals and narrative - I created the characters and items assets, while Nika created the postcard backgrounds.',
+    links: [
+      {
+        href: "https://kunykumm.itch.io/pastcards",
+        ariaLabel: "pastcards itch.io",
+        text: "Pastcards game on Itch.io",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
   },
 ];
