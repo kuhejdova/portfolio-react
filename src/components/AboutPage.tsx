@@ -50,7 +50,7 @@ export default function ProjectPage() {
         <Text fontSize={"lg"}>
           A young woman that loves creative work in many different ways. Not
           only digital design but also handicrafts such as crocheting, sewing,
-          or just drawing on paper or furniture. I like to try new ways how to
+          or just drawing on paper. I like to try new ways how to
           express myself and broaden my horizons in the creative field.
         </Text>
         <Text
@@ -62,13 +62,17 @@ export default function ProjectPage() {
           {"What do I do?"}
         </Text>
         <Text fontSize={"lg"}>
+          I'm a designer at RWS Group. I work on digital assets as well as printed media, 
+          and I collaborate with the DX team on web design. 
+          I also freelance as a graphic designer from time to time.
+        </Text>
+        <Text fontSize={"lg"}>
           I finished my studies and got a master's degree from the Faculty of
           Informatics at Masaryk University in Brno. I studied Visual
           informatics with a specialization in Graphic design. During my
           studies, I tried many fields in graphic design - from logo design and
           typography to UX design, generative design programming, 3D modeling,
-          and photography. Sometimes I do graphic work for my friends or as a
-          job.
+          and photography.
         </Text>
         <Text
           color={useColorModeValue("gray.500", "gray.400")}
