@@ -8,7 +8,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { Project } from "../projects";
 
 export interface IProjectBoxProps {

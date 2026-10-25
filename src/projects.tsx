@@ -1,12 +1,8 @@
-import ProjectPageAkademikpro from "./components/ProjectPageAkademikpro";
-import ProjectPageAlenaKuhejdova from "./components/ProjectPageAlenaKuhejdova";
 import ProjectPageAnthropology from "./components/ProjectPageAnthropology";
 import ProjectPageArcheryfont from "./components/ProjectPageArcheryfont";
 import ProjectPageArcheryResults from "./components/ProjectPageArcheryResults";
 import ProjectPageAuversum from "./components/ProjectPageAuversum";
 import ProjectPageAzu from "./components/ProjectPageAzu";
-import ProjectPageBabylonfest from "./components/ProjectPageBabylonfest";
-import ProjectPageEffecta from "./components/ProjectPageEffecta";
 import ProjectPageElderlyBanking from "./components/ProjectPageElderlyBanking";
 import ProjectPageFastr from "./components/ProjectPageFastr";
 import ProjectPageFFFIMU from "./components/ProjectPageFFFIMU";
@@ -15,16 +11,11 @@ import ProjectPageGarden from "./components/ProjectPageGarden";
 import ProjectPageHandicraftBooks from "./components/ProjectPageHandicraftBooks";
 import ProjectPageHead from "./components/ProjectPageHead";
 import ProjectPageHGAnimation from "./components/ProjectPageHGAnimation";
-import ProjectPageKurzM365 from "./components/ProjectPageKurzM365";
-import ProjectPageMeduse from "./components/ProjectPageMeduse";
-import ProjectPageMjuniAdvent from "./components/ProjectPageMjuniAdvent";
 import ProjectPageMocap from "./components/ProjectPageMocap";
 import ProjectPagePhysarum from "./components/ProjectPagePhysarum";
 import ProjectPageRewriteTheStars from "./components/ProjectPageRewriteTheStars";
 import ProjectPageSupernova from "./components/ProjectPageSupernova";
-import ProjectPageThesis from "./components/ProjectPageThesis";
 import ProjectPageTreeClock from "./components/ProjectPageTreeClock";
-import ProjectPageVisegradGroup from "./components/ProjectPageVisegradGroup";
 import ProjectPageWakeUpCall from "./components/ProjectPageWakeUpCall";
 
 export enum ProjectTags {
@@ -142,8 +133,8 @@ export const projects: Project[] = [
   {
     name: "Babylonfest",
     image: "cover_images/babylonfest_sign.png",
+    headerImage: "project_images/babylonfest_sign.jpg",
     projectImages: [
-      "project_images/babylonfest_sign.jpg",
       "project_images/babylonfest_food.jpg",
       "project_images/babylonfest_badge.png",
       "project_images/babylonfest_name1.jpg",
@@ -155,7 +146,7 @@ export const projects: Project[] = [
     tools: ["Adobe Illustrator"],
     description: "Competition to create a visual identity for Babylonfest",
     text: "Babylonfest is the festival of the minorities living in Brno city. The task was to create a new visual identity that could be used on many objects and merch during the festival. The competition was canceled due to covid, but this is the visual identity I have prepared. The main idea was to recreate the Babylon tower with letters and use more colors to highlight the diversity.",
-    component: (project) => <ProjectPageBabylonfest project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
   {
     name: "Wake up call poster",
@@ -197,8 +188,8 @@ export const projects: Project[] = [
   {
     name: "Medus-e",
     image: "cover_images/meduse_sign.png",
+    headerImage: "project_images/meduse_sign.jpg",
     projectImages: [
-      "project_images/meduse_sign.jpg",
       "project_images/meduse_1.jpg",
       "project_images/meduse_2.jpg",
     ],
@@ -208,7 +199,7 @@ export const projects: Project[] = [
     tools: ["Blender"],
     description: "This robot can help you... or petrify you",
     text: 'The 3D model of the robot was inspired by the Wall-e robot from Pixar and Meduse from the Ancient Greek myths. The bottom part is a cleaning robot, which can help you at home and has many hands coming from the "head." It also has a blindfold; in the myth, you were not supposed to look into Medusa\'s eyes. If you look at her, she will petrify you, as this housecleaning robot will do.',
-    component: (project) => <ProjectPageMeduse project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
   {
     name: "Human head",
@@ -246,8 +237,8 @@ export const projects: Project[] = [
   {
     name: "Archery jersey",
     image: "cover_images/archeryjersey_me.JPG",
+    headerImage: "project_images/archeryjersey_me.JPG",
     projectImages: [
-      "project_images/archeryjersey_me.JPG",
       "project_images/archeryjersey_front.jpg",
       "project_images/archeryjersey_back.jpg",
       "project_images/archeryjersey_mock1.jpg",
@@ -260,7 +251,7 @@ export const projects: Project[] = [
     description:
       "Redesign of the plain white jerseys for the Archery club Ostrava",
     text: "The goal was to create a new design of archery jerseys for the Archery club Ostrava Mariánské hory. The original jerseys were plain white with the logo on the front and back. I wanted to keep it simple and select colors suitable for the amount of time spent on the sun and in nature. I have chosen two shades of blue, the lighter represents the color of Ostrava city, and the darker means one of the colors of the Moravian-Silesian Region.",
-    component: (project) => <ProjectPageBabylonfest project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
   {
     name: "Rewrite the stars",
@@ -284,8 +275,8 @@ export const projects: Project[] = [
   {
     name: "Dentists visual identity",
     image: "cover_images/ak_sign.png",
+    headerImage: "project_images/ak_logo.png",
     projectImages: [
-      "project_images/ak_logo.png",
       "project_images/ak_business_cards.jpg",
       "project_images/ak_stationery.jpg",
       "project_images/ak_face_masks.jpg",
@@ -300,7 +291,7 @@ export const projects: Project[] = [
     tools: ["Adobe Illustrator", "Adobe Photoshop", "Adobe After Effects"],
     description: "Playful visual identity for the dentists",
     text: "The only request for the visual identity for Alena Kuhejdová was to use violet and/or orange, which are the colors of the dentist's office. My idea was to create something playful and cheerful, as many people fear the visit. So the main component is the tooth which is smiling, as people will be after the visit. Two variants, one with the violet and one with the orange shade, are interchangeable. She also wanted some T-shirts as work uniforms and some colorful masks.",
-    component: (project) => <ProjectPageAlenaKuhejdova project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
   {
     name: "Handicrafts book edition",
@@ -351,14 +342,15 @@ export const projects: Project[] = [
   {
     name: "30 Years of the Visegrad group",
     image: "cover_images/v4_sign.png",
-    projectImages: ["project_images/v4_sign.jpg"],
+    headerImage: "project_images/v4_sign.jpg",
+    projectImages: [],
     tags: [ProjectTags.GRAPHIC_DESIGN, ProjectTags.TYPOGRAPHY],
     path: "/visegradgroup",
     date: new Date(2020, 10, 1),
     tools: ["Adobe Illustrator"],
     description: "30 Years of the Visegrad group poster competition",
     text: "The topic of this competition was to create a poster to celebrate the 30 years of existence of the Visegrad group. My idea was to display this with simple designs focused on the numbers. The left one has rising numbers in the middle and also represents that there are four countries. The second poster represents the numbers by using dots.",
-    component: (project) => <ProjectPageVisegradGroup project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
   {
     name: "Archery results visualization",
@@ -403,6 +395,7 @@ export const projects: Project[] = [
   {
     name: "MjUNI advent",
     image: "cover_images/mjuni_advent_sign.png",
+    headerImage: "project_images/mjuni_advent_sign.png",
     projectImages: [
       "project_images/mjuni_advent_sign.png",
       "project_images/mjuni_advent_2.png",
@@ -417,7 +410,7 @@ export const projects: Project[] = [
     tools: ["Affinity Designer"],
     description: "Advent banners for Masaryk Juniverzity",
     text: "This project aimed to create a series of Facebook banners for MjUNI with the advent theme. There are four candles, as in the Czech tradition of lighting one candle every week of Advent on Sunday. It's based on the MUNI font, as this job was done for the university. Another task was to create a design for an advent calendar, so I continued with the idea of the candles.",
-    component: (project) => <ProjectPageMjuniAdvent project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   // {
@@ -492,8 +485,8 @@ export const projects: Project[] = [
   {
     name: "AkademikPRO",
     image: "cover_images/akademikpro_sign.jpg",
+    headerImage: "project_images/akademikpro_1.png",
     projectImages: [
-      "project_images/akademikpro_1.png",
       "project_images/akademikpro_colors.png",
       "project_images/akademikpro.gif",
       "project_images/akademikpro_certifikat.png",
@@ -505,14 +498,14 @@ export const projects: Project[] = [
     tools: ["Affinity Designer"],
     description: "Competition to create a visual identity for AkademikPRO",
     text: "This competition aimed to create the logo and visual identity for the project called AkademikPRO focused mainly on social networks, youtube, and electronic devices. This project is focused on educating young academics in the sphere of the communication of science and research. Part of the task was also to create just a simple prototype of the animation for the educational videos and a webpage and certificate for the participating in their courses.",
-    component: (project) => <ProjectPageAkademikpro project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
     name: "CAIO",
     image: "cover_images/caio_sign.png",
+    headerImage: "project_images/caio_1.png",
     projectImages: [
-      "project_images/caio_1.png",
       "project_images/caio_sign.png",
       "project_images/caio_3.jpg",
       "project_images/caio_2.png",
@@ -525,7 +518,7 @@ export const projects: Project[] = [
     description:
       "Competition to create a visual identity for the Centre for Artificial Intelligence in Oncology",
     text: "This competition focused on creating the logo and visual identity for the Centre for AI in Oncology. Their requirements were to make a webpage, Word, and Powerpoint template. My idea was to connect the ribbon, which represents the oncology, with the integrated circuit's parts. The color palette also blended yellow, which represents the color of intelligence, and violet, which is the general color for oncology. This logo ended up in second place.",
-    component: (project) => <ProjectPageAkademikpro project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
@@ -597,22 +590,22 @@ export const projects: Project[] = [
     component: (project) => <ProjectPageSupernova project={project} />,
   },
 
-  {
-    name: "Kafe",
-    image: "cover_images/kafe_sign.png",
-    projectImages: [
-      "project_images/kafe_usage.png",
-      "project_images/kafe_light.png",
-      "project_images/kafe_dark.png",
-    ],
-    tags: [ProjectTags.GRAPHIC_DESIGN],
-    path: "/kafe",
-    date: new Date(2023, 2, 1),
-    tools: ["Affinity Designer"],
-    description: "A combination of KAFE (coffee) and films is the best",
-    text: "My friends asked me to create a logo and a few icons for their project KAFE, a video archive, and a registration form for the films for the Film Festival of the Faculty of Informatics MU. I wanted to combine the coffee icon with the film tape, and as you are supposed to save your films into the KAFE system, I designed the videotape that sinks into the coffee mug. There is a dark and light option, but it is also used in colored lines on the webpage.",
-    component: (project) => <ProjectPageMeduse project={project} />,
-  },
+  // {
+  //   name: "Kafe",
+  //   image: "cover_images/kafe_sign.png",
+  //   projectImages: [
+  //     "project_images/kafe_usage.png",
+  //     "project_images/kafe_light.png",
+  //     "project_images/kafe_dark.png",
+  //   ],
+  //   tags: [ProjectTags.GRAPHIC_DESIGN],
+  //   path: "/kafe",
+  //   date: new Date(2023, 2, 1),
+  //   tools: ["Affinity Designer"],
+  //   description: "A combination of KAFE (coffee) and films is the best",
+  //   text: "My friends asked me to create a logo and a few icons for their project KAFE, a video archive, and a registration form for the films for the Film Festival of the Faculty of Informatics MU. I wanted to combine the coffee icon with the film tape, and as you are supposed to save your films into the KAFE system, I designed the videotape that sinks into the coffee mug. There is a dark and light option, but it is also used in colored lines on the webpage.",
+  //   component: (project) => <ProjectPageMeduse project={project} />,
+  // },
 
   {
     name: "Physarum simulation",
@@ -693,8 +686,8 @@ export const projects: Project[] = [
   {
     name: "Effecta",
     image: "cover_images/effecta_sign.png",
+    headerImage: "project_images/effecta_0.png",
     projectImages: [
-      "project_images/effecta_0.png",
       "project_images/effecta_1.jpg",
       "project_images/effecta_2.jpg",
       "project_images/effecta_3.jpg",
@@ -709,7 +702,7 @@ export const projects: Project[] = [
     description:
       "Competition to create visual motives for a company Effecta group",
     text: "The goal was to create visual motives (T-shirt, wall design, and car design) for a company, Effecta group, which works with documents and data. One of the ideas from brainstorming was to try to have a bit of fun in this field, so I've decided to create clothes with some puns and simple visuals in the style of comic books. I've chosen the marks used in the paper shredding for the wall design.",
-    component: (project) => <ProjectPageEffecta project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
@@ -733,8 +726,8 @@ export const projects: Project[] = [
   {
     name: "Research brochure for FI MUNI",
     image: "cover_images/fi_research_sign.jpg",
+    headerImage: "project_images/fi_research_0.png",
     projectImages: [
-      "project_images/fi_research_0.png",
       "project_images/fi_brochure_1.png",
       "project_images/fi_brochure_2.png",
       "project_images/fi_brochure_3.jpg",
@@ -747,14 +740,14 @@ export const projects: Project[] = [
     description:
       "Competition to create a design for a brochure of Research laboratories",
     text: "The goal was to design a brochure for Research laboratories at the Faculty of Informatics at Masaryk University. One of the requirements was to use the faculty colors - yellow and black. The idea was to create a short overview instead of the catalog version, which is foldable and easily understandable. For several fields, icons were created, and each field has its own color. The map is shaped into the motherboard design, where in the middle is a QR code with a link to the detailed description of the laboratories.",
-    component: (project) => <ProjectPageAkademikpro project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
     name: "Merch for FI MUNI",
     image: "cover_images/fi_merch_sign.jpg",
+    headerImage: "project_images/fi_merch_0.png",
     projectImages: [
-      "project_images/fi_merch_0.png",
       "project_images/fi_merch_2.jpg",
       "project_images/fi_merch_1.jpg",
       "project_images/fi_merch_3.jpg",
@@ -767,14 +760,14 @@ export const projects: Project[] = [
     description:
       "Competition to create ideas for merch at the Faculty of Informatics",
     text: "The goal was to develop ideas for potential future expansion of the merch at the Faculty of Informatics. The restrictions were to work with the faculty colors - yellow and black - and to develop some original ideas. There were several categories - cheap gifts for events, fancy gifts for partners, gifts for students as price, and gifts for new employees.",
-    component: (project) => <ProjectPageAkademikpro project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
     name: "AZUFont",
     image: "cover_images/azufont_sign.png",
+    headerImage: "project_images/azufont_0.png",
     projectImages: [
-      "project_images/azufont_0.png",
       "project_images/azufont_1.png",
       "project_images/azufont_2.png",
       "project_images/azufont_3.png",
@@ -788,7 +781,7 @@ export const projects: Project[] = [
     tools: ["Affinity Designer"],
     description: "The font based on azulejo tiles",
     text: "The AzuFont is based on the twelve basic symbols used in the traditional Portuguese Azulejo tiles. The AzuFont consists of the upper case letters of the Latin alphabet. It has mainly decorative functions and is supposed to be used for short texts or headings, as the text is less readable when used in longer texts or smaller font sizes. Not only the letters but also the tiles were created as a part and extension for this font. Each tile contains the letter that represents it; however, it might not be visible at first sight. The tiles are highly decorative and could be used in propagation materials or as examples of what could be created with this application.",
-    component: (project) => <ProjectPageEffecta project={project} />,
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
@@ -913,8 +906,8 @@ export const projects: Project[] = [
   {
     name: "Kurz M365",
     image: "cover_images/uvt_sign.jpg",
+    headerImage: "project_images/uvt_0.png",
     projectImages: [
-      "project_images/uvt_0.png",
       "project_images/uvt_1.jpg",
       "project_images/uvt_4.jpg",
       "project_images/uvt_5.png",
@@ -929,14 +922,21 @@ export const projects: Project[] = [
     tools: ["Affinity Designer", "Adobe After Effects", "Adobe Premiere Pro"],
     description: "Online education course on Microsoft 365 tools",
     text: "For several months, I worked at ICT MUNI as a graphic designer, animator, and video creator of an online course on Microsoft 365 tools. My task was to create characters, that would introduce users to some basic concepts of various Microsoft 365 tools. Another task was to create animation and concepts for the series of educational videos and also create these videos. I made around 15 out of 40 videos; later, several people joined to create videos based on my template video. The course is available online only to students and teachers of Masaryk University.",
-    component: (project) => <ProjectPageKurzM365 project={project} />,
+    links: [
+      {
+        href: "https://it.muni.cz/aktuality/vyzkousejte-novy-online-vzdelavaci-kurz-k-nastrojum-microsoft-365",
+        ariaLabel: "kurzm365",
+        text: "Kurz M365",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
     name: "Generative Art In Psychology",
     image: "cover_images/thesis_sign.png",
+    headerImage: "project_images/thesis_0.jpg",
     projectImages: [
-      "project_images/thesis_0.jpg",
       "project_images/thesis_1.jpg",
       "project_images/thesis_2.jpg",
       "project_images/thesis_3.jpg",
@@ -948,7 +948,14 @@ export const projects: Project[] = [
     tools: ["Affinity Designer", "Affinity Publisher"],
     description: "Cover and typesetting of my diploma thesis",
     text: "For my diploma thesis, I have decided to avoid the traditional template of our faculty, and as a graphic design student, I was able to create this typesetting. For the shape, I used the square, as the central motif of my thesis is Azulejo tiles, which are squares. The cover looks like one of those tiles and was created (without the texts) in the application I developed for this thesis. The typography is straightforward, and the sans serif font used in the application was also used in the text. The headings are blue, and the numbering is orange, the secondary color in my application. The images used in the thesis were mainly created for the needs of the text; however, several photos are adopted from the internet, and they match the overall color scheme.",
-    component: (project) => <ProjectPageThesis project={project} />,
+    links: [
+      {
+        href: "https://is.muni.cz/th/gfbqm/Generative_Art_in_Psychology_Kuhejdova.pdf",
+        ariaLabel: "thesis fulltext",
+        text: "See fulltext of my thesis",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
   },
 
   {
@@ -1051,6 +1058,101 @@ export const projects: Project[] = [
         href: "https://kunykumm.itch.io/pastcards",
         ariaLabel: "pastcards itch.io",
         text: "Pastcards game on Itch.io",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
+  },
+
+  {
+    name: "Active Mindz",
+    image: "cover_images/active-mindz_sign.jpg",
+    headerImage: "project_images/active-mindz-0.webp",
+    projectImages: [
+      "project_images/active-mindz-1.webp",
+      "project_images/active-mindz-2.webp",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/active-mindz",
+    date: new Date(2025, 7, 1),
+    tools: ["Affinity Designer"],
+    description: "Natural brain support with cherry flavour",
+    text: "I created the design for the packaging of the natural brain support drink with cherry flavour. The requirements were for a minimalist, fresh design similar to kratom package designs featuring a dragon. I combined a dragon silhouette emerging from cherry leaves with fresh green colours.\nThe brief was to create three versions for three different package sizes. This presented a typesetting challenge as there was a lot of necessary information and legal requirements regarding font sizes and readability.",
+    component: (project) => <ProjectPageGames project={project} />,
+  },
+
+  {
+    name: "The history of the archery club book",
+    image: "cover_images/archery-history-book_sign.jpg",
+    headerImage: "project_images/archery-history-book-0.webp",
+    projectImages: [
+      "project_images/archery-history-book-1.webp",
+      "project_images/archery-history-book-2.webp",
+      "project_images/archery-history-book-3.webp",
+      "project_images/archery-history-book-4.webp",
+    ],
+    tags: [ProjectTags.TYPOGRAPHY],
+    path: "/archery-history-book",
+    date: new Date(2025, 8, 1),
+    tools: ["Adobe InDesign, Adobe Photoshop, Adobe Lightroom"],
+    description: "The history of the archery club from 1955 to 2025",
+    text: "I was asked to prepare a book summarising the history of our archery club in Ostrava. Using the available sources, I collected the texts and photos, and composed and organised them into an 84-page book. The cover combines a view of the archery field from the past and present with visuals of an archery target. The photos used in this publication needed to be selected and digitalized, as well as the texts needed to be revised and rewritten.",
+    links: [
+      {
+        href: "https://lukostrelba.info/historie/",
+        ariaLabel: "read the full book here",
+        text: "Read the full book (CZ only)",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
+  },
+
+  {
+    name: "The Lunar Chronicals Covers",
+    image: "cover_images/book-challenge-cover.webp",
+    headerImage: "project_images/book-cover-challenge-0.webp",
+    projectImages: [
+      "project_images/book-cover-challenge-1.webp",
+      "project_images/book-cover-challenge-2.webp",
+      "project_images/book-cover-challenge-3.webp",
+      "project_images/book-cover-challenge-4.webp",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/lunar-chronicals-covers",
+    date: new Date(2025, 9, 15),
+    tools: ["Adobe Illustrator, Adobe Photoshop"],
+    description: "Four redesigned book covers",
+    text: "This challenge was inspired by the Book Cover Design Challenge – Young Guns Season 2 Episode 8. The constraints for the book cover designs were as follows: a cohesive set of covers; a maximum of four colours in total; and no photography.\nI chose The Lunar Chronicles series, which consists of four books that retell famous fairy tales in a sci-fi setting. My goal was to make the covers minimalist, highlighting the items from the fairy tales in the same way that they were presented in the books. The typography combines futuristic massivity with fairytale curls. The four stages of the moon are depicted in the background, with each stage representing a book, as the moon plays a significant part in the story.",
+    links: [
+      {
+        href: "https://www.youtube.com/watch?v=MITy9UGnKt8",
+        ariaLabel: "Book Cover Design Challenge episode",
+        text: "Book Cover Design Challenge episode",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
+  },
+
+  {
+    name: "CM Širúch website",
+    image: "cover_images/cm-siruch_sign.webp",
+    headerImage: "project_images/cm-siruch-0.webp",
+    projectImages: [
+      "project_images/cm-siruch-1.webp",
+      "project_images/cm-siruch-2.webp",
+      "project_images/cm-siruch-3.webp",
+      "project_images/cm-siruch-4.webp",
+    ],
+    tags: [ProjectTags.UX],
+    path: "/cm-siruch-website",
+    date: new Date(2025, 10, 1),
+    tools: ["Figma"],
+    description: "Website for a moravian folk band",
+    text: "I was asked to design a website for the moravian folk band Cimbálová muzika Širúch. The goal was to design a single-page website with sections introducing the band and offering the option to book a performance. I took their brand colours and adjusted them for the web, bearing accessibility in mind. The page is light and airy, presenting all the necessary details. In the same style, I created also the print promo material.",
+    links: [
+      {
+        href: "https://www.cmsiruch.cz/cs",
+        ariaLabel: "CM Širúch website",
+        text: "CM Širúch website",
       },
     ],
     component: (project) => <ProjectPageGames project={project} />,

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useOutlet } from 'react-router-dom';
+import { useOutlet } from 'react-router';
 
 interface IOutletOrChildrenProps {
     children: React.ReactElement,
