@@ -1062,4 +1062,99 @@ export const projects: Project[] = [
     ],
     component: (project) => <ProjectPageGames project={project} />,
   },
+
+  {
+    name: "Active Mindz",
+    image: "cover_images/active-mindz_sign.jpg",
+    headerImage: "project_images/active-mindz-0.webp",
+    projectImages: [
+      "project_images/active-mindz-1.webp",
+      "project_images/active-mindz-2.webp",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/active-mindz",
+    date: new Date(2025, 7, 1),
+    tools: ["Affinity Designer"],
+    description: "Natural brain support with cherry flavour",
+    text: "I created the design for the packaging of the natural brain support drink with cherry flavour. The requirements were for a minimalist, fresh design similar to kratom package designs featuring a dragon. I combined a dragon silhouette emerging from cherry leaves with fresh green colours.\nThe brief was to create three versions for three different package sizes. This presented a typesetting challenge as there was a lot of necessary information and legal requirements regarding font sizes and readability.",
+    component: (project) => <ProjectPageGames project={project} />,
+  },
+
+  {
+    name: "The history of the archery club book",
+    image: "cover_images/archery-history-book_sign.jpg",
+    headerImage: "project_images/archery-history-book-0.webp",
+    projectImages: [
+      "project_images/archery-history-book-1.webp",
+      "project_images/archery-history-book-2.webp",
+      "project_images/archery-history-book-3.webp",
+      "project_images/archery-history-book-4.webp",
+    ],
+    tags: [ProjectTags.TYPOGRAPHY],
+    path: "/archery-history-book",
+    date: new Date(2025, 8, 1),
+    tools: ["Adobe InDesign, Adobe Photoshop, Adobe Lightroom"],
+    description: "The history of the archery club from 1955 to 2025",
+    text: "I was asked to prepare a book summarising the history of our archery club in Ostrava. Using the available sources, I collected the texts and photos, and composed and organised them into an 84-page book. The cover combines a view of the archery field from the past and present with visuals of an archery target. The photos used in this publication needed to be selected and digitalized, as well as the texts needed to be revised and rewritten.",
+    links: [
+      {
+        href: "https://lukostrelba.info/historie/",
+        ariaLabel: "read the full book here",
+        text: "Read the full book (CZ only)",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
+  },
+
+  {
+    name: "The Lunar Chronicals Covers",
+    image: "cover_images/book-challenge-cover.webp",
+    headerImage: "project_images/book-cover-challenge-0.webp",
+    projectImages: [
+      "project_images/book-cover-challenge-1.webp",
+      "project_images/book-cover-challenge-2.webp",
+      "project_images/book-cover-challenge-3.webp",
+      "project_images/book-cover-challenge-4.webp",
+    ],
+    tags: [ProjectTags.GRAPHIC_DESIGN],
+    path: "/lunar-chronicals-covers",
+    date: new Date(2025, 9, 15),
+    tools: ["Adobe Illustrator, Adobe Photoshop"],
+    description: "Four redesigned book covers",
+    text: "This challenge was inspired by the *Book Cover Design Challenge – Young Guns Season 2 Episode 8. The constraints for the book cover designs were as follows: a cohesive set of covers; a maximum of four colours in total; and no photography.\nI chose The Lunar Chronicles series, which consists of four books that retell famous fairy tales in a sci-fi setting. My goal was to make the covers minimalist, highlighting the items from the fairy tales in the same way that they were presented in the books. The typography combines futuristic massivity with fairytale curls. The four stages of the moon are depicted in the background, with each stage representing a book, as the moon plays a significant part in the story.",
+    links: [
+      {
+        href: "https://www.youtube.com/watch?v=MITy9UGnKt8",
+        ariaLabel: "Book Cover Design Challenge episode",
+        text: "Book Cover Design Challenge episode",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
+  },
+
+  {
+    name: "CM Širúch website",
+    image: "cover_images/cm-siruch_sign.webp",
+    headerImage: "project_images/cm-siruch-0.webp",
+    projectImages: [
+      "project_images/cm-siruch-1.webp",
+      "project_images/cm-siruch-2.webp",
+      "project_images/cm-siruch-3.webp",
+      "project_images/cm-siruch-4.webp",
+    ],
+    tags: [ProjectTags.UX],
+    path: "/cm-siruch-website",
+    date: new Date(2025, 10, 1),
+    tools: ["Figma"],
+    description: "Website for a moravian folk band",
+    text: "I was asked to design a website for the moravian folk band Cimbálová muzika Širúch. The goal was to design a single-page website with sections introducing the band and offering the option to book a performance. I took their brand colours and adjusted them for the web, bearing accessibility in mind. The page is light and airy, presenting all the necessary details. In the same style, I created also the print promo material.",
+    links: [
+      {
+        href: "https://www.cmsiruch.cz/cs",
+        ariaLabel: "CM Širúch website",
+        text: "CM Širúch website",
+      },
+    ],
+    component: (project) => <ProjectPageGames project={project} />,
+  },
 ];
