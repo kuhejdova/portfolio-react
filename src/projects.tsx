@@ -1121,7 +1121,7 @@ export const projects: Project[] = [
     date: new Date(2025, 9, 15),
     tools: ["Adobe Illustrator, Adobe Photoshop"],
     description: "Four redesigned book covers",
-    text: "This challenge was inspired by the *Book Cover Design Challenge – Young Guns Season 2 Episode 8. The constraints for the book cover designs were as follows: a cohesive set of covers; a maximum of four colours in total; and no photography.\nI chose The Lunar Chronicles series, which consists of four books that retell famous fairy tales in a sci-fi setting. My goal was to make the covers minimalist, highlighting the items from the fairy tales in the same way that they were presented in the books. The typography combines futuristic massivity with fairytale curls. The four stages of the moon are depicted in the background, with each stage representing a book, as the moon plays a significant part in the story.",
+    text: "This challenge was inspired by the Book Cover Design Challenge – Young Guns Season 2 Episode 8. The constraints for the book cover designs were as follows: a cohesive set of covers; a maximum of four colours in total; and no photography.\nI chose The Lunar Chronicles series, which consists of four books that retell famous fairy tales in a sci-fi setting. My goal was to make the covers minimalist, highlighting the items from the fairy tales in the same way that they were presented in the books. The typography combines futuristic massivity with fairytale curls. The four stages of the moon are depicted in the background, with each stage representing a book, as the moon plays a significant part in the story.",
     links: [
       {
         href: "https://www.youtube.com/watch?v=MITy9UGnKt8",
